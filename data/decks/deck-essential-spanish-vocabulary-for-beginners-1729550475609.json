@@ -1,83 +1,85 @@
 {
   "name": "Essential Spanish Vocabulary for Beginners",
+  "id": "1729550475609",
+  "description": "This deck contains essential Spanish vocabulary for beginners.",
   "cards": [
     {
-      "question": "Hola",
-      "answer": "Hello",
+      "front": "Hola",
+      "back": "Hello",
       "tags": [
         "greeting",
         "basic"
       ]
     },
     {
-      "question": "¿Cómo estás?",
-      "answer": "How are you?",
+      "front": "¿Cómo estás?",
+      "back": "How are you?",
       "tags": [
         "greeting",
-        "question"
+        "front"
       ]
     },
     {
-      "question": "Gracias",
-      "answer": "Thank you",
+      "front": "Gracias",
+      "back": "Thank you",
       "tags": [
         "politeness",
         "basic"
       ]
     },
     {
-      "question": "Por favor",
-      "answer": "Please",
+      "front": "Por favor",
+      "back": "Please",
       "tags": [
         "politeness",
         "basic"
       ]
     },
     {
-      "question": "Sí",
-      "answer": "Yes",
+      "front": "Sí",
+      "back": "Yes",
       "tags": [
         "affirmation",
         "basic"
       ]
     },
     {
-      "question": "No",
-      "answer": "No",
+      "front": "No",
+      "back": "No",
       "tags": [
         "negation",
         "basic"
       ]
     },
     {
-      "question": "¿Qué hora es?",
-      "answer": "What time is it?",
+      "front": "¿Qué hora es?",
+      "back": "What time is it?",
       "tags": [
-        "question",
+        "front",
         "time"
       ]
     },
     {
-      "question": "Me llamo...",
-      "answer": "My name is...",
+      "front": "Me llamo...",
+      "back": "My name is...",
       "tags": [
         "introduction",
         "basic"
       ]
     },
     {
-      "question": "Tengo una pregunta",
-      "answer": "I have a question",
+      "front": "Tengo una pregunta",
+      "back": "I have a front",
       "tags": [
         "expression",
         "basic"
       ]
     },
     {
-      "question": "¿Dónde está el baño?",
-      "answer": "Where is the bathroom?",
+      "front": "¿Dónde está el baño?",
+      "back": "Where is the bathroom?",
       "tags": [
-        "question",
+        "front",
         "directions"
       ]
     }

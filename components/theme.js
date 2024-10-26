@@ -61,59 +61,6 @@ const theme = extendTheme({
     "2xl": "32px",
     "3xl": "48px",
   },
-  components: {
-    Button: {
-      baseStyle: {
-        rounded: "lg",
-        _text: {
-          color: "background.dark",
-        },
-        _light: {
-          bg: "primary.400",
-          _pressed: {
-            bg: "primary.500",
-          },
-        },
-        _dark: {
-          bg: "secondary.400",
-          _pressed: {
-            bg: "secondary.500",
-          },
-        },
-        _hover: {
-          shadow: "0 0 10px rgba(0, 255, 255, 0.4)", // Neon glow on hover
-        },
-      },
-    },
-    Input: {
-      baseStyle: {
-        _focus: {
-          borderColor: "primary.400",
-          boxShadow: "0 0 5px rgba(0, 255, 255, 0.6)", // Electric blue shadow on focus
-        },
-      },
-      defaultProps: {
-        variant: "outline",
-        placeholderTextColor: "text.placeholder",
-      },
-    },
-    Box: {
-      baseStyle: {
-        bg: "background.card",
-        rounded: "md",
-        shadow: 2,
-      },
-    },
-    Text: {
-      baseStyle: {
-        color: "text.primary",
-        fontSize: "md",
-      },
-      defaultProps: {
-        fontFamily: "body",
-      },
-    },
-  },
 });
 
 export default theme;

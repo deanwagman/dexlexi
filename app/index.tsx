@@ -15,34 +15,11 @@ const Stack = createStackNavigator();
 function MainStack() {
   return (
     <NativeBaseProvider theme={theme}>
-      <Stack.Navigator
-        screenOptions={{
-          header: ({ navigation }) => {
-            return (
-              <Container>
-                <Text fontSize="md" onPress={() => navigation.navigate("Home")}>
-                  Home
-                </Text>
-                <Text
-                  fontSize="md"
-                  onPress={() => navigation.navigate("Practice")}
-                >
-                  Practice
-                </Text>
-                <Text
-                  fontSize="md"
-                  onPress={() => navigation.navigate("Decks")}
-                >
-                  Decks
-                </Text>
-              </Container>
-            );
-          },
-        }}
-      >
+      <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Practice" component={PracticeScreen} />
         <Stack.Screen name="Decks" component={DeckScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NativeBaseProvider>
   );

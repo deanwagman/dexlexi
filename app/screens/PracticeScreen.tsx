@@ -1,61 +1,70 @@
 // screens/PracticeScreen.js
-import React, { useState } from "react";
-import { View, Text, Pressable } from "react-native";
+import React, { useState, useReducer } from "react";
+import { View, Pressable } from "react-native";
 import { useRoute } from "@react-navigation/native";
+import { Text, Button, Box, Row, Spacer, Stack } from "native-base";
 
 import useSpacedRepetition from "../hooks/useSpacedRepetition";
 
+import DeckCard from "../../components/DeckCard";
+
+import deck from "../../data/decks/deck-essential-spanish-vocabulary-for-beginners-1729550475609.json";
+
 const PracticeScreen = () => {
   const route = useRoute();
-  const [isFlipped, setIsFlipped] = useState(false);
-  // const { deck } = route.params; // Access the deck data from route params
-  const deck = {
-    id: 1,
-    title: "Deck 1",
-    cards: [
-      { id: 1, front: "Front 1", back: "Back 1" },
-      { id: 2, front: "Front 2", back: "Back 2" },
-      { id: 3, front: "Front 3", back: "Back 3" },
-    ],
-  };
-  const card = deck.cards[0]; // Get the first card from the deck
 
-  console.log({ deck });
+  const [state, dispatch] = useReducer(
+    (state, action) => {
+      switch (action.type) {
+        case "CORRECT":
+          return {
+            ...state,
+            correct: state.correct + 1,
+            currentCardIndex: state.currentCardIndex + 1,
+            completed: state.currentCardIndex + 1 === deck.cards.length,
+          };
+        case "INCORRECT":
+          return {
+            ...state,
+            incorrect: state.incorrect + 1,
+            currentCardIndex: state.currentCardIndex + 1,
+            completed: state.currentCardIndex + 1 === deck.cards.length,
+          };
+        default:
+          return state;
+      }
+    },
+    {
+      correct: 0,
+      incorrect: 0,
+      currentCardIndex: 0,
+    }
+  );
+  const markCorrect = () => dispatch({ type: "CORRECT" });
+  const markIncorrect = () => dispatch({ type: "INCORRECT" });
+  const currentCard = deck.cards[state.currentCardIndex];
 
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <View style={{ marginBottom: 20 }}>
-        <Pressable
-          onPress={() => {
-            setIsFlipped(!isFlipped);
-          }}
-        >
-          <View
-            style={
-              isFlipped
-                ? {
-                    width: 200,
-                    backgroundColor: "green",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: 20,
-                  }
-                : {
-                    width: 200,
-                    backgroundColor: "red",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: 20,
-                  }
-            }
-          >
-            <Text style={{ fontSize: 18 }}>
-              {isFlipped ? card.back : card.front}
-            </Text>
-          </View>
-        </Pressable>
-      </View>
-    </View>
+    <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      {currentCard && (
+        <DeckCard front={currentCard.front} back={currentCard.back} />
+      )}
+      {state.completed ? (
+        <Stack>
+          <Text>Practice completed</Text>
+
+          <Text>Correct: {state.correct}</Text>
+          <Text>Incorrect: {state.incorrect}</Text>
+        </Stack>
+      ) : (
+        <Row padding={10}>
+          {deck.cards}
+          <Button onPress={markIncorrect}>Incorrect</Button>
+          <Spacer width={100} />
+          <Button onPress={markCorrect}>Correct</Button>
+        </Row>
+      )}
+    </Box>
   );
 };
 
