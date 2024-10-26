@@ -1,0 +1,95 @@
+{
+  "name": "Cold Colors Flashcards",
+  "cards": [
+    {
+      "question": "What is the color associated with feelings of calmness and serenity?",
+      "answer": "Blue",
+      "tags": [
+        "color",
+        "cold",
+        "calm"
+      ]
+    },
+    {
+      "question": "Which color is often described as icy and is associated with coolness?",
+      "answer": "Cyan",
+      "tags": [
+        "color",
+        "cold",
+        "icy"
+      ]
+    },
+    {
+      "question": "What is the color that represents frost and is a mix of blue and white?",
+      "answer": "Frost",
+      "tags": [
+        "color",
+        "cold",
+        "frost"
+      ]
+    },
+    {
+      "question": "Which color symbolizes tranquility and is often associated with nature and winter?",
+      "answer": "Teal",
+      "tags": [
+        "color",
+        "cold",
+        "tranquility"
+      ]
+    },
+    {
+      "question": "What color is often used to depict shade and shadows, making it appear cooler?",
+      "answer": "Violet",
+      "tags": [
+        "color",
+        "cold",
+        "shadows"
+      ]
+    },
+    {
+      "question": "What color is often linked to winter and has associations with snow?",
+      "answer": "White",
+      "tags": [
+        "color",
+        "cold",
+        "winter"
+      ]
+    },
+    {
+      "question": "Which cold color is at the end of the visual spectrum and appears bluish?",
+      "answer": "Indigo",
+      "tags": [
+        "color",
+        "cold",
+        "spectrum"
+      ]
+    },
+    {
+      "question": "What cool color is often associated with healing and cleanliness?",
+      "answer": "Green",
+      "tags": [
+        "color",
+        "cold",
+        "healing"
+      ]
+    },
+    {
+      "question": "What is the name of the cold color that is synonymous with freshness?",
+      "answer": "Aqua",
+      "tags": [
+        "color",
+        "cold",
+        "freshness"
+      ]
+    },
+    {
+      "question": "Which color is seen as masculine and is often used in corporate branding, evoking trust?",
+      "answer": "Navy Blue",
+      "tags": [
+        "color",
+        "cold",
+        "masculine"
+      ]
+    }
+  ]
+}

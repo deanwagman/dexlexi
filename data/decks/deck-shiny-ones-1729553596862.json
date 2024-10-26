@@ -1,0 +1,93 @@
+{
+  "name": "Shiny Ones",
+  "cards": [
+    {
+      "question": "What is a liquid metal?",
+      "answer": "A liquid metal is a metal that is in a liquid state at or near room temperature due to its low melting point.",
+      "tags": [
+        "definition",
+        "liquid metal"
+      ]
+    },
+    {
+      "question": "Which liquid metal is commonly used in thermometers?",
+      "answer": "Mercury is the liquid metal commonly used in thermometers due to its high density and wide liquid range.",
+      "tags": [
+        "mercury",
+        "thermometers"
+      ]
+    },
+    {
+      "question": "What are some applications of liquid metals?",
+      "answer": "Liquid metals can be used in cooling systems, electronics, medical devices, and as an innovative element in soft robotics.",
+      "tags": [
+        "applications",
+        "technology",
+        "cooling systems"
+      ]
+    },
+    {
+      "question": "What is the melting point of Gallium?",
+      "answer": "Gallium has a melting point of approximately 29.76 °C (85.57 °F), allowing it to melt in your hand.",
+      "tags": [
+        "gallium",
+        "melting point",
+        "properties"
+      ]
+    },
+    {
+      "question": "What is the main advantage of using liquid metals as coolants?",
+      "answer": "The main advantage is their excellent thermal conductivity, which allows for efficient heat transfer in systems like nuclear reactors or electronic devices.",
+      "tags": [
+        "coolants",
+        "thermal conductivity",
+        "advantages"
+      ]
+    },
+    {
+      "question": "What happens when mercury is exposed to oxygen?",
+      "answer": "When mercury is exposed to oxygen, it can oxidize to form mercury oxide, which can be hazardous.",
+      "tags": [
+        "mercury",
+        "oxidation",
+        "hazards"
+      ]
+    },
+    {
+      "question": "Can liquid metals be used for 3D printing?",
+      "answer": "Yes, liquid metals can be used in 3D printing technologies to create flexible and conductive materials.",
+      "tags": [
+        "3D printing",
+        "liquid metals",
+        "flexible materials"
+      ]
+    },
+    {
+      "question": "What safety concerns are associated with liquid metals?",
+      "answer": "Safety concerns include toxicity (especially with mercury), environmental impact, and potential spills that require careful handling.",
+      "tags": [
+        "safety",
+        "toxicity",
+        "environmental impact"
+      ]
+    },
+    {
+      "question": "What is the primary liquid metal in the field of soft robotics?",
+      "answer": "Gallium-based alloys, such as Galinstan, are often used in soft robotics due to their malleability and conductivity.",
+      "tags": [
+        "soft robotics",
+        "gallium alloys",
+        "Galinstan"
+      ]
+    },
+    {
+      "question": "Name a non-toxic alternative to mercury for use in thermometers.",
+      "answer": "Galinstan, a gallium alloy, is a non-toxic alternative to mercury used in thermometers.",
+      "tags": [
+        "non-toxic",
+        "thermometers",
+        "Galinstan"
+      ]
+    }
+  ]
+}

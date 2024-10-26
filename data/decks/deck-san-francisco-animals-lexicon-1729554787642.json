@@ -1,0 +1,165 @@
+{
+  "name": "San Francisco Animals Lexicon",
+  "cards": [
+    {
+      "front": "California Sea Lion",
+      "back": "A marine mammal often seen at Pier 39, known for its barking and playful nature.",
+      "tags": [
+        "Sea Lion",
+        "Marine Life",
+        "Pier 39",
+        "Wildlife",
+        "California",
+        "Playful",
+        "Mammal",
+        "Urban",
+        "Animals",
+        "Marine Mammals"
+      ]
+    },
+    {
+      "front": "Golden Gate Park Birds",
+      "back": "A diverse range of bird species can be spotted including ducks, herons, and songbirds.",
+      "tags": [
+        "Birds",
+        "Golden Gate Park",
+        "Wildlife",
+        "Nature",
+        "Diversity",
+        "Urban Nature",
+        "Birdwatching",
+        "California",
+        "Outdoor",
+        "San Francisco"
+      ]
+    },
+    {
+      "front": "San Francisco Bay Goose",
+      "back": "A large waterfowl commonly found in the Bay Area, recognizable by its black head and white chin strap.",
+      "tags": [
+        "Goose",
+        "Waterfowl",
+        "San Francisco Bay",
+        "Wildlife",
+        "Nature",
+        "Birdwatching",
+        "California",
+        "Urban Animals",
+        "Migration",
+        "Ecosystem"
+      ]
+    },
+    {
+      "front": "Albatross",
+      "back": "A large seabird found in the Pacific Ocean, known for its impressive wingspan and gliding ability.",
+      "tags": [
+        "Seabird",
+        "Albatross",
+        "Wingspan",
+        "Pacific Ocean",
+        "Birds",
+        "Wildlife",
+        "Marine Animals",
+        "Migration",
+        "Nature",
+        "Conservation"
+      ]
+    },
+    {
+      "front": "Mission District Murals",
+      "back": "Some murals feature local wildlife, highlighting the blend of urban art and nature in San Francisco.",
+      "tags": [
+        "Murals",
+        "Mission District",
+        "Wildlife Art",
+        "Urban Culture",
+        "Animals",
+        "California",
+        "Graffiti Art",
+        "Street Art",
+        "Nature",
+        "Urban Environment"
+      ]
+    },
+    {
+      "front": "Cable Car Cats",
+      "back": "Stray cats in San Francisco are often seen around cable car stops, part of the city's unique urban wildlife.",
+      "tags": [
+        "Cats",
+        "Urban Wildlife",
+        "Cable Cars",
+        "Stray Animals",
+        "San Francisco",
+        "California",
+        "City Life",
+        "Animals",
+        "Street Cats",
+        "Urban Environment"
+      ]
+    },
+    {
+      "front": "San Francisco Aquatic Park",
+      "back": "A habitat for various fish and marine life, popular for swimming and outdoor activities.",
+      "tags": [
+        "Aquatic Park",
+        "Marine Life",
+        "Swimming",
+        "Nature",
+        "Wildlife",
+        "Ocean",
+        "San Francisco",
+        "Outdoor Activities",
+        "California",
+        "Coastal Ecology"
+      ]
+    },
+    {
+      "front": "Great Blue Heron",
+      "back": "A large bird often seen by the water, known for its hunting skills and patience.",
+      "tags": [
+        "Heron",
+        "Great Blue Heron",
+        "Birdwatching",
+        "Wetlands",
+        "Wildlife",
+        "San Francisco",
+        "Nature",
+        "Fishing",
+        "California",
+        "Birds"
+      ]
+    },
+    {
+      "front": "Pigeon,",
+      "back": "Commonly found in urban areas, these birds are known for their adaptability and can be seen throughout the city.",
+      "tags": [
+        "Pigeon",
+        "Urban Bird",
+        "Adaptability",
+        "Wildlife",
+        "City Life",
+        "San Francisco",
+        "California",
+        "Street Animals",
+        "Birdwatching",
+        "Common Birds"
+      ]
+    },
+    {
+      "front": "Sea Otter",
+      "back": "A playful marine mammal found off the coast, known for its use of tools to crack open shells.",
+      "tags": [
+        "Sea Otter",
+        "Marine Mammal",
+        "Plays",
+        "Tools",
+        "California",
+        "Coastal Wildlife",
+        "Sea Life",
+        "Nature",
+        "Conservation",
+        "Family Groups"
+      ]
+    }
+  ]
+}

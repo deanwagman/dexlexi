@@ -1,0 +1,170 @@
+{
+  "name": "Mexican Beer Lexicon",
+  "cards": [
+    {
+      "front": "Cerveza",
+      "back": "Beer in Spanish.",
+      "tags": [
+        "Cerveza",
+        "Spanish",
+        "Beer",
+        "Language",
+        "Basics"
+      ]
+    },
+    {
+      "front": "Corona",
+      "back": "A popular Mexican pale lager, often served with lime.",
+      "tags": [
+        "Corona",
+        "Beer",
+        "Lager",
+        "Popular",
+        "Mexican"
+      ]
+    },
+    {
+      "front": "Negra Modelo",
+      "back": "A Munich-style dunkel beer known for its rich flavor.",
+      "tags": [
+        "Negra Modelo",
+        "Dunkel",
+        "Rich Flavor",
+        "Beer",
+        "Types"
+      ]
+    },
+    {
+      "front": "Modelo Especial",
+      "back": "A light pilsner with a crisp and refreshing taste.",
+      "tags": [
+        "Modelo Especial",
+        "Pilsner",
+        "Light Beer",
+        "Crisp",
+        "Refreshing"
+      ]
+    },
+    {
+      "front": "Tequila Beer",
+      "back": "Beer mixed with tequila for a unique flavor.",
+      "tags": [
+        "Tequila Beer",
+        "Cocktails",
+        "Beer",
+        "Fusion",
+        "Flavors"
+      ]
+    },
+    {
+      "front": "Michelada",
+      "back": "A beer cocktail made with lime juice, spices, and sauce.",
+      "tags": [
+        "Michelada",
+        "Cocktail",
+        "Spices",
+        "Lime Juice",
+        "Beer"
+      ]
+    },
+    {
+      "front": "Tacos de cerveza",
+      "back": "Beer tacos; a traditional homemade snack pairing beer with tacos.",
+      "tags": [
+        "Tacos de cerveza",
+        "Food Pairing",
+        "Traditional",
+        "Snack",
+        "Beer"
+      ]
+    },
+    {
+      "front": "Agua de cebada",
+      "back": "Hibiscus beer, flavored with barley and hibiscus petals.",
+      "tags": [
+        "Agua de cebada",
+        "Hibiscus",
+        "Flavored",
+        "Beer",
+        "Mexican"
+      ]
+    },
+    {
+      "front": "Cerveza Artesanal",
+      "back": "Craft beer, focusing on quality and unique flavors.",
+      "tags": [
+        "Cerveza Artesanal",
+        "Craft Beer",
+        "Quality",
+        "Unique",
+        "Flavors"
+      ]
+    },
+    {
+      "front": "Oaxacan Ale",
+      "back": "A unique ale with flavors inspired by the Oaxaca region.",
+      "tags": [
+        "Oaxacan Ale",
+        "Regional Beer",
+        "Unique",
+        "Flavors",
+        "Mexico"
+      ]
+    },
+    {
+      "front": "Charro Negro",
+      "back": "A cocktail made with beer, tequila, and lime, served with salt.",
+      "tags": [
+        "Charro Negro",
+        "Cocktail",
+        "Tequila",
+        "Lime",
+        "Beer"
+      ]
+    },
+    {
+      "front": "Palenque",
+      "back": "A style of beer brewed in specific regions of Mexico, often thicker.",
+      "tags": [
+        "Palenque",
+        "Beer Style",
+        "Regional",
+        "Thicker",
+        "Mexico"
+      ]
+    },
+    {
+      "front": "Cervecería",
+      "back": "Brewery in Spanish; the place where beer is produced.",
+      "tags": [
+        "Cervecería",
+        "Brewery",
+        "Beer Production",
+        "Spanish",
+        "Basics"
+      ]
+    },
+    {
+      "front": "Sangrita",
+      "back": "A spicy drink often served alongside tequila, complements beer.",
+      "tags": [
+        "Sangrita",
+        "Spicy",
+        "Drink",
+        "Tequila",
+        "Complement"
+      ]
+    },
+    {
+      "front": "Cerveza de cola",
+      "back": "Beer mixed with cola, popular in some regions.",
+      "tags": [
+        "Cerveza de cola",
+        "Cola Beer",
+        "Mix",
+        "Popular",
+        "Flavors"
+      ]
+    }
+  ]
+}

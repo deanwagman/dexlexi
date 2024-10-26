@@ -1,0 +1,85 @@
+{
+  "name": "Essential Spanish Vocabulary for Beginners",
+  "cards": [
+    {
+      "question": "Hola",
+      "answer": "Hello",
+      "tags": [
+        "greeting",
+        "basic"
+      ]
+    },
+    {
+      "question": "¿Cómo estás?",
+      "answer": "How are you?",
+      "tags": [
+        "greeting",
+        "question"
+      ]
+    },
+    {
+      "question": "Gracias",
+      "answer": "Thank you",
+      "tags": [
+        "politeness",
+        "basic"
+      ]
+    },
+    {
+      "question": "Por favor",
+      "answer": "Please",
+      "tags": [
+        "politeness",
+        "basic"
+      ]
+    },
+    {
+      "question": "Sí",
+      "answer": "Yes",
+      "tags": [
+        "affirmation",
+        "basic"
+      ]
+    },
+    {
+      "question": "No",
+      "answer": "No",
+      "tags": [
+        "negation",
+        "basic"
+      ]
+    },
+    {
+      "question": "¿Qué hora es?",
+      "answer": "What time is it?",
+      "tags": [
+        "question",
+        "time"
+      ]
+    },
+    {
+      "question": "Me llamo...",
+      "answer": "My name is...",
+      "tags": [
+        "introduction",
+        "basic"
+      ]
+    },
+    {
+      "question": "Tengo una pregunta",
+      "answer": "I have a question",
+      "tags": [
+        "expression",
+        "basic"
+      ]
+    },
+    {
+      "question": "¿Dónde está el baño?",
+      "answer": "Where is the bathroom?",
+      "tags": [
+        "question",
+        "directions"
+      ]
+    }
+  ]
+}

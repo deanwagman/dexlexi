@@ -1,0 +1,95 @@
+{
+  "name": "MTG",
+  "cards": [
+    {
+      "question": "What does MTG stand for?",
+      "answer": "Magic: The Gathering",
+      "tags": [
+        "Acronym",
+        "Game",
+        "Card Game"
+      ]
+    },
+    {
+      "question": "What is the primary objective in MTG?",
+      "answer": "To reduce your opponent's life total to zero.",
+      "tags": [
+        "Objective",
+        "Gameplay",
+        "Strategy"
+      ]
+    },
+    {
+      "question": "What are the five colors of mana in MTG?",
+      "answer": "White, Blue, Black, Red, Green",
+      "tags": [
+        "Mana",
+        "Colors",
+        "Gameplay"
+      ]
+    },
+    {
+      "question": "What is a planeswalker in MTG?",
+      "answer": "A powerful card type that represents allies who can assist you in the game.",
+      "tags": [
+        "Card Type",
+        "Game Mechanics",
+        "Strategy"
+      ]
+    },
+    {
+      "question": "What does the term \"deck\" refer to in MTG?",
+      "answer": "A collection of cards that a player uses to play the game.",
+      "tags": [
+        "Terminology",
+        "Gameplay",
+        "Strategy"
+      ]
+    },
+    {
+      "question": "What is a token in MTG?",
+      "answer": "A permanent created by spells or abilities that represents creatures or other types of permanents.",
+      "tags": [
+        "Gameplay",
+        "Card Mechanics",
+        "Tokens"
+      ]
+    },
+    {
+      "question": "What are the phases of a turn in MTG?",
+      "answer": "Untap, Upkeep, Draw, Main Phase 1, Combat, Main Phase 2, End Phase.",
+      "tags": [
+        "Turn Structure",
+        "Gameplay",
+        "Strategy"
+      ]
+    },
+    {
+      "question": "What is a 'Tapping' card in MTG?",
+      "answer": "The act of turning a card sideways to indicate that it has been used for the turn.",
+      "tags": [
+        "Gameplay",
+        "Card Mechanics",
+        "Tapping"
+      ]
+    },
+    {
+      "question": "What is the significance of the ‘Legendary’ tag on a card?",
+      "answer": "You can only have one copy of a legendary creature or planeswalker with the same name on the battlefield at a time.",
+      "tags": [
+        "Card Type",
+        "Unique",
+        "Gameplay"
+      ]
+    },
+    {
+      "question": "What does 'Lifegain' mean in MTG?",
+      "answer": "Any action that increases a player's life total.",
+      "tags": [
+        "Gameplay",
+        "Mechanic",
+        "Strategy"
+      ]
+    }
+  ]
+}

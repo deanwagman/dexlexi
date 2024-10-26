@@ -1,0 +1,171 @@
+{
+  "name": "Japanese Home Words",
+  "cards": [
+    {
+      "front": "家 (いえ)",
+      "back": "House",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "House",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "部屋 (へや)",
+      "back": "Room",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Room",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "キッチン",
+      "back": "Kitchen",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Kitchen",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "リビング",
+      "back": "Living Room",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Living Room",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "バスルーム",
+      "back": "Bathroom",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Bathroom",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "寝室 (しんしつ)",
+      "back": "Bedroom",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Bedroom",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "庭 (にわ)",
+      "back": "Garden",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Garden",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "家具 (かぐ)",
+      "back": "Furniture",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Furniture",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "テーブル",
+      "back": "Table",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Table",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "椅子 (いす)",
+      "back": "Chair",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Chair",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "ドア",
+      "back": "Door",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Door",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "窓 (まど)",
+      "back": "Window",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Window",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "床 (ゆか)",
+      "back": "Floor",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Floor",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "天井 (てんじょう)",
+      "back": "Ceiling",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Ceiling",
+        "Japanese"
+      ]
+    },
+    {
+      "front": "電気 (でんき)",
+      "back": "Light/Electricity",
+      "tags": [
+        "Basic Vocabulary",
+        "Nouns",
+        "Home",
+        "Electricity",
+        "Light",
+        "Japanese"
+      ]
+    }
+  ]
+}

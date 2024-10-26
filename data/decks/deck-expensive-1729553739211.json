@@ -1,0 +1,95 @@
+{
+  "name": "Expensive",
+  "cards": [
+    {
+      "question": "What are igneous rocks?",
+      "answer": "Igneous rocks are formed from the solidification of molten material called magma or lava.",
+      "tags": [
+        "igneous",
+        "rocks",
+        "types of rocks"
+      ]
+    },
+    {
+      "question": "What is the difference between sedimentary and metamorphic rocks?",
+      "answer": "Sedimentary rocks are formed from the accumulation of sediments, while metamorphic rocks are formed from the alteration of existing rocks due to heat and pressure.",
+      "tags": [
+        "sedimentary",
+        "metamorphic",
+        "rock types"
+      ]
+    },
+    {
+      "question": "What is granite?",
+      "answer": "Granite is a common type of igneous rock that is coarse-grained and composed mainly of quartz, feldspar, and mica.",
+      "tags": [
+        "granite",
+        "igneous",
+        "rock types"
+      ]
+    },
+    {
+      "question": "What is limestone used for?",
+      "answer": "Limestone is used in construction, as a building material, and in the production of cement and lime.",
+      "tags": [
+        "limestone",
+        "usage",
+        "sedimentary"
+      ]
+    },
+    {
+      "question": "How are sedimentary rocks formed?",
+      "answer": "Sedimentary rocks are formed from the compaction and cementation of mineral and organic particles over time.",
+      "tags": [
+        "sedimentary",
+        "rocks",
+        "formation"
+      ]
+    },
+    {
+      "question": "What is a common feature of metamorphic rocks?",
+      "answer": "A common feature of metamorphic rocks is foliation, which is the alignment of mineral grains under directed pressure.",
+      "tags": [
+        "metamorphic",
+        "rocks",
+        "foliation"
+      ]
+    },
+    {
+      "question": "What is basalt?",
+      "answer": "Basalt is a fine-grained igneous rock formed from rapidly cooling lava, typically dark in color.",
+      "tags": [
+        "basalt",
+        "igneous",
+        "rock types"
+      ]
+    },
+    {
+      "question": "What are fossils and where can they be found?",
+      "answer": "Fossils are preserved remains or traces of ancient organisms and can be found in sedimentary rocks.",
+      "tags": [
+        "fossils",
+        "sedimentary",
+        "rocks"
+      ]
+    },
+    {
+      "question": "What are the main components of soil?",
+      "answer": "The main components of soil include minerals, organic matter, water, and air, often derived from weathered rocks.",
+      "tags": [
+        "soil",
+        "rocks",
+        "components"
+      ]
+    },
+    {
+      "question": "What is marble?",
+      "answer": "Marble is a metamorphic rock that forms from the recrystallization of limestone under heat and pressure, known for its use in sculpture and architecture.",
+      "tags": [
+        "marble",
+        "metamorphic",
+        "rock types"
+      ]
+    }
+  ]
+}

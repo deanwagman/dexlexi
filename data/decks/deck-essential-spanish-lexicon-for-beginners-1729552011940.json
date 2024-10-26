@@ -1,0 +1,85 @@
+{
+  "name": "Essential Spanish Lexicon for Beginners",
+  "cards": [
+    {
+      "question": "Hola",
+      "answer": "Hello",
+      "tags": [
+        "greeting",
+        "basic"
+      ]
+    },
+    {
+      "question": "Por favor",
+      "answer": "Please",
+      "tags": [
+        "politeness",
+        "basic expression"
+      ]
+    },
+    {
+      "question": "Gracias",
+      "answer": "Thank you",
+      "tags": [
+        "politeness",
+        "basic expression"
+      ]
+    },
+    {
+      "question": "¿Cómo estás?",
+      "answer": "How are you?",
+      "tags": [
+        "greeting",
+        "conversation"
+      ]
+    },
+    {
+      "question": "Sí",
+      "answer": "Yes",
+      "tags": [
+        "affirmation",
+        "basic"
+      ]
+    },
+    {
+      "question": "No",
+      "answer": "No",
+      "tags": [
+        "negation",
+        "basic"
+      ]
+    },
+    {
+      "question": "¿Cuánto cuesta?",
+      "answer": "How much does it cost?",
+      "tags": [
+        "shopping",
+        "basic expression"
+      ]
+    },
+    {
+      "question": "Tengo una pregunta",
+      "answer": "I have a question",
+      "tags": [
+        "conversation",
+        "basic expression"
+      ]
+    },
+    {
+      "question": "¿Dónde está...?",
+      "answer": "Where is...?",
+      "tags": [
+        "directions",
+        "basic expression"
+      ]
+    },
+    {
+      "question": "Me llamo...",
+      "answer": "My name is...",
+      "tags": [
+        "introduction",
+        "conversation"
+      ]
+    }
+  ]
+}

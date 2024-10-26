@@ -1,0 +1,95 @@
+{
+  "name": "Brands",
+  "cards": [
+    {
+      "question": "What is the brand associated with the slogan 'The Ultimate Driving Machine'?",
+      "answer": "BMW",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Luxury"
+      ]
+    },
+    {
+      "question": "Which car brand is known for its high-performance models like the Mustang?",
+      "answer": "Ford",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Performance"
+      ]
+    },
+    {
+      "question": "What automotive brand features a four-ring logo?",
+      "answer": "Audi",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Luxury"
+      ]
+    },
+    {
+      "question": "Which brand produces the popular model Civic?",
+      "answer": "Honda",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Sedan"
+      ]
+    },
+    {
+      "question": "Name the luxury electric vehicle brand founded by Elon Musk.",
+      "answer": "Tesla",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Electric"
+      ]
+    },
+    {
+      "question": "What car brand is represented by a prancing horse logo?",
+      "answer": "Ferrari",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Luxury"
+      ]
+    },
+    {
+      "question": "Which car brand is known for itsboxy design and safety features, often associated with Swedes?",
+      "answer": "Volvo",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Safety"
+      ]
+    },
+    {
+      "question": "What brand is famous for its luxury SUVs, such as the Range Rover?",
+      "answer": "Land Rover",
+      "tags": [
+        "Cars",
+        "Brands",
+        "SUV"
+      ]
+    },
+    {
+      "question": "Which company produces vehicles under the brand Subaru?",
+      "answer": "Subaru Corporation",
+      "tags": [
+        "Cars",
+        "Brands",
+        "AWD"
+      ]
+    },
+    {
+      "question": "What is the brand known for its iconic beetle model?",
+      "answer": "Volkswagen",
+      "tags": [
+        "Cars",
+        "Brands",
+        "Classic"
+      ]
+    }
+  ]
+}

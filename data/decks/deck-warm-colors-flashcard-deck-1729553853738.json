@@ -1,0 +1,77 @@
+{
+  "name": "Warm Colors Flashcard Deck",
+  "cards": [
+    {
+      "question": "What color is warm and often associated with the sun?",
+      "answer": "Yellow",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What warm color is made by mixing red and yellow?",
+      "answer": "Orange",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What is the warm color that symbolizes love and passion?",
+      "answer": "Red",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What warm shade is often seen in sunsets and is a mix of orange and red?",
+      "answer": "Scarlet",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What warm hue is often associated with nature and often represents growth?",
+      "answer": "Brown",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What warm color can be described as a lighter version of red?",
+      "answer": "Pink",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What is a common warm color that can also represent danger?",
+      "answer": "Crimson",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    },
+    {
+      "question": "What warm color is often found in autumn leaves and is a yellowish-brown?",
+      "answer": "Gold",
+      "tags": [
+        "color",
+        "warm",
+        "beginner"
+      ]
+    }
+  ]
+}
