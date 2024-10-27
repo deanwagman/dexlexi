@@ -1,0 +1,272 @@
+{
+  "subject": "Plants",
+  "numberOfDecks": 6,
+  "decks": [
+    {
+      "name": "Introduction to Plants (Beginner)",
+      "cards": [
+        {
+          "front": "Roots",
+          "back": "The part of the plant that typically lies below the surface of the soil, anchoring the plant and absorbing water and nutrients.",
+          "tags": [
+            "anatomy",
+            "basics"
+          ]
+        },
+        {
+          "front": "Leaves",
+          "back": "The parts of a plant that are primarily responsible for photosynthesis, typically green and flat to catch sunlight.",
+          "tags": [
+            "anatomy",
+            "basics"
+          ]
+        },
+        {
+          "front": "Photosynthesis",
+          "back": "The process by which green plants use sunlight to synthesize foods from carbon dioxide and water, producing oxygen as a byproduct.",
+          "tags": [
+            "process",
+            "basics"
+          ]
+        },
+        {
+          "front": "Flower",
+          "back": "The reproductive structure found in flowering plants, often characterized by colorful petals and unique shapes to attract pollinators.",
+          "tags": [
+            "anatomy",
+            "basics"
+          ]
+        },
+        {
+          "front": "Life Cycle",
+          "back": "The series of stages a plant goes through from seed germination to maturity and reproduction.",
+          "tags": [
+            "basics"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plant Classification (Beginner to Intermediate)",
+      "cards": [
+        {
+          "front": "Angiosperms",
+          "back": "A group of flowering plants that produce seeds enclosed within a fruit.",
+          "tags": [
+            "taxonomy",
+            "classification"
+          ]
+        },
+        {
+          "front": "Gymnosperms",
+          "back": "Seed-producing plants that do not produce flowers or fruits, with seeds unprotected by ovary or fruit.",
+          "tags": [
+            "taxonomy",
+            "classification"
+          ]
+        },
+        {
+          "front": "Ferns",
+          "back": "A group of non-flowering vascular plants that reproduce via spores, typically characterized by feather-like leaves.",
+          "tags": [
+            "taxonomy",
+            "classification"
+          ]
+        },
+        {
+          "front": "Rosaceae",
+          "back": "A large family of plants that includes many flowers, fruits, and ornamental plants such as roses, apples, and strawberries.",
+          "tags": [
+            "family",
+            "taxonomy"
+          ]
+        },
+        {
+          "front": "Taxonomy",
+          "back": "The science of classification, particularly in biology, which categorizes organisms based on shared characteristics.",
+          "tags": [
+            "classification"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plant Physiology (Intermediate)",
+      "cards": [
+        {
+          "front": "Transpiration",
+          "back": "The process of water movement through a plant and the loss of water vapor from aerial parts, primarily leaves.",
+          "tags": [
+            "process",
+            "physiology"
+          ]
+        },
+        {
+          "front": "Chlorophyll",
+          "back": "A green pigment found in plants that is essential for photosynthesis, allowing plants to absorb sunlight.",
+          "tags": [
+            "pigments",
+            "physiology"
+          ]
+        },
+        {
+          "front": "Plant Respiration",
+          "back": "The process by which plants convert sugars and oxygen into energy, carbon dioxide, and water, essential for growth and metabolism.",
+          "tags": [
+            "process",
+            "physiology"
+          ]
+        },
+        {
+          "front": "Plant Hormones",
+          "back": "Chemical substances produced by plants that regulate growth, development, and responses to environmental stimuli.",
+          "tags": [
+            "growth",
+            "physiology"
+          ]
+        },
+        {
+          "front": "Photosynthetic Efficiency",
+          "back": "The effectiveness of photosynthesis in converting sunlight, water, and carbon dioxide into glucose and oxygen, indicative of plant health.",
+          "tags": [
+            "process",
+            "physiology"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plant Ecology (Intermediate to Advanced)",
+      "cards": [
+        {
+          "front": "Ecosystem",
+          "back": "A biological community of interacting organisms and their physical environment, encompassing both biotic and abiotic factors.",
+          "tags": [
+            "ecology"
+          ]
+        },
+        {
+          "front": "Biodiversity",
+          "back": "The variety of life in the world or in a particular habitat or ecosystem, crucial for maintaining ecological balance.",
+          "tags": [
+            "ecology",
+            "conservation"
+          ]
+        },
+        {
+          "front": "Pollination",
+          "back": "The transfer of pollen from the male anther to the female stigma of a flower, essential for the reproduction of many plants.",
+          "tags": [
+            "ecology",
+            "interaction"
+          ]
+        },
+        {
+          "front": "Adaptation",
+          "back": "The process by which plants develop traits that enable them to survive and reproduce in their specific environments.",
+          "tags": [
+            "ecology",
+            "adaptation"
+          ]
+        },
+        {
+          "front": "Herbivores",
+          "back": "Organisms that primarily consume plant material, playing a significant role in plant population dynamics and ecosystem health.",
+          "tags": [
+            "ecology",
+            "interaction"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plant Genetics and Breeding (Advanced)",
+      "cards": [
+        {
+          "front": "Mendelian Inheritance",
+          "back": "The basic principles of heredity formulated by Gregor Mendel, describing how traits are passed from parents to offspring.",
+          "tags": [
+            "genetics",
+            "inheritance"
+          ]
+        },
+        {
+          "front": "Hybridization",
+          "back": "The process of cross-breeding different plant varieties to produce offspring with desired traits.",
+          "tags": [
+            "breeding",
+            "techniques"
+          ]
+        },
+        {
+          "front": "Genetic Modification",
+          "back": "The manipulation of an organism's genes using biotechnology to create desired changes, often resulting in genetically modified organisms (GMOs).",
+          "tags": [
+            "genetics",
+            "technology"
+          ]
+        },
+        {
+          "front": "Phenotype",
+          "back": "The observable physical or biochemical characteristics of an organism, determined by both genetic makeup and environmental influences.",
+          "tags": [
+            "genetics"
+          ]
+        },
+        {
+          "front": "Plant Breeding Objectives",
+          "back": "The goals set during the plant breeding process, such as improving yield, disease resistance, or drought tolerance.",
+          "tags": [
+            "breeding",
+            "objectives"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Applied Plant Science (Advanced)",
+      "cards": [
+        {
+          "front": "Agroecology",
+          "back": "The branch of agricultural science that considers ecological principles in the design and management of agricultural systems.",
+          "tags": [
+            "science",
+            "agriculture"
+          ]
+        },
+        {
+          "front": "Horticulture",
+          "back": "The science and art of growing fruits, vegetables, and ornamental plants, encompassing plant breeding, production, and landscape management.",
+          "tags": [
+            "science",
+            "landscape"
+          ]
+        },
+        {
+          "front": "Plant Pathology",
+          "back": "The study of plant diseases caused by pathogens and environmental factors, focusing on prevention and management strategies.",
+          "tags": [
+            "science",
+            "disease"
+          ]
+        },
+        {
+          "front": "Sustainable Agriculture",
+          "back": "Farming practices that meet current food needs without compromising future generations' ability to produce their own food, promoting ecological balance.",
+          "tags": [
+            "agriculture",
+            "sustainability"
+          ]
+        },
+        {
+          "front": "CRISPR Technology",
+          "back": "A groundbreaking gene-editing technology that allows for precise modifications to DNA, holding potential in agricultural advances.",
+          "tags": [
+            "technology",
+            "genetics"
+          ]
+        }
+      ]
+    }
+  ]
+}

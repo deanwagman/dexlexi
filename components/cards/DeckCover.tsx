@@ -6,10 +6,12 @@ const DeckCover = ({ text }) => {
       bg="white"
       shadow={2}
       rounded="lg"
-      width="68.9%"
-      height="38vh"
-      p={4}
-      m={2}
+      width="100%"
+      height="600"
+      p={60}
+      style={{
+        zIndex: 1,
+      }}
     >
       <Text
         style={{

@@ -22,7 +22,7 @@ const DeckCard = ({ front, back, style }) => {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: "38vh",
+        height: "600",
         perspective: 1000,
         ...style,
       }}
@@ -35,7 +35,7 @@ const DeckCard = ({ front, back, style }) => {
           transition: "transform 0.5s",
           transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
           width: "100%",
-          height: "38vh",
+          height: "600",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -47,7 +47,7 @@ const DeckCard = ({ front, back, style }) => {
           shadow={2}
           rounded="lg"
           width="100%"
-          height="38vh"
+          height="600"
           p={4}
           m={2}
           style={{
@@ -73,7 +73,7 @@ const DeckCard = ({ front, back, style }) => {
           shadow={2}
           rounded="lg"
           width="100%"
-          height="38vh"
+          height="600"
           p={4}
           m={2}
           style={{

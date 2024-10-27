@@ -1,0 +1,377 @@
+{
+  "subject": "React Native Base",
+  "numberOfDecks": 10,
+  "decks": [
+    {
+      "name": "Introduction to React Native Base",
+      "cards": [
+        {
+          "front": "What is React Native?",
+          "back": "React Native is an open-source framework for building mobile applications using JavaScript and React.",
+          "tags": [
+            "definition",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What is React Native Base?",
+          "back": "React Native Base is a UI component library that provides a set of essential components to help create a mobile app quickly and efficiently.",
+          "tags": [
+            "definition",
+            "React Native Base"
+          ]
+        },
+        {
+          "front": "What are the benefits of using React Native Base?",
+          "back": "Benefits include faster development, reusable components, and a consistent visual appearance across different platforms.",
+          "tags": [
+            "benefits",
+            "React Native Base"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Setting Up the Environment",
+      "cards": [
+        {
+          "front": "Prerequisites",
+          "back": "Prerequisites include having Node.js installed and a code editor like Visual Studio Code.",
+          "tags": [
+            "installation",
+            "prerequisites"
+          ]
+        },
+        {
+          "front": "How to install Node.js?",
+          "back": "Node.js can be installed from the official website by downloading the installer suitable for your operating system.",
+          "tags": [
+            "installation",
+            "Node.js"
+          ]
+        },
+        {
+          "front": "How to set up React Native CLI?",
+          "back": "You can set up React Native CLI by running 'npm install -g react-native-cli' in your terminal after installing Node.js.",
+          "tags": [
+            "installation",
+            "React Native CLI"
+          ]
+        },
+        {
+          "front": "How to create a new React Native project?",
+          "back": "Use the command 'npx react-native init ProjectName' to create a new React Native project.",
+          "tags": [
+            "project setup",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What is the directory structure of a React Native app?",
+          "back": "The directory structure usually includes folders like 'android', 'ios', and 'src' where your application logic resides.",
+          "tags": [
+            "directory structure",
+            "React Native"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Components and Layout",
+      "cards": [
+        {
+          "front": "What are basic components in React Native?",
+          "back": "Basic components include View, Text, and Image, which are used to build the user interface.",
+          "tags": [
+            "components",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What is Flexbox layout?",
+          "back": "Flexbox is a CSS layout module that enables the arrangement of components in a flexible and responsive way.",
+          "tags": [
+            "layout",
+            "Flexbox"
+          ]
+        },
+        {
+          "front": "How to style components?",
+          "back": "Components can be styled using a style prop with a JavaScript object or by using Stylesheet.create().",
+          "tags": [
+            "styling",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What are props?",
+          "back": "Props (short for properties) are inputs to a React component that allow data to be passed from parent to child components.",
+          "tags": [
+            "props",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What is state?",
+          "back": "State is a JavaScript object that holds the component's dynamic data and determines its rendering.",
+          "tags": [
+            "state",
+            "React Native"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Navigation Basics",
+      "cards": [
+        {
+          "front": "What is React Navigation?",
+          "back": "React Navigation is a library that helps manage the navigation and routing in React Native applications.",
+          "tags": [
+            "navigation",
+            "React Navigation"
+          ]
+        },
+        {
+          "front": "How to set up navigation containers?",
+          "back": "Navigation containers can be set up by wrapping your app with <NavigationContainer> from the React Navigation library.",
+          "tags": [
+            "setup",
+            "navigation"
+          ]
+        },
+        {
+          "front": "What is stack navigation?",
+          "back": "Stack navigation allows users to navigate through a stack of screens, where one screen is pushed on top of another.",
+          "tags": [
+            "navigation",
+            "stack"
+          ]
+        },
+        {
+          "front": "What is tab navigation?",
+          "back": "Tab navigation provides a way for users to switch between different views or screens using tabs at the bottom of the app.",
+          "tags": [
+            "navigation",
+            "tab"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "User Input Handling",
+      "cards": [
+        {
+          "front": "What is TextInput in React Native?",
+          "back": "TextInput is a core component used for user input, allowing users to enter text data.",
+          "tags": [
+            "input handling",
+            "TextInput"
+          ]
+        },
+        {
+          "front": "How to handle user input?",
+          "back": "User input can be handled by using state to track the value entered in the TextInput component.",
+          "tags": [
+            "input handling",
+            "state"
+          ]
+        },
+        {
+          "front": "What is form validation?",
+          "back": "Form validation is the process of checking whether the data entered into a form meets certain criteria before submission.",
+          "tags": [
+            "forms",
+            "validation"
+          ]
+        },
+        {
+          "front": "How to connect forms to state?",
+          "back": "Forms can be connected to state by using controlled components, where the input value is linked to a piece of state.",
+          "tags": [
+            "forms",
+            "state"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "State Management",
+      "cards": [
+        {
+          "front": "What is local component state?",
+          "back": "Local component state is the state that is managed within a single component, typically using useState or this.setState().",
+          "tags": [
+            "state management",
+            "local state"
+          ]
+        },
+        {
+          "front": "What is global state?",
+          "back": "Global state is a state that can be shared across multiple components, often managed using Context API or a state management library.",
+          "tags": [
+            "state management",
+            "global state"
+          ]
+        },
+        {
+          "front": "What is the Context API?",
+          "back": "The Context API allows for easier state management by providing a way to pass data through the component tree without props.",
+          "tags": [
+            "state management",
+            "Context API"
+          ]
+        },
+        {
+          "front": "What are state management libraries?",
+          "back": "State management libraries like Redux help manage application state in a predictable way, especially for complex applications.",
+          "tags": [
+            "state management",
+            "libraries"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "API Integration",
+      "cards": [
+        {
+          "front": "What is the Fetch API?",
+          "back": "The Fetch API is an interface that allows web browsers to make network requests, such as fetching data from an API.",
+          "tags": [
+            "API",
+            "Fetch API"
+          ]
+        },
+        {
+          "front": "What is Axios?",
+          "back": "Axios is a promise-based HTTP client for the browser and Node.js, used for making API requests in a simpler way than Fetch.",
+          "tags": [
+            "API",
+            "Axios"
+          ]
+        },
+        {
+          "front": "What does handling asynchronous data mean?",
+          "back": "Handling asynchronous data refers to managing operations that take time to complete, such as fetching data from an API, without blocking the main thread.",
+          "tags": [
+            "asynchronous",
+            "data"
+          ]
+        },
+        {
+          "front": "How to display data in components?",
+          "back": "Data can be displayed in components by setting the fetched data to state and rendering it in the component's return statement.",
+          "tags": [
+            "data display",
+            "React Native"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Performance Optimization",
+      "cards": [
+        {
+          "front": "What are re-renders?",
+          "back": "Re-renders occur when a component's state or props change, causing it to update its UI.",
+          "tags": [
+            "performance",
+            "re-renders"
+          ]
+        },
+        {
+          "front": "What is React.memo?",
+          "back": "React.memo is a higher-order component that optimizes functional components by preventing unnecessary re-renders when the props have not changed.",
+          "tags": [
+            "performance",
+            "React.memo"
+          ]
+        },
+        {
+          "front": "What are performance monitoring tools?",
+          "back": "Performance monitoring tools like React DevTools or Flipper help developers analyze the performance and optimize React Native applications.",
+          "tags": [
+            "performance",
+            "monitoring tools"
+          ]
+        },
+        {
+          "front": "What is FlatList?",
+          "back": "FlatList is a core React Native component optimized for rendering large lists of data efficiently and with good performance.",
+          "tags": [
+            "optimization",
+            "FlatList"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advanced Components and Libraries",
+      "cards": [
+        {
+          "front": "What are popular libraries for React Native?",
+          "back": "Popular libraries include React Native Elements for UI components and React Native Paper for material design components.",
+          "tags": [
+            "libraries",
+            "React Native"
+          ]
+        },
+        {
+          "front": "How to build custom components?",
+          "back": "Custom components can be built by creating a function or class that returns JSX and can accept props for flexibility.",
+          "tags": [
+            "custom components",
+            "React Native"
+          ]
+        },
+        {
+          "front": "What are native modules?",
+          "back": "Native modules are pieces of code written in native languages (like Java/Kotlin or Objective-C/Swift) that can be accessed by JavaScript in React Native.",
+          "tags": [
+            "native modules",
+            "React Native"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Deployment and Maintenance",
+      "cards": [
+        {
+          "front": "How to prepare for production?",
+          "back": "Preparing for production involves optimizing the app, removing debug code, and ensuring proper configurations for deployment.",
+          "tags": [
+            "deployment",
+            "production"
+          ]
+        },
+        {
+          "front": "How to build apps for iOS and Android?",
+          "back": "Apps for iOS and Android can be built using commands like 'npx react-native run-ios' or 'npx react-native run-android' after setting up the environment.",
+          "tags": [
+            "building",
+            "iOS",
+            "Android"
+          ]
+        },
+        {
+          "front": "What are App Store & Play Store submission guidelines?",
+          "back": "Submission guidelines include ensuring app compliance with platform policies, preparing screenshots, and mandatory privacy policies.",
+          "tags": [
+            "deployment",
+            "submission"
+          ]
+        },
+        {
+          "front": "How to manage dependencies in a React Native app?",
+          "back": "Dependencies can be managed through package managers like npm or Yarn, keeping them updated and ensuring compatibility.",
+          "tags": [
+            "maintenance",
+            "dependencies"
+          ]
+        }
+      ]
+    }
+  ]
+}

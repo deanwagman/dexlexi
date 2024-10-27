@@ -1,51 +1,69 @@
 // screens/DeckScreen.js
 import React from "react";
-import { View, Text, FlatList, Button, Box } from "native-base";
+import {
+  ScrollView,
+  View,
+  Center,
+  Text,
+  Button,
+  Box,
+  SafeAreaView,
+  Container,
+  FlatList,
+  Pressable,
+} from "native-base";
 
 import { useRoute } from "@react-navigation/native";
 import { Canvas, Group } from "@shopify/react-native-skia";
-import { decks } from "../../mockData/decks"; // Import the mock decks
+
+import collectionNativeBase from "../../data/collections/collection-React-Native-Base-1730063718899";
 
 import DeckCard from "../../components/DeckCard";
 
 import DeckCover from "../../components/cards/DeckCover";
 
 export default function DeckScreen({ navigation }) {
-  const ShadowCard = ({ index }) => (
-    <Box
-      bg="white"
-      shadow={2}
-      rounded="lg"
-      width="68.9%"
-      height="38vh"
-      style={{
-        position: "absolute",
-        zIndex: index * -1,
-        transform: `translateX(${index * 10}px) translateY(-${index * 10}px)`,
-        filter: `opacity(${1 - index * 0.2}) blur(${
-          index * 2
-        }px) drop-shadow(0 0 ${index * 2}px rgba(0, 0, 0, 0.2))`,
-      }}
-    />
-  );
+  const ShadowCard = ({ index }) =>
+    index < 10 ? (
+      <Box
+        key={index}
+        bg="white"
+        shadow={2}
+        rounded="lg"
+        width="100%"
+        height="600"
+        style={{
+          position: "absolute",
+          zIndex: index * -1,
+          transform: `translateX(${index * 10}px) translateY(-${index * 10}px)`,
+          filter: `opacity(${Math.max(1 - index * 0.2, 0)})`,
+          top: 0,
+          left: 0,
+        }}
+      />
+    ) : null;
 
+  console.table(collectionNativeBase.decks);
+
+  // Flat list of decks
   return (
-    <View style={{ flex: 1, padding: 20 }}>
+    <ScrollView style={{ flex: 1 }}>
       <FlatList
-        data={decks}
-        keyExtractor={(item) => item.id}
+        data={collectionNativeBase.decks}
         renderItem={({ item }) => (
-          <Box key={item.name}>
-            <DeckCover
-              text={item.name}
-              onPress={() => navigation.navigate("Practice")}
-            />
+          <Pressable
+            mx={100}
+            my={100}
+            onPress={() => navigation.navigate("Practice", { deck: item })}
+          >
+            <DeckCover text={item.name} style={{ cursor: "pointer" }} />
             {item.cards.map((card, index) => (
               <ShadowCard key={index} index={index} />
             ))}
-          </Box>
+          </Pressable>
         )}
+        keyExtractor={(item) => item.name}
       />
-    </View>
+    </ScrollView>
   );
 }

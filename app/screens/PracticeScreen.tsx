@@ -2,7 +2,7 @@
 import React, { useState, useReducer } from "react";
 import { View, Pressable } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { Text, Button, Box, Row, Spacer, Stack } from "native-base";
+import { Text, Button, Box, Row, Spacer, Stack, ScrollView } from "native-base";
 
 import useSpacedRepetition from "../hooks/useSpacedRepetition";
 
@@ -12,6 +12,7 @@ import deck from "../../data/decks/deck-essential-spanish-vocabulary-for-beginne
 
 const PracticeScreen = () => {
   const route = useRoute();
+  const deck = route.params.deck;
 
   const [state, dispatch] = useReducer(
     (state, action) => {
@@ -47,7 +48,7 @@ const PracticeScreen = () => {
   console.log({ state });
 
   return (
-    <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <ScrollView p={60} style={{ flex: 1 }}>
       {/* {currentCard && (
         <DeckCard front={currentCard.front} back={currentCard.back} />
       )} */}
@@ -59,15 +60,16 @@ const PracticeScreen = () => {
           <Text>Incorrect: {state.incorrect}</Text>
         </Stack>
       ) : (
-        <Stack>
+        <Stack flex={1}>
           <Box
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+
               width: "100%",
-              height: "38vh",
-              perspective: 1000,
+              flex: 1,
+              perspective: 10000,
             }}
           >
             {deck.cards.map((card, index) => {
@@ -91,11 +93,11 @@ const PracticeScreen = () => {
                       transformStyle: "preserve-3d",
                       transition: "transform 0.5s",
                       width: "100%",
-                      height: "38vh",
+                      height: 600,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      position: "absolute",
+                      position: "relative",
                       transform: `translateX(0) translateY(0)`,
                       zIndex: 1,
                       top: 0,
@@ -113,7 +115,7 @@ const PracticeScreen = () => {
                       transformStyle: "preserve-3d",
                       transition: "transform 0.5s",
                       width: "100%",
-                      height: "38vh",
+                      height: 600,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
@@ -139,7 +141,7 @@ const PracticeScreen = () => {
                     transformStyle: "preserve-3d",
                     transition: "transform 0.5s",
                     width: "100%",
-                    height: "38vh",
+                    height: 600,
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -163,7 +165,7 @@ const PracticeScreen = () => {
           </Row>
         </Stack>
       )}
-    </Box>
+    </ScrollView>
   );
 };
 

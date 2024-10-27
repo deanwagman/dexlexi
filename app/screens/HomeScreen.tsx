@@ -22,9 +22,9 @@ export default function HomeScreen({ navigation }) {
         <Button onPress={() => navigation.navigate("Practice")}>
           Practice
         </Button>
-        <Spacer height={10} />
+        <Spacer height={20} />
         <Button onPress={() => navigation.navigate("Decks")}>Decks</Button>
-        <Spacer height={10} />
+        <Spacer height={20} />
         <Button onPress={() => navigation.navigate("Settings")}>
           Settings
         </Button>

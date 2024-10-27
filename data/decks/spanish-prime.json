@@ -1,0 +1,221 @@
+{
+    "name": "Spanish Language Learning Collection",
+    "cards": [
+        {
+            "front": "What is the Spanish alphabet?",
+            "back": "The Spanish alphabet consists of 27 letters: A, B, C, D, E, F, G, H, I, J, K, L, M, N, Ñ, O, P, Q, R, S, T, U, V, W, X, Y, Z.",
+            "tags": [
+                "Basics",
+                "Alphabet"
+            ]
+        },
+        {
+            "front": "How do you greet someone in Spanish?",
+            "back": "You can say 'Hola' for 'Hello'.",
+            "tags": [
+                "Basics",
+                "Greetings"
+            ]
+        },
+        {
+            "front": "How do you say 'thank you' in Spanish?",
+            "back": "'Gracias' means 'thank you' in Spanish.",
+            "tags": [
+                "Basics",
+                "Common Phrases"
+            ]
+        },
+        {
+            "front": "What are the numbers from 1 to 10 in Spanish?",
+            "back": "1- Uno, 2- Dos, 3- Tres, 4- Cuatro, 5- Cinco, 6- Seis, 7- Siete, 8- Ocho, 9- Nueve, 10- Diez.",
+            "tags": [
+                "Basics",
+                "Numbers"
+            ]
+        },
+        {
+            "front": "List the primary colors in Spanish.",
+            "back": "Rojo (Red), Azul (Blue), Amarillo (Yellow).",
+            "tags": [
+                "Basics",
+                "Colors"
+            ]
+        },
+        {
+            "front": "What is 'Monday' in Spanish?",
+            "back": "'Lunes' is the Spanish word for 'Monday'.",
+            "tags": [
+                "Basics",
+                "Days of the Week"
+            ]
+        },
+        {
+            "front": "Translate 'Please' to Spanish.",
+            "back": "'Por favor' is the translation of 'Please'.",
+            "tags": [
+                "Basics",
+                "Common Phrases"
+            ]
+        },
+        {
+            "front": "Translate 'I am happy' into Spanish.",
+            "back": "'Estoy feliz' means 'I am happy' in Spanish.",
+            "tags": [
+                "Basic Vocabulary",
+                "Simple Sentences"
+            ]
+        },
+        {
+            "front": "What is the Spanish word for 'dog'?",
+            "back": "'Perro' is the Spanish word for 'dog'.",
+            "tags": [
+                "Basic Vocabulary",
+                "Nouns"
+            ]
+        },
+        {
+            "front": "How do you say 'large' in Spanish?",
+            "back": "'Grande' translates to 'large' in Spanish.",
+            "tags": [
+                "Basic Vocabulary",
+                "Adjectives"
+            ]
+        },
+        {
+            "front": "How do you ask 'Where are you?' in Spanish?",
+            "back": "'¿Dónde estás?' is 'Where are you?' in Spanish.",
+            "tags": [
+                "Basic Grammar",
+                "Questions"
+            ]
+        },
+        {
+            "front": "Form a simple sentence: 'I eat an apple.'",
+            "back": "'Yo como una manzana.' means 'I eat an apple.' in Spanish.",
+            "tags": [
+                "Basic Sentence Structure",
+                "Simple Sentences"
+            ]
+        },
+        {
+            "front": "Translate 'The cat is black.' into Spanish.",
+            "back": "'El gato es negro.'",
+            "tags": [
+                "Basic Vocabulary",
+                "Describing"
+            ]
+        },
+        {
+            "front": "What is the present tense of 'to be' (ser) for 'I'?",
+            "back": "'Yo soy' is the present tense for 'I am' (to be).",
+            "tags": [
+                "Basic Verb Conjugation",
+                "Common Verbs"
+            ]
+        },
+        {
+            "front": "What is a negative sentence? Give an example in Spanish.",
+            "back": "A negative sentence states that something is not the case. Example: 'No tengo dinero.' (I don't have money.)",
+            "tags": [
+                "Grammar",
+                "Negative Sentences"
+            ]
+        },
+        {
+            "front": "Translate 'Where is the bank?'",
+            "back": "'¿Dónde está el banco?' means 'Where is the bank?' in Spanish.",
+            "tags": [
+                "Everyday Conversations",
+                "Asking for Directions"
+            ]
+        },
+        {
+            "front": "What is the preterite form of 'to go' (ir) for 'we'?",
+            "back": "'Nosotros fuimos' means 'We went.'",
+            "tags": [
+                "Grammar",
+                "Past Tense"
+            ]
+        },
+        {
+            "front": "How do you describe someone’s hair color?",
+            "back": "You can say 'Ella tiene pelo rubio' (She has blonde hair).",
+            "tags": [
+                "Describing",
+                "Adjectives"
+            ]
+        },
+        {
+            "front": "What is an idiomatic expression in Spanish?",
+            "back": "'Echar agua al mar' (to throw water into the sea) means to do something pointless.",
+            "tags": [
+                "Idiomatic Expressions",
+                "Language Use"
+            ]
+        },
+        {
+            "front": "Translate: 'I used to play soccer.'",
+            "back": "'Yo solía jugar al fútbol.'",
+            "tags": [
+                "Grammar",
+                "Imperfect Tense"
+            ]
+        },
+        {
+            "front": "What is the future tense form of 'to have' (tener) for 'he'?",
+            "back": "'Él tendrá' means 'He will have.'",
+            "tags": [
+                "Grammar",
+                "Future Tense"
+            ]
+        },
+        {
+            "front": "Translate 'I think that the movie is interesting.'",
+            "back": "'Creo que la película es interesante.'",
+            "tags": [
+                "Nuanced Vocabulary",
+                "Opinions"
+            ]
+        },
+        {
+            "front": "What is a common phrase for asking for a bill in a restaurant?",
+            "back": "'La cuenta, por favor.' means 'The bill, please.'",
+            "tags": [
+                "Everyday Conversations",
+                "Dining"
+            ]
+        },
+        {
+            "front": "What does the subjunctive mood express?",
+            "back": "The subjunctive mood expresses desires, doubts, wishes, or hypothetical situations.",
+            "tags": [
+                "Grammar",
+                "Subjunctive Mood"
+            ]
+        },
+        {
+            "front": "Translate the phrase 'They are my friends.' into Spanish.",
+            "back": "'Ellos son mis amigos.'",
+            "tags": [
+                "Intermediate Vocabulary",
+                "Sentence Structure"
+            ]
+        },
+        {
+            "front": "What is the Spanish word for 'emotion'?",
+            "back": "'Emoción' means 'emotion' in Spanish.",
+            "tags": [
+                "Nuanced Vocabulary",
+                "Emotions"
+            ]
+        },
+        {
+            "front": "Translate 'I would like to travel to Spain.'",
+            "back": "'Me gustaría viajar a España.'",
+            "tags": [
+                "Intermediate Vocabulary",
+                "Wishes"
+            ]
+        }
+    ]
+}
