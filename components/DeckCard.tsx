@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { View, FlatList } from "react-native";
 import { Box, Text, Center } from "native-base";
 
+import type { Deck } from "./cards/types";
+
 // Example deck data
 const decks = [
   { id: "1", title: "Deck 1", icon: "⚙️" },
@@ -10,7 +12,7 @@ const decks = [
   // Add more deck data
 ];
 
-const DeckCard = ({ front, back }) => {
+const DeckCard = ({ front, back, style }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -22,6 +24,7 @@ const DeckCard = ({ front, back }) => {
         width: "100%",
         height: "38vh",
         perspective: 1000,
+        ...style,
       }}
     >
       <Box
@@ -43,7 +46,7 @@ const DeckCard = ({ front, back }) => {
           bg="white"
           shadow={2}
           rounded="lg"
-          width="68.9%"
+          width="100%"
           height="38vh"
           p={4}
           m={2}
@@ -69,7 +72,7 @@ const DeckCard = ({ front, back }) => {
           bg="white"
           shadow={2}
           rounded="lg"
-          width="68.9%"
+          width="100%"
           height="38vh"
           p={4}
           m={2}

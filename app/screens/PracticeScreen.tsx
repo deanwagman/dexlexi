@@ -44,11 +44,13 @@ const PracticeScreen = () => {
   const markIncorrect = () => dispatch({ type: "INCORRECT" });
   const currentCard = deck.cards[state.currentCardIndex];
 
+  console.log({ state });
+
   return (
     <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      {currentCard && (
+      {/* {currentCard && (
         <DeckCard front={currentCard.front} back={currentCard.back} />
-      )}
+      )} */}
       {state.completed ? (
         <Stack>
           <Text>Practice completed</Text>
@@ -57,12 +59,109 @@ const PracticeScreen = () => {
           <Text>Incorrect: {state.incorrect}</Text>
         </Stack>
       ) : (
-        <Row padding={10}>
-          {deck.cards}
-          <Button onPress={markIncorrect}>Incorrect</Button>
-          <Spacer width={100} />
-          <Button onPress={markCorrect}>Correct</Button>
-        </Row>
+        <Stack>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              height: "38vh",
+              perspective: 1000,
+            }}
+          >
+            {deck.cards.map((card, index) => {
+              const isCurrentCard = index === state.currentCardIndex;
+              const isPreviousCard = index < state.currentCardIndex;
+              const isNextCard = index > state.currentCardIndex;
+              const isAbsoluteNextCard = index === state.currentCardIndex + 1;
+              const offsetIndex = index - state.currentCardIndex;
+
+              if (isPreviousCard) {
+                return <Box key={`empty-${index}`} />;
+              }
+
+              if (isCurrentCard) {
+                return (
+                  <DeckCard
+                    key={index}
+                    front={card.front}
+                    back={card.back}
+                    style={{
+                      transformStyle: "preserve-3d",
+                      transition: "transform 0.5s",
+                      width: "100%",
+                      height: "38vh",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      transform: `translateX(0) translateY(0)`,
+                      zIndex: 1,
+                      top: 0,
+                      left: 0,
+                    }}
+                  />
+                );
+              }
+
+              if (isNextCard) {
+                return (
+                  <DeckCard
+                    key={index}
+                    style={{
+                      transformStyle: "preserve-3d",
+                      transition: "transform 0.5s",
+                      width: "100%",
+                      height: "38vh",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      position: "absolute",
+                      zIndex: -1 * index,
+                      top: 0,
+                      left: 0,
+                      transform: `translateX(${
+                        offsetIndex * 10
+                      }px) translateY(-${offsetIndex * 10}px)`,
+                    }}
+                  />
+                );
+              }
+
+              return (
+                <DeckCard
+                  key={index}
+                  // Don't display the front of the card if it's not the current card
+                  front={index === state.currentCardIndex ? card.front : ""}
+                  back={index === state.currentCardIndex ? card.back : ""}
+                  style={{
+                    transformStyle: "preserve-3d",
+                    transition: "transform 0.5s",
+                    width: "100%",
+                    height: "38vh",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "absolute",
+                    zIndex: index * -1,
+                    transform: `translateX(${index * 10}px) translateY(-${
+                      index * 10
+                    }px)`,
+                    filter: `opacity(${Math.max(1 - index * 0.2, 0)})`,
+                    top: 0,
+                    left: 0,
+                  }}
+                />
+              );
+            })}
+          </Box>
+          <Row padding={10}>
+            <Button onPress={markIncorrect}>Incorrect</Button>
+            <Spacer width={100} />
+            <Button onPress={markCorrect}>Correct</Button>
+          </Row>
+        </Stack>
       )}
     </Box>
   );

@@ -41,7 +41,7 @@ export default function DeckScreen({ navigation }) {
               onPress={() => navigation.navigate("Practice")}
             />
             {item.cards.map((card, index) => (
-              <ShadowCard index={index} />
+              <ShadowCard key={index} index={index} />
             ))}
           </Box>
         )}
