@@ -46,9 +46,11 @@ const main = async () => {
   });
 
   const deckShema = z.object({
+    id: z.string(),
     name: z.string(),
     cards: z.array(
       z.object({
+        id: z.string(),
         front: z.string(),
         back: z.string(),
         tags: z.array(z.string()),
@@ -57,6 +59,7 @@ const main = async () => {
   });
 
   const collectionShema = z.object({
+    id: z.string(),
     subject: z.string(),
     numberOfDecks: z.number(),
     decks: z.array(deckShema),

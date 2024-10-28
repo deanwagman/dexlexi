@@ -1,0 +1,291 @@
+{
+  "id": "ui-design-collection",
+  "subject": "User Interface Design Theory",
+  "numberOfDecks": 6,
+  "decks": [
+    {
+      "id": "deck-1",
+      "name": "Introduction to User Interface Design",
+      "cards": [
+        {
+          "id": "card-1",
+          "front": "User Interface (UI)",
+          "back": "The point of interaction between a user and a digital device or application.",
+          "tags": [
+            "UI"
+          ]
+        },
+        {
+          "id": "card-2",
+          "front": "User Experience (UX)",
+          "back": "The overall experience a user has with a product, particularly in terms of how enjoyable or easy it is to use.",
+          "tags": [
+            "UX"
+          ]
+        },
+        {
+          "id": "card-3",
+          "front": "Visibility",
+          "back": "Design principle that ensures vital functions are visible, making them easier to discover and use.",
+          "tags": [
+            "principles",
+            "visibility"
+          ]
+        },
+        {
+          "id": "card-4",
+          "front": "Feedback",
+          "back": "The information communicated to a user about operations that have been initiated, indicating success or failure.",
+          "tags": [
+            "principles",
+            "feedback"
+          ]
+        },
+        {
+          "id": "card-5",
+          "front": "Common UI Components",
+          "back": "Basic elements used in user interfaces, such as buttons, forms, input fields, and navigation bars.",
+          "tags": [
+            "components"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-2",
+      "name": "Design Principles and Best Practices",
+      "cards": [
+        {
+          "id": "card-6",
+          "front": "Usability",
+          "back": "The ease with which users can learn and use a product to achieve their goals.",
+          "tags": [
+            "usability"
+          ]
+        },
+        {
+          "id": "card-7",
+          "front": "Accessibility",
+          "back": "The practice of making products usable for people of all abilities and disabilities.",
+          "tags": [
+            "accessibility"
+          ]
+        },
+        {
+          "id": "card-8",
+          "front": "Personas",
+          "back": "Fictional characters created based on user research to represent different user types for design decisions.",
+          "tags": [
+            "user research"
+          ]
+        },
+        {
+          "id": "card-9",
+          "front": "Affordances",
+          "back": "A property of an object that indicates how it can be used, such as buttons that look clickable.",
+          "tags": [
+            "design principles"
+          ]
+        },
+        {
+          "id": "card-10",
+          "front": "Visual Hierarchy",
+          "back": "The arrangement of elements in a way that implies importance or order, guiding the user’s attention.",
+          "tags": [
+            "composition",
+            "visual hierarchy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-3",
+      "name": "Tools and Techniques for UI Design",
+      "cards": [
+        {
+          "id": "card-11",
+          "front": "Wireframing",
+          "back": "A low-fidelity representation of a user interface, used to outline the structure and layout.",
+          "tags": [
+            "wireframing"
+          ]
+        },
+        {
+          "id": "card-12",
+          "front": "Prototyping",
+          "back": "Creating a preliminary version of a product to test and validate design concepts.",
+          "tags": [
+            "prototyping"
+          ]
+        },
+        {
+          "id": "card-13",
+          "front": "Figma",
+          "back": "A collaborative web-based UI design tool used for designing and prototyping interfaces.",
+          "tags": [
+            "tools",
+            "Figma"
+          ]
+        },
+        {
+          "id": "card-14",
+          "front": "Usability Testing",
+          "back": "A method of evaluating a product by testing it with real users to gather feedback on their experience.",
+          "tags": [
+            "usability",
+            "testing"
+          ]
+        },
+        {
+          "id": "card-15",
+          "front": "Responsive Design",
+          "back": "Design that adapts to different screen sizes and orientations, providing an optimal experience across devices.",
+          "tags": [
+            "responsive design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-4",
+      "name": "Advanced UI Design Concepts",
+      "cards": [
+        {
+          "id": "card-16",
+          "front": "Cognitive Load",
+          "back": "The total amount of mental effort being used in the working memory, which can impact usability.",
+          "tags": [
+            "cognitive load"
+          ]
+        },
+        {
+          "id": "card-17",
+          "front": "Progressive Disclosure",
+          "back": "A design principle that helps manage complexity by only showing users what they need when they need it.",
+          "tags": [
+            "information architecture"
+          ]
+        },
+        {
+          "id": "card-18",
+          "front": "Color Theory",
+          "back": "A body of practical guidance to color mixing and the visual effects of a specific color combination.",
+          "tags": [
+            "color theory"
+          ]
+        },
+        {
+          "id": "card-19",
+          "front": "Typography",
+          "back": "The art and technique of arranging type to make written language legible, readable, and appealing.",
+          "tags": [
+            "typography"
+          ]
+        },
+        {
+          "id": "card-20",
+          "front": "Adaptive Design",
+          "back": "A design approach that creates multiple layouts for different screen sizes, differing from responsive design.",
+          "tags": [
+            "adaptive design"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-5",
+      "name": "Interaction Design and User Flows",
+      "cards": [
+        {
+          "id": "card-21",
+          "front": "User Flow",
+          "back": "The path users follow to complete tasks within a digital product, illustrating their interactions.",
+          "tags": [
+            "user flow"
+          ]
+        },
+        {
+          "id": "card-22",
+          "front": "Micro-interactions",
+          "back": "Small, contained product moments that revolve around a single use case.",
+          "tags": [
+            "interaction design"
+          ]
+        },
+        {
+          "id": "card-23",
+          "front": "Feedback Loops",
+          "back": "Interactions that allow users to receive inputs about their actions, improving engagement and usability.",
+          "tags": [
+            "interaction design"
+          ]
+        },
+        {
+          "id": "card-24",
+          "front": "Animation in UI",
+          "back": "The use of movement to enhance the user experience, which can guide users and provide context.",
+          "tags": [
+            "animation",
+            "interaction design"
+          ]
+        },
+        {
+          "id": "card-25",
+          "front": "WCAG",
+          "back": "Web Content Accessibility Guidelines; a set of guidelines for making web content more accessible.",
+          "tags": [
+            "accessibility",
+            "WCAG"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-6",
+      "name": "Emerging Trends and Future Directions in UI Design",
+      "cards": [
+        {
+          "id": "card-26",
+          "front": "Voice User Interfaces (VUIs)",
+          "back": "Interfaces that allow users to interact with a system through voice commands.",
+          "tags": [
+            "VUI"
+          ]
+        },
+        {
+          "id": "card-27",
+          "front": "Artificial Intelligence in UI",
+          "back": "The integration of AI technologies to enhance user interactions and personalize experiences.",
+          "tags": [
+            "AI",
+            "trends"
+          ]
+        },
+        {
+          "id": "card-28",
+          "front": "Augmented Reality (AR)",
+          "back": "An interactive experience that enhances the real world with digital information.",
+          "tags": [
+            "AR"
+          ]
+        },
+        {
+          "id": "card-29",
+          "front": "Data-Driven Design",
+          "back": "Design powered by analysis of user data to inform and improve user experience.",
+          "tags": [
+            "data-driven design"
+          ]
+        },
+        {
+          "id": "card-30",
+          "front": "Ethical UI Design",
+          "back": "The consideration of moral principles in the design process, focusing on user privacy and security.",
+          "tags": [
+            "ethics"
+          ]
+        }
+      ]
+    }
+  ]
+}

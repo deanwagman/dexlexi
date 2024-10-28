@@ -1,0 +1,368 @@
+{
+  "subject": "Expo Application Framework",
+  "numberOfDecks": 10,
+  "decks": [
+    {
+      "name": "Introduction to Expo",
+      "cards": [
+        {
+          "front": "What is Expo?",
+          "back": "A framework and platform for universal React applications that allows developers to build native apps using JavaScript and React.",
+          "tags": [
+            "Introduction",
+            "Basics"
+          ]
+        },
+        {
+          "front": "History and evolution of Expo",
+          "back": "Expo was launched to simplify the development of cross-platform mobile applications using React Native by providing tools and libraries for rapid development.",
+          "tags": [
+            "History",
+            "Evolution"
+          ]
+        },
+        {
+          "front": "Benefits of using Expo",
+          "back": "Expo offers advantages like faster development, built-in components, over-the-air updates, and easy access to native APIs without needing to write custom native code.",
+          "tags": [
+            "Benefits",
+            "Overview"
+          ]
+        },
+        {
+          "front": "Overview of the Expo ecosystem",
+          "back": "The Expo ecosystem includes Expo CLI, Expo Go, Expo SDK, and a variety of tools and third-party libraries designed to enhance mobile app development.",
+          "tags": [
+            "Ecosystem",
+            "Overview"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Setting Up the Environment",
+      "cards": [
+        {
+          "front": "Installing Node.js and NPM",
+          "back": "Node.js is a JavaScript runtime that allows developers to run JavaScript on the server side, and NPM is the package manager for Node.js used to install libraries and tools.",
+          "tags": [
+            "Environment Setup",
+            "Node.js"
+          ]
+        },
+        {
+          "front": "Installing Expo CLI",
+          "back": "Expo CLI (Command Line Interface) is a tool that helps developers create, build, and manage Expo projects easily from the terminal.",
+          "tags": [
+            "CLI",
+            "Installation"
+          ]
+        },
+        {
+          "front": "Creating a new Expo project",
+          "back": "To create a new Expo project, you can use the command 'expo init <project-name>' in the terminal, which sets up the project structure and configuration files.",
+          "tags": [
+            "Project Creation",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Running the project on Expo Go",
+          "back": "You can run your Expo project on a mobile device using the Expo Go app, enabling live reloading and testing on real devices without recompilation.",
+          "tags": [
+            "Testing",
+            "Expo Go"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Understanding Expo Structure",
+      "cards": [
+        {
+          "front": "Directory structure of a new project",
+          "back": "The typical structure includes folders like 'assets' for images and fonts, 'screens' for view components, and configuration files like 'app.json'.",
+          "tags": [
+            "Structure",
+            "Overview"
+          ]
+        },
+        {
+          "front": "Project configuration files (app.json, package.json)",
+          "back": "'app.json' defines app properties and configurations, while 'package.json' contains dependencies and scripts for the project.",
+          "tags": [
+            "Configuration",
+            "Files"
+          ]
+        },
+        {
+          "front": "Key components of the Expo project",
+          "back": "Key components include the entry file (usually App.js), assets folder, and configuration files to manage settings and dependencies.",
+          "tags": [
+            "Components",
+            "Structure"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Basic Components and APIs",
+      "cards": [
+        {
+          "front": "Overview of core React Native components",
+          "back": "Core components include View, Text, Image, ScrollView, and others that form the building blocks of a React Native application.",
+          "tags": [
+            "Components",
+            "React Native"
+          ]
+        },
+        {
+          "front": "Introduction to Expo-specific components (e.g., ImagePicker)",
+          "back": "Expo provides additional components like ImagePicker for selecting images from the device's media library or camera.",
+          "tags": [
+            "Expo Components",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Using styles in Expo with StyleSheet",
+          "back": "StyleSheet is used to define styles in Expo applications, similar to inline styles in React, but optimized for performance.",
+          "tags": [
+            "Styling",
+            "Expo"
+          ]
+        },
+        {
+          "front": "Interactivity with Touchable components",
+          "back": "Touchable components like TouchableOpacity and TouchableHighlight allow users to create interactive elements that respond to touch events.",
+          "tags": [
+            "Interactivity",
+            "Components"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Working with Navigation",
+      "cards": [
+        {
+          "front": "Introduction to React Navigation",
+          "back": "React Navigation is a popular library for implementing navigation in React Native apps, making it easy to navigate between screens.",
+          "tags": [
+            "Navigation",
+            "React Navigation"
+          ]
+        },
+        {
+          "front": "Setting up a navigation stack",
+          "back": "Create a stack navigator using createStackNavigator and wrap it in a NavigationContainer to manage navigation history.",
+          "tags": [
+            "Stack Navigation",
+            "Setup"
+          ]
+        },
+        {
+          "front": "Navigating between screens",
+          "back": "Screens can be navigated programmatically using navigation.navigate('ScreenName') or through user interactions with buttons.",
+          "tags": [
+            "Navigation",
+            "Screens"
+          ]
+        },
+        {
+          "front": "Passing data between screens",
+          "back": "Data can be passed between screens using route parameters, accessed via navigation.navigate and the route object.",
+          "tags": [
+            "Data Passing",
+            "Screens"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accessing Device Features",
+      "cards": [
+        {
+          "front": "Overview of Expo APIs (Camera, Location, Notifications)",
+          "back": "Expo provides APIs to access device features like the camera for capturing images, location services for geolocation, and notifications for user alerts.",
+          "tags": [
+            "APIs",
+            "Device Features"
+          ]
+        },
+        {
+          "front": "Implementing the Camera API",
+          "back": "Use the Camera component from Expo to take photos or record videos within your app, requiring permissions for accessing the camera.",
+          "tags": [
+            "Camera API",
+            "Implementation"
+          ]
+        },
+        {
+          "front": "Using the Location API for geolocation features",
+          "back": "Expo Location API allows apps to retrieve the device's current location, monitor location changes, and request permissions.",
+          "tags": [
+            "Location API",
+            "Geolocation"
+          ]
+        },
+        {
+          "front": "Sending push notifications with Expo",
+          "back": "Expo provides a simple way to send push notifications using the Notifications API, allowing you to inform users of updates or messages.",
+          "tags": [
+            "Push Notifications",
+            "Expo"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Media and Assets Management",
+      "cards": [
+        {
+          "front": "Loading images and fonts in Expo",
+          "back": "Expo allows you to preload images and custom fonts using Asset and Font modules to ensure they are available before rendering components.",
+          "tags": [
+            "Assets",
+            "Loading"
+          ]
+        },
+        {
+          "front": "Managing audio/video playback",
+          "back": "Use the Audio and Video components from the Expo AV package to play media files in your app with controls and callbacks.",
+          "tags": [
+            "Media",
+            "Playback"
+          ]
+        },
+        {
+          "front": "Using the FileSystem API",
+          "back": "The FileSystem API allows reading, writing, and managing files on the device's storage, enabling more complex data handling.",
+          "tags": [
+            "FileSystem",
+            "Management"
+          ]
+        },
+        {
+          "front": "Accessing device storage to save/retrieve files",
+          "back": "In Expo, access device storage is facilitated via the FileSystem API to save and retrieve user-generated files like images or documents.",
+          "tags": [
+            "Device Storage",
+            "File Handling"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "State Management and Data Handling",
+      "cards": [
+        {
+          "front": "Understand local component state vs. global state",
+          "back": "Local state is managed within a component using useState, while global state is shared across components and can be managed with Context or Redux.",
+          "tags": [
+            "State Management",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Introduction to Context API",
+          "back": "The Context API allows for the sharing of values globally across a React app without passing props at every level, simplifying state management.",
+          "tags": [
+            "Context API",
+            "Overview"
+          ]
+        },
+        {
+          "front": "Using libraries like Redux with Expo",
+          "back": "Redux can be integrated into Expo apps for complex state management needs, providing a centralized store and predictable state changes.",
+          "tags": [
+            "Redux",
+            "Integration"
+          ]
+        },
+        {
+          "front": "Persisting data with AsyncStorage",
+          "back": "AsyncStorage allows you to store key-value pairs locally on the device, making it useful for persisting user settings or session data.",
+          "tags": [
+            "Data Persistence",
+            "AsyncStorage"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Testing and Debugging",
+      "cards": [
+        {
+          "front": "Setting up unit tests with Jest",
+          "back": "Jest is a testing framework that can be integrated into Expo projects to write and run unit tests for components and functions.",
+          "tags": [
+            "Testing",
+            "Jest"
+          ]
+        },
+        {
+          "front": "Testing components with React Testing Library",
+          "back": "React Testing Library provides utilities to test React components by simulating user interaction and verifying outputs.",
+          "tags": [
+            "Testing",
+            "React Testing Library"
+          ]
+        },
+        {
+          "front": "Debugging techniques in Expo",
+          "back": "Use console logging, remote debugging tools, and of course, the React DevTools and Expo's built-in developer tools to debug your app.",
+          "tags": [
+            "Debugging",
+            "Techniques"
+          ]
+        },
+        {
+          "front": "Common issues and how to resolve them",
+          "back": "Familiarize yourself with common Expo issues like package version conflicts, environment setup problems, and how to troubleshoot or seek help.",
+          "tags": [
+            "Troubleshooting",
+            "Common Issues"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Deployment and Advanced Topics",
+      "cards": [
+        {
+          "front": "Building and deploying Expo apps to iOS/Android",
+          "back": "Use Expo build services or EAS Build to compile and deploy your apps to app stores for iOS and Android without ejecting from Expo.",
+          "tags": [
+            "Deployment",
+            "Building"
+          ]
+        },
+        {
+          "front": "Overview of Expo EAS (Expo Application Services)",
+          "back": "EAS provides various services that enhance Expo app development, including build, submit, and update services for smoother workflows.",
+          "tags": [
+            "EAS",
+            "Overview"
+          ]
+        },
+        {
+          "front": "Configuring app permissions",
+          "back": "Adjust app permissions by modifying app.json to request access to device capabilities like camera or location.",
+          "tags": [
+            "Permissions",
+            "Configuration"
+          ]
+        },
+        {
+          "front": "Exploring advanced Expo features (custom development clients)",
+          "back": "Advanced features include creating custom development clients to extend Expo's capabilities for unique requirements, allowing deeper integrations.",
+          "tags": [
+            "Advanced Features",
+            "Custom Clients"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,12 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -11,27 +18,33 @@ import SettingsScreen from "./screens/SettingsScreen";
 
 import theme from "../components/theme";
 
+// Create a client
+const queryClient = new QueryClient();
+
+// Create a stack navigator
 const Stack = createStackNavigator();
 
 function MainStack() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <NativeBaseProvider theme={theme} style={{ flex: 1 }}>
-        <Stack.Navigator style={{ flex: 1 }}>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen
-            name="Practice"
-            component={PracticeScreen}
-            style={{ flex: 1 }}
-          />
-          <Stack.Screen
-            name="Decks"
-            component={DeckScreen}
-            style={{ flex: 1 }}
-          />
-          <Stack.Screen name="Settings" component={SettingsScreen} />
-        </Stack.Navigator>
-      </NativeBaseProvider>
+      <QueryClientProvider client={queryClient}>
+        <NativeBaseProvider theme={theme} style={{ flex: 1 }}>
+          <Stack.Navigator style={{ flex: 1 }}>
+            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen
+              name="Practice"
+              component={PracticeScreen}
+              style={{ flex: 1 }}
+            />
+            <Stack.Screen
+              name="Decks"
+              component={DeckScreen}
+              style={{ flex: 1 }}
+            />
+            <Stack.Screen name="Settings" component={SettingsScreen} />
+          </Stack.Navigator>
+        </NativeBaseProvider>
+      </QueryClientProvider>
     </SafeAreaView>
   );
 }

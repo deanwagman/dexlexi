@@ -1,18 +1,20 @@
 // screens/PracticeScreen.js
-import React, { useState, useReducer } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { View, Pressable } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { Text, Button, Box, Row, Spacer, Stack, ScrollView } from "native-base";
+
+import useStorage from "../../hooks/useStorage";
 
 import useSpacedRepetition from "../hooks/useSpacedRepetition";
 
 import DeckCard from "../../components/DeckCard";
 
-import deck from "../../data/decks/deck-essential-spanish-vocabulary-for-beginners-1729550475609.json";
-
 const PracticeScreen = () => {
   const route = useRoute();
   const deck = route.params.deck;
+
+  const { setItem, getItem } = useStorage();
 
   const [state, dispatch] = useReducer(
     (state, action) => {
@@ -21,6 +23,10 @@ const PracticeScreen = () => {
           return {
             ...state,
             correct: state.correct + 1,
+            correctCards: [
+              ...state.correctCards,
+              deck.cards[state.currentCardIndex],
+            ],
             currentCardIndex: state.currentCardIndex + 1,
             completed: state.currentCardIndex + 1 === deck.cards.length,
           };
@@ -28,6 +34,10 @@ const PracticeScreen = () => {
           return {
             ...state,
             incorrect: state.incorrect + 1,
+            incorrectCards: [
+              ...state.incorrectCards,
+              deck.cards[state.currentCardIndex],
+            ],
             currentCardIndex: state.currentCardIndex + 1,
             completed: state.currentCardIndex + 1 === deck.cards.length,
           };
@@ -38,6 +48,8 @@ const PracticeScreen = () => {
     {
       correct: 0,
       incorrect: 0,
+      correctCards: [],
+      incorrectCards: [],
       currentCardIndex: 0,
     }
   );
@@ -45,7 +57,22 @@ const PracticeScreen = () => {
   const markIncorrect = () => dispatch({ type: "INCORRECT" });
   const currentCard = deck.cards[state.currentCardIndex];
 
-  console.log({ state });
+  const saveProgress = async () => {
+    const progress = {
+      correct: state.correct,
+      incorrect: state.incorrect,
+      correctCards: state.correctCards,
+      incorrectCards: state.incorrectCards,
+    };
+
+    console.log("Saving progress", progress);
+
+    await setItem(`progress-${deck.id}`, progress);
+  };
+
+  useEffect(() => {
+    state.completed && saveProgress();
+  }, [state.completed]);
 
   return (
     <ScrollView p={60} style={{ flex: 1 }}>
