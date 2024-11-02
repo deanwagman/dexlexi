@@ -16,15 +16,21 @@ export default function HomeScreen({ navigation }) {
         width: "100%",
         alignItems: "center",
         justifyContent: "center",
+        minHeight: "100vh",
       }}
     >
-      <Stack>
+      <Stack
+        space={4}
+        alignItems="center"
+        justifyContent="center"
+        style={{ width: "100%" }}
+      >
         <Button onPress={() => navigation.navigate("Practice")}>
           Practice
         </Button>
-        <Spacer height={20} />
+        <Spacer height={1} />
         <Button onPress={() => navigation.navigate("Decks")}>Decks</Button>
-        <Spacer height={20} />
+        <Spacer height={1} />
         <Button onPress={() => navigation.navigate("Settings")}>
           Settings
         </Button>

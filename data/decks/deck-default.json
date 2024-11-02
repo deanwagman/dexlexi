@@ -1,0 +1,95 @@
+{
+    "name": "Ancient Plants Lexicon Flashcard Deck",
+    "cards": [
+        {
+            "front": "What is a gymnosperm?",
+            "back": "A gymnosperm is a seed-producing plant that has seeds unprotected by an ovary or fruit. Examples include conifers like pine trees.",
+            "tags": [
+                "Gymnosperms",
+                "Botany",
+                "Ancient Plants"
+            ]
+        },
+        {
+            "front": "Define 'bryophytes'.",
+            "back": "Bryophytes are non-vascular plants that include mosses, liverworts, and hornworts. They are considered some of the oldest land plants.",
+            "tags": [
+                "Bryophytes",
+                "Evolution",
+                "Plants"
+            ]
+        },
+        {
+            "front": "What period is known for the emergence of the first vascular plants?",
+            "back": "The Silurian Period is known for the emergence of the first vascular plants, which allowed plants to grow taller and adapt to terrestrial environments.",
+            "tags": [
+                "Silurian Period",
+                "Vascular Plants",
+                "Ancient"
+            ]
+        },
+        {
+            "front": "Explain the significance of ferns in ancient ecosystems.",
+            "back": "Ferns were among the first vascular plants to appear and dominated ancient forest ecosystems, forming lush habitats during the Carboniferous period.",
+            "tags": [
+                "Ferns",
+                "Ecosystems",
+                "Carboniferous"
+            ]
+        },
+        {
+            "front": "What are angiosperms?",
+            "back": "Angiosperms are flowering plants that produce seeds enclosed within a fruit. They became dominant during the Cretaceous period.",
+            "tags": [
+                "Angiosperms",
+                "Flowering Plants",
+                "Evolution"
+            ]
+        },
+        {
+            "front": "What does the term 'Paleozoic' refer to in the context of plant evolution?",
+            "back": "The Paleozoic Era, covering about 541 to 252 million years ago, marks significant plant evolution, including the rise of the first land plants.",
+            "tags": [
+                "Paleozoic",
+                "Plant Evolution",
+                "Ancient Plants"
+            ]
+        },
+        {
+            "front": "What role did climate play in the evolution of ancient plants?",
+            "back": "Climate changes, such as shifts from warm to cooler temperatures, influenced the distribution and types of ancient plants, driving evolution and diversification.",
+            "tags": [
+                "Climate",
+                "Evolution",
+                "Ancient Flora"
+            ]
+        },
+        {
+            "front": "Name an ancient plant group that contributed to coal formation.",
+            "back": "Lycophytes, ferns, and seed ferns contributed significantly to coal formation during the Carboniferous period due to their extensive forest coverage.",
+            "tags": [
+                "Coal Formation",
+                "Lycophytes",
+                "Ancient"
+            ]
+        },
+        {
+            "front": "What is notable about the seed ferns (Pteridospermatophytes)?",
+            "back": "Seed ferns are an extinct group of plants that exhibited characteristics of both ferns and seed plants, and were widespread during the Mesozoic era.",
+            "tags": [
+                "Seed Ferns",
+                "Extinct Plants",
+                "Mesozoic"
+            ]
+        },
+        {
+            "front": "Describe the significance of the Devonian period in plant history.",
+            "back": "The Devonian period, often referred to as the 'Age of Fishes,' saw the diversification and establishment of early forests, primarily composed of trees and vascular plants.",
+            "tags": [
+                "Devonian Period",
+                "Plant History",
+                "Ancient Flora"
+            ]
+        }
+    ]
+}
