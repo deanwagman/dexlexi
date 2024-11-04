@@ -1,12 +1,13 @@
-// screens/PracticeScreen.js
 import React, { useEffect, useReducer } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { Text, Button, Box, HStack, VStack } from "native-base";
+import { useTransition, animated } from "@react-spring/native";
 
 import useStorage from "../../hooks/useStorage";
 import defaultDeck from "../../data/decks/deck-default";
 import DeckCard from "../../components/DeckCard";
+import PracticeSummary from "../../components/deck-data/PracticeSummary";
 
 const initialState = {
   correct: 0,
@@ -80,31 +81,47 @@ const PracticeScreen = () => {
     }
   }, [state.completed]);
 
-  const renderCurrentCard = () => {
-    if (!currentCard) return null;
+  const AnimatedBox = animated(Box);
 
-    return (
-      <DeckCard
-        front={currentCard.front}
-        back={currentCard.back}
-        key={state.currentCardIndex}
-      />
-    );
-  };
+  const transitions = useTransition(currentCard, {
+    key: state.currentCardIndex,
+    from: { opacity: 0, x: 300 },
+    enter: { opacity: 1, x: 0 },
+    leave: { opacity: 0, x: -300 },
+    config: { tension: 200, friction: 15 },
+  });
 
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
       {state.completed ? (
-        <VStack space={4} alignItems="center">
-          <Text fontSize="2xl" bold>
-            Practice Completed
-          </Text>
-          <Text>Correct: {state.correct}</Text>
-          <Text>Incorrect: {state.incorrect}</Text>
-        </VStack>
+        <PracticeSummary
+          correct={state.correct}
+          incorrect={state.incorrect}
+          total={deck.cards.length}
+        />
       ) : (
         <VStack flex={1} alignItems="center" justifyContent="center" space={4}>
-          <Box style={styles.cardContainer}>{renderCurrentCard()}</Box>
+          <Box style={styles.cardArea}>
+            {transitions((style, item) =>
+              item ? (
+                <AnimatedBox
+                  style={[
+                    styles.cardContainer,
+                    {
+                      opacity: style.opacity,
+                      transform: [{ translateX: style.x }],
+                    },
+                  ]}
+                >
+                  <DeckCard
+                    front={item.front}
+                    back={item.back}
+                    key={state.currentCardIndex}
+                  />
+                </AnimatedBox>
+              ) : null
+            )}
+          </Box>
           <HStack space={10} padding={4}>
             <Button onPress={markIncorrect} colorScheme="red">
               Incorrect
@@ -126,10 +143,15 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
   },
+  cardArea: {
+    width: "100%",
+    height: 400,
+  },
   cardContainer: {
     width: "100%",
     minHeight: 400,
     alignItems: "center",
     justifyContent: "center",
+    position: "absolute",
   },
 });

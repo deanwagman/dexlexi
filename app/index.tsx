@@ -15,6 +15,9 @@ import HomeScreen from "./screens/HomeScreen"; // Your custom screens
 import DeckScreen from "./screens/DeckScreen";
 import PracticeScreen from "./screens/PracticeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import { useFonts, Exo2_700Bold } from "@expo-google-fonts/exo-2";
+import { Roboto_400Regular } from "@expo-google-fonts/roboto";
+import AppLoading from "expo-app-loading";
 
 import theme from "../components/theme";
 
@@ -25,6 +28,15 @@ const queryClient = new QueryClient();
 const Stack = createStackNavigator();
 
 function MainStack() {
+  const [fontsLoaded] = useFonts({
+    Exo2_700Bold,
+    Roboto_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>
