@@ -22,7 +22,7 @@ const useSpacedRepetition = () => {
         repetition = 0,
         easiness = 2.5,
         dueDate = new Date(),
-      } = {}
+      } = {},
     ) => {
       setCardData((prevCardData) => {
         const updatedCardData = new Map(prevCardData);
@@ -35,7 +35,7 @@ const useSpacedRepetition = () => {
         return updatedCardData;
       });
     },
-    []
+    [],
   );
 
   // Function to process the user's answer and update the card data.
@@ -46,7 +46,7 @@ const useSpacedRepetition = () => {
         throw new Error("Card not found");
       }
 
-      const { interval, repetition, easiness, dueDate } = card;
+      const { interval, repetition, easiness /* dueDate */ } = card;
 
       // Quality should be a value between 0 and 5, representing how well the user remembered the card.
       // 0 means complete failure, and 5 means perfect recall.
@@ -101,7 +101,7 @@ const useSpacedRepetition = () => {
   const getDueCards = useCallback(() => {
     const now = new Date();
     return Array.from(cardData.entries()).filter(
-      ([, card]) => card.dueDate <= now
+      ([, card]) => card.dueDate <= now,
     );
   }, [cardData]);
 

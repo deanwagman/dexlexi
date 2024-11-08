@@ -2,7 +2,6 @@
 import React from "react";
 import { SafeAreaView } from "react-native";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NativeBaseProvider } from "native-base";
 import { useFonts, Exo2_700Bold } from "@expo-google-fonts/exo-2";

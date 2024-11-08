@@ -12,10 +12,10 @@ const { OpenAI } = require("openai");
 const z = require("zod");
 const { zodResponseFormat } = require("openai/helpers/zod");
 
-const AVERAGE_DECK_SIZE = 20;
-const DECK_SIZE_VARIATION = 10;
-const getSize = () =>
-  Math.floor(Math.random() * DECK_SIZE_VARIATION) + AVERAGE_DECK_SIZE;
+// const AVERAGE_DECK_SIZE = 20;
+// const DECK_SIZE_VARIATION = 10;
+// const getSize = () =>
+//   Math.floor(Math.random() * DECK_SIZE_VARIATION) + AVERAGE_DECK_SIZE;
 
 // Helper function to create readline interface
 const createReadlineInterface = () => {
@@ -54,7 +54,7 @@ const main = async () => {
         front: z.string(),
         back: z.string(),
         tags: z.array(z.string()),
-      })
+      }),
     ),
   });
 
@@ -74,10 +74,10 @@ const main = async () => {
 
     // get prompt from run arguments
     const subject = await askQuestion(
-      "What is the subject of the collection? "
+      "What is the subject of the collection? ",
     );
     const numberOfDecks = await askQuestion(
-      "How many decks would you like to generate? "
+      "How many decks would you like to generate? ",
     );
 
     const collectionPrePrompt = `
@@ -110,7 +110,7 @@ const main = async () => {
     console.log(collectionResponseText);
 
     const confirmGenerate = await askQuestion(
-      "Would you like to generate the collection? (yes/no) "
+      "Would you like to generate the collection? (yes/no) ",
     );
 
     if (confirmGenerate.toLowerCase() !== "yes") {
@@ -156,7 +156,7 @@ const main = async () => {
       "..",
       "data",
       "collections",
-      collectionName
+      collectionName,
     );
 
     fs.writeFileSync(collectionPath, JSON.stringify(collection, null, 2));
@@ -167,7 +167,9 @@ const main = async () => {
 
   const rl = createReadlineInterface();
 
-  const collection = await getRequest(rl);
+  await getRequest(rl);
+
+  rl.close();
 };
 
 main();

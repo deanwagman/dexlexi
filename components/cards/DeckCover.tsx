@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image, Pressable } from "native-base";
+import { Box, Text, Image } from "native-base";
 
 const DeckCover = ({
   title,
@@ -7,7 +7,6 @@ const DeckCover = ({
   description,
   icon,
   imageUri,
-  onPress,
   style,
   ...props
 }) => {

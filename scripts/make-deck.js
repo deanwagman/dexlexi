@@ -6,8 +6,6 @@ const zodResponseFormat = require("openai/helpers/zod")?.zodResponseFormat;
 
 const fs = require("fs");
 const path = require("path");
-const fetch = require("node-fetch");
-const util = require("util");
 
 // Read the .env file
 const envPath = path.join(__dirname, "..", ".env");
@@ -23,8 +21,6 @@ envLines.forEach((line) => {
 
 // Get the openai key from the .env file
 const openaiKey = envVariables.OPEN_AI_KEY;
-
-const deckPrompt = require("./prompts").deckPrompt;
 
 const client = new OpenAI({
   apiKey: openaiKey,
@@ -45,7 +41,7 @@ const deckShema = z.object({
       front: z.string(),
       back: z.string(),
       tags: z.array(z.string()),
-    })
+    }),
   ),
 });
 
@@ -60,7 +56,7 @@ const getRequest = async (rl) => {
   const subject = await askQuestion("What is the subject of the deck? ");
   const topic = await askQuestion("What is the name of the deck? ");
   const level = await askQuestion(
-    "What is the difficulty level of the deck? (1-9) "
+    "What is the difficulty level of the deck? (1-9) ",
   );
   const numberOfCards = await askQuestion("How many cards would you like? ");
 

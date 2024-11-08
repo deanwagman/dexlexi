@@ -1,10 +1,9 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useReducer } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { Text, Button, Box, HStack, VStack } from "native-base";
+import { Button, Box, HStack, VStack } from "native-base";
 import { useTransition, animated } from "@react-spring/native";
 
-import useStorage from "../../hooks/useStorage";
 import defaultDeck from "../../data/decks/deck-default";
 import DeckCard from "../../components/DeckCard";
 import PracticeSummary from "../../components/deck-data/PracticeSummary";
@@ -45,8 +44,6 @@ const PracticeScreen = () => {
   const route = useRoute();
   const deck = route.params?.deck || defaultDeck;
 
-  const { setItem } = useStorage();
-
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const currentCard = deck.cards[state.currentCardIndex];
@@ -65,21 +62,21 @@ const PracticeScreen = () => {
       totalCards: deck.cards.length,
     });
 
-  useEffect(() => {
-    if (state.completed) {
-      const saveProgress = async () => {
-        const progress = {
-          correct: state.correct,
-          incorrect: state.incorrect,
-          correctCards: state.correctCards,
-          incorrectCards: state.incorrectCards,
-        };
-        console.log("Saving progress", progress);
-        await setItem(`progress-${deck.id}`, progress);
-      };
-      saveProgress();
-    }
-  }, [state.completed]);
+  // useEffect(() => {
+  //   if (state.completed) {
+  //     const saveProgress = async () => {
+  //       const progress = {
+  //         correct: state.correct,
+  //         incorrect: state.incorrect,
+  //         correctCards: state.correctCards,
+  //         incorrectCards: state.incorrectCards,
+  //       };
+  //       console.log("Saving progress", progress);
+  //       await setItem(`progress-${deck.id}`, progress);
+  //     };
+  //     saveProgress();
+  //   }
+  // }, [state.completed]);
 
   const AnimatedBox = animated(Box);
 
@@ -119,7 +116,7 @@ const PracticeScreen = () => {
                     key={state.currentCardIndex}
                   />
                 </AnimatedBox>
-              ) : null
+              ) : null,
             )}
           </Box>
           <HStack space={10} padding={4}>
