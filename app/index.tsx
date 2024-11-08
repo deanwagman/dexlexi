@@ -1,27 +1,25 @@
+// App.js or App.tsx
 import React from "react";
 import { SafeAreaView } from "react-native";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NativeBaseProvider, Box, Container, Text } from "native-base";
-import HomeScreen from "./screens/HomeScreen"; // Your custom screens
-import DeckScreen from "./screens/DeckScreen";
-import PracticeScreen from "./screens/PracticeScreen";
-import SettingsScreen from "./screens/SettingsScreen";
+import { NativeBaseProvider } from "native-base";
 import { useFonts, Exo2_700Bold } from "@expo-google-fonts/exo-2";
 import { Roboto_400Regular } from "@expo-google-fonts/roboto";
 import AppLoading from "expo-app-loading";
 
+import { useDrizzleStudio } from "expo-drizzle-studio-plugin";
+import { db } from "./db";
+
 import theme from "../components/theme";
 
-// Create a client
+import HomeScreen from "./screens/HomeScreen"; // Your custom screens
+import DeckScreen from "./screens/DeckScreen";
+import PracticeScreen from "./screens/PracticeScreen";
+import SettingsScreen from "./screens/SettingsScreen";
+
+// Create a client for React Query
 const queryClient = new QueryClient();
 
 // Create a stack navigator
@@ -32,6 +30,8 @@ function MainStack() {
     Exo2_700Bold,
     Roboto_400Regular,
   });
+
+  useDrizzleStudio(db);
 
   if (!fontsLoaded) {
     return <AppLoading />;

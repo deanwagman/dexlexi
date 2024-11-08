@@ -38,26 +38,26 @@ const DeckScreen = () => {
 
   const decks = query.data;
 
-  const ShadowCard = ({ index }) =>
-    index < 10 ? (
-      <Box
-        key={index}
-        bg="white"
-        shadow={2}
-        rounded="lg"
-        width="100%"
-        height={400}
-        position="absolute"
-        zIndex={-index}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          transform: [{ translateX: index * 10 }, { translateY: index * -10 }],
-          opacity: Math.max(1 - index * 0.2, 0),
-        }}
-      />
-    ) : null;
+  // const ShadowCard = ({ index }) =>
+  //   index < 10 ? (
+  //     <Box
+  //       key={index}
+  //       bg="white"
+  //       shadow={2}
+  //       rounded="lg"
+  //       width="100%"
+  //       height={400}
+  //       position="absolute"
+  //       zIndex={-index}
+  //       style={{
+  //         position: "absolute",
+  //         top: 0,
+  //         left: 0,
+  //         transform: [{ translateX: index * 10 }, { translateY: index * -10 }],
+  //         opacity: Math.max(1 - index * 0.2, 0),
+  //       }}
+  //     />
+  //   ) : null;
 
   const renderItem = ({ item, index }) => {
     return (
@@ -79,11 +79,11 @@ const DeckScreen = () => {
             height: 400,
           }}
         />
-        <Box style={styles.shadowContainer}>
+        {/* <Box style={styles.shadowContainer}>
           {item.cards.slice(0, 5).map((_, idx) => (
             <ShadowCard key={idx} index={idx + 1} />
           ))}
-        </Box>
+        </Box> */}
         {item.progress?.correct !== undefined && (
           <Text mt={2} style={styles.progress}>
             Progress: {item.progress.correct} / {item.cards.length}
