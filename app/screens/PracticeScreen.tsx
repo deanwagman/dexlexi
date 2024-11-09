@@ -1,10 +1,14 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { Button, Box, HStack, VStack } from "native-base";
 import { useTransition, animated } from "@react-spring/native";
 
-import defaultDeck from "../../data/decks/deck-default";
+import { useQuery } from "@tanstack/react-query";
+import { getCards } from "../db/cards";
+import { startSession, endSession } from "../db/session";
+import { updateCardProgress } from "../db/cards";
+
 import DeckCard from "../../components/DeckCard";
 import PracticeSummary from "../../components/deck-data/PracticeSummary";
 
@@ -15,6 +19,7 @@ const initialState = {
   incorrectCards: [],
   currentCardIndex: 0,
   completed: false,
+  sessionId: null,
 };
 
 const reducer = (state, action) => {
@@ -25,7 +30,6 @@ const reducer = (state, action) => {
         correct: state.correct + 1,
         correctCards: [...state.correctCards, action.card],
         currentCardIndex: state.currentCardIndex + 1,
-        completed: state.currentCardIndex + 1 >= action.totalCards,
       };
     case "INCORRECT":
       return {
@@ -33,7 +37,16 @@ const reducer = (state, action) => {
         incorrect: state.incorrect + 1,
         incorrectCards: [...state.incorrectCards, action.card],
         currentCardIndex: state.currentCardIndex + 1,
-        completed: state.currentCardIndex + 1 >= action.totalCards,
+      };
+    case "END":
+      return {
+        ...state,
+        completed: true,
+      };
+    case "SET_SESSION_ID":
+      return {
+        ...state,
+        sessionId: action.sessionId,
       };
     default:
       return state;
@@ -42,41 +55,74 @@ const reducer = (state, action) => {
 
 const PracticeScreen = () => {
   const route = useRoute();
-  const deck = route.params?.deck || defaultDeck;
-
+  const deckId = route.params.deckId;
   const [state, dispatch] = useReducer(reducer, initialState);
+  const { data: cards } = useQuery({
+    queryKey: ["deck", deckId],
+    queryFn: async () => {
+      const cards = await getCards(deckId);
+      dispatch({ type: "SET_CARDS", cards });
 
-  const currentCard = deck.cards[state.currentCardIndex];
+      return cards;
+    },
+    initialData: [],
+  });
 
-  const markCorrect = () =>
+  const currentCard = cards[state.currentCardIndex];
+
+  console.log({ currentCard });
+
+  const markCorrect = async () => {
+    const now = new Date().toISOString();
+    await updateCardProgress(
+      currentCard.id,
+      1,
+      now,
+      null,
+      currentCard.reviewCount + 1,
+      currentCard.easeFactor,
+    );
     dispatch({
       type: "CORRECT",
       card: currentCard,
-      totalCards: deck.cards.length,
     });
 
-  const markIncorrect = () =>
+    if (state.currentCardIndex === cards.length - 1) {
+      dispatch({ type: "END" });
+      endSession(
+        state.sessionId,
+        new Date().toISOString(),
+        state.correct,
+        state.correct / cards.length,
+      );
+    }
+  };
+
+  const markIncorrect = async () => {
+    const now = new Date().toISOString();
+    await updateCardProgress(
+      currentCard.id,
+      0,
+      now,
+      null,
+      currentCard.reviewCount + 1,
+      currentCard.easeFactor,
+    );
     dispatch({
       type: "INCORRECT",
       card: currentCard,
-      totalCards: deck.cards.length,
     });
 
-  // useEffect(() => {
-  //   if (state.completed) {
-  //     const saveProgress = async () => {
-  //       const progress = {
-  //         correct: state.correct,
-  //         incorrect: state.incorrect,
-  //         correctCards: state.correctCards,
-  //         incorrectCards: state.incorrectCards,
-  //       };
-  //       console.log("Saving progress", progress);
-  //       await setItem(`progress-${deck.id}`, progress);
-  //     };
-  //     saveProgress();
-  //   }
-  // }, [state.completed]);
+    if (state.currentCardIndex === cards.length - 1) {
+      dispatch({ type: "END" });
+      endSession(
+        state.sessionId,
+        new Date().toISOString(),
+        state.correct,
+        state.correct / cards.length,
+      );
+    }
+  };
 
   const AnimatedBox = animated(Box);
 
@@ -88,13 +134,31 @@ const PracticeScreen = () => {
     config: { tension: 200, friction: 15 },
   });
 
+  useEffect(() => {
+    const startTime = new Date().toISOString();
+    // eslint-disable-next-line no-undef
+    // const abortController = new AbortController();
+
+    startSession(1, deckId, startTime)
+      .then((sessionId) => {
+        dispatch({ type: "SET_SESSION_ID", sessionId });
+      })
+      .catch((error) => {
+        console.error("Error starting session:", error);
+      });
+
+    // return () => {
+    //   abortController.abort();
+    // };
+  }, []);
+
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>
       {state.completed ? (
         <PracticeSummary
           correct={state.correct}
           incorrect={state.incorrect}
-          total={deck.cards.length}
+          total={cards.length}
         />
       ) : (
         <VStack flex={1} alignItems="center" justifyContent="center" space={4}>

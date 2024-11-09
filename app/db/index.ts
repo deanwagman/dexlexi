@@ -87,10 +87,14 @@ const initializeDatabase = async () => {
     `);
 
     console.log("Database initialized successfully.");
+
+    return db;
   } catch (error) {
     console.error("Error initializing database:", error);
   }
 };
 
-// Call the initializeDatabase function
 initializeDatabase();
+
+// Call the initializeDatabase function
+export const db = SQLite.openDatabaseSync("alpha.db");

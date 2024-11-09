@@ -4,26 +4,22 @@ import { StyleSheet } from "react-native";
 import { FlatList, Text, Pressable } from "native-base";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigation } from "@react-navigation/native";
-import collectionExpo from "../../data/collections/collection-User Interface Design Theory-1730146684288";
+// import collectionExpo from "../../data/collections/collection-User Interface Design Theory-1730146684288";
 import DeckCover from "../../components/cards/DeckCover";
-import useStorage from "../../hooks/useStorage";
+
+import { getDecks } from "../db/decks";
 
 const DeckScreen = () => {
   const navigation = useNavigation();
-  const { getItem } = useStorage();
 
   const query = useQuery({
     queryKey: ["decks"],
     queryFn: async () => {
-      return await Promise.all(
-        collectionExpo.decks.map(async (deck) => {
-          const progress = await getItem(`progress-${deck.id}`);
-          return {
-            ...deck,
-            progress,
-          };
-        }),
-      );
+      const decks = await getDecks(1);
+
+      console.log({ decks });
+
+      return decks;
     },
   });
 
@@ -46,7 +42,7 @@ const DeckScreen = () => {
           height: 400,
           position: "relative",
         }}
-        onPress={() => navigation.navigate("Practice", { deck: item })}
+        onPress={() => navigation.navigate("Practice", { deckId: item.id })}
       >
         <DeckCover
           title={item.name}
