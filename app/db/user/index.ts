@@ -1,6 +1,6 @@
 import { db } from "../index";
 
-const addUser = (username) => {
+const createUser = (username) => {
   try {
     const result = db.runSync("INSERT INTO Users (username) VALUES (?);", [
       username,
@@ -60,4 +60,4 @@ const deleteUser = (id) => {
 };
 
 // Export CRUD functions for use in other parts of the app
-export { addUser, getUserById, getAllUsers, updateUser, deleteUser };
+export { createUser, getUserById, getAllUsers, updateUser, deleteUser };

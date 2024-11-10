@@ -13,10 +13,13 @@ import { db } from "./db";
 
 import theme from "../components/theme";
 
-import HomeScreen from "./screens/HomeScreen"; // Your custom screens
+import { UserProvider } from "./contexts/UserContext";
+
+import HomeScreen from "./screens/HomeScreen";
 import DeckScreen from "./screens/DeckScreen";
 import PracticeScreen from "./screens/PracticeScreen";
 import SettingsScreen from "./screens/SettingsScreen";
+import DeckCreateScreen from "./screens/DeckCreateScreen";
 
 // Create a client for React Query
 const queryClient = new QueryClient();
@@ -40,20 +43,27 @@ function MainStack() {
     <SafeAreaView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>
         <NativeBaseProvider theme={theme} style={{ flex: 1 }}>
-          <Stack.Navigator style={{ flex: 1 }}>
-            <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen
-              name="Practice"
-              component={PracticeScreen}
-              style={{ flex: 1 }}
-            />
-            <Stack.Screen
-              name="Decks"
-              component={DeckScreen}
-              style={{ flex: 1 }}
-            />
-            <Stack.Screen name="Settings" component={SettingsScreen} />
-          </Stack.Navigator>
+          <UserProvider>
+            <Stack.Navigator style={{ flex: 1 }}>
+              <Stack.Screen name="Home" component={HomeScreen} />
+              <Stack.Screen
+                name="Practice"
+                component={PracticeScreen}
+                style={{ flex: 1 }}
+              />
+              <Stack.Screen
+                name="Decks"
+                component={DeckScreen}
+                style={{ flex: 1 }}
+              />
+              <Stack.Screen name="Settings" component={SettingsScreen} />
+              <Stack.Screen
+                name="DeckCreate"
+                component={DeckCreateScreen}
+                style={{ flex: 1 }}
+              />
+            </Stack.Navigator>
+          </UserProvider>
         </NativeBaseProvider>
       </QueryClientProvider>
     </SafeAreaView>

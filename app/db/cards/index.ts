@@ -74,3 +74,54 @@ export const updateCardProgress = async (
     return null;
   }
 };
+
+export const createCard = async (
+  deckId,
+  front,
+  back,
+  difficulty,
+  masteryLevel,
+  lastReviewed,
+  nextReviewDate,
+  reviewCount,
+  easeFactor,
+) => {
+  try {
+    const result = await db.runAsync(
+      `
+        INSERT INTO Cards (deckId, front, back, difficulty, masteryLevel, lastReviewed, nextReviewDate, reviewCount, easeFactor)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+        `,
+      [
+        deckId,
+        front,
+        back,
+        difficulty,
+        masteryLevel,
+        lastReviewed,
+        nextReviewDate,
+        reviewCount,
+        easeFactor,
+      ],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error creating card:", error);
+    return null;
+  }
+};
+
+export const deleteCard = async (cardId) => {
+  try {
+    const result = await db.runAsync(
+      `
+        DELETE FROM Cards WHERE id = ?;
+        `,
+      [cardId],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error deleting card:", error);
+    return null;
+  }
+};

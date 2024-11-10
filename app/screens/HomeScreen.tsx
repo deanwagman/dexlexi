@@ -29,6 +29,10 @@ export default function HomeScreen({ navigation }) {
         <Button onPress={() => navigation.navigate("Settings")}>
           Settings
         </Button>
+        <Spacer height={1} />
+        <Button onPress={() => navigation.navigate("DeckCreate")}>
+          Create Deck
+        </Button>
       </Stack>
     </Box>
   );

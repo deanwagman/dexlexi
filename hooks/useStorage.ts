@@ -15,6 +15,7 @@ export default function useStorage() {
       return value ? JSON.parse(value) : null;
     } catch (e) {
       console.error(e);
+      return null;
     }
   };
 

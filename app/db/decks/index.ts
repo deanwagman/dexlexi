@@ -37,3 +37,74 @@ export const getDecks = async (userId) => {
     return null;
   }
 };
+
+export const createDeck = async (name, userId) => {
+  try {
+    const result = await db.runAsync(
+      `
+        INSERT INTO Decks (name, userId)
+        VALUES (?, ?);
+        `,
+      [name, userId],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error creating deck:", error);
+    return null;
+  }
+};
+
+export const updateDeck = async (deckId, name) => {
+  try {
+    const result = await db.runAsync(
+      `
+        UPDATE Decks
+        SET name = ?
+        WHERE id = ?;
+        `,
+      [name, deckId],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error updating deck:", error);
+    return null;
+  }
+};
+
+export const deleteDeck = async (deckId) => {
+  try {
+    const result = await db.runAsync(
+      `
+        DELETE FROM Decks
+        WHERE id = ?;
+        `,
+      [deckId],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error deleting deck:", error);
+    return null;
+  }
+};
+
+export const updateDeckProgress = async (
+  deckId,
+  totalCards,
+  cardsLearned,
+  progressPercentage,
+) => {
+  try {
+    const result = await db.runAsync(
+      `
+        UPDATE Decks
+        SET totalCards = ?, cardsLearned = ?, progressPercentage = ?
+        WHERE id = ?;
+        `,
+      [totalCards, cardsLearned, progressPercentage, deckId],
+    );
+    return result;
+  } catch (error) {
+    console.error("Error updating deck progress:", error);
+    return null;
+  }
+};
