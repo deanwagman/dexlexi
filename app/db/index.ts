@@ -1,5 +1,7 @@
 import * as SQLite from "expo-sqlite";
 
+import { DEFAULT_USER } from "../../constants";
+
 // Open the database asynchronously
 const openDatabase = async () => {
   try {
@@ -20,7 +22,7 @@ const initializeDatabase = async () => {
     await db.execAsync(`
       CREATE TABLE IF NOT EXISTS Users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT,
+        username TEXT UNIQUE,
         velocity REAL DEFAULT 1.0,
         totalWordsLearned INTEGER DEFAULT 0,
         streak INTEGER DEFAULT 0,
@@ -88,9 +90,32 @@ const initializeDatabase = async () => {
 
     console.log("Database initialized successfully.");
 
+    await createDefaultUserIfNotExists(db);
+
     return db;
   } catch (error) {
     console.error("Error initializing database:", error);
+  }
+};
+
+// Create a default user if one does not exist
+const createDefaultUserIfNotExists = async (db) => {
+  try {
+    const [{ userCount }] = await db.getAllAsync(
+      `SELECT COUNT(*) AS userCount FROM Users`,
+    );
+
+    if (userCount === 0) {
+      await db.runAsync(
+        `INSERT INTO Users (username, lastLogin) VALUES (?, ?)`,
+        [DEFAULT_USER, new Date().toISOString()],
+      );
+      console.log("Default user created.");
+    } else {
+      console.log("Default user already exists.");
+    }
+  } catch (error) {
+    console.error("Error checking/creating default user:", error);
   }
 };
 

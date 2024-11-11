@@ -27,6 +27,24 @@ const getUserById = (id) => {
   }
 };
 
+const getUserByUsername = (username) => {
+  try {
+    const user = db.getFirstSync("SELECT * FROM Users WHERE username = ?;", [
+      username,
+    ]);
+    if (user) {
+      console.log("User:", user);
+      return user;
+    } else {
+      console.log("User not found");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error retrieving user:", error);
+    return null;
+  }
+};
+
 const getAllUsers = () => {
   try {
     const users = db.getAllSync("SELECT * FROM Users;");
@@ -60,4 +78,11 @@ const deleteUser = (id) => {
 };
 
 // Export CRUD functions for use in other parts of the app
-export { createUser, getUserById, getAllUsers, updateUser, deleteUser };
+export {
+  createUser,
+  getUserById,
+  getUserByUsername,
+  getAllUsers,
+  updateUser,
+  deleteUser,
+};
