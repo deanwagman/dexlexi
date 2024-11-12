@@ -1,5 +1,7 @@
 import { db } from "../index";
 
+import { DEFAULT_USER } from "../../../constants";
+
 const createUser = (username) => {
   try {
     const result = db.runSync("INSERT INTO Users (username) VALUES (?);", [
@@ -77,11 +79,31 @@ const deleteUser = (id) => {
   }
 };
 
+const getDefaultUser = async () => {
+  try {
+    const user = await db.getFirstAsync(
+      "SELECT * FROM Users WHERE username = ?;",
+      [DEFAULT_USER],
+    );
+    if (user) {
+      console.log("User:", user);
+      return user;
+    } else {
+      console.log("User not found");
+      return null;
+    }
+  } catch (error) {
+    console.error("Error retrieving user:", error);
+    return null;
+  }
+};
+
 // Export CRUD functions for use in other parts of the app
 export {
   createUser,
   getUserById,
   getUserByUsername,
+  getDefaultUser,
   getAllUsers,
   updateUser,
   deleteUser,

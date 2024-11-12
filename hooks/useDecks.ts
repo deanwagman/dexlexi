@@ -1,8 +1,16 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getDecks, createDeck, updateDeck, deleteDeck } from "../app/db/decks";
+import { getDefaultUser } from "../app/db/user";
 
-export const useDecks = (userId) => {
-  return useQuery(["decks", userId], () => getDecks(userId));
+export const useDecks = () => {
+  return useQuery({
+    queryKey: ["decks"],
+    queryFn: async () => {
+      const user = await getDefaultUser();
+
+      return getDecks(user.id);
+    },
+  });
 };
 
 export const useCreateDeck = () => {

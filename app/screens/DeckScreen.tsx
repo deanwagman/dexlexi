@@ -2,36 +2,23 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import { FlatList, Text, Pressable } from "native-base";
-import { useQuery } from "@tanstack/react-query";
 import { useNavigation } from "@react-navigation/native";
-// import collectionExpo from "../../data/collections/collection-User Interface Design Theory-1730146684288";
 import DeckCover from "../../components/cards/DeckCover";
 
-import { getDecks } from "../db/decks";
+import { useDecks } from "../../hooks/useDecks";
 
 const DeckScreen = () => {
   const navigation = useNavigation();
 
-  const query = useQuery({
-    queryKey: ["decks"],
-    queryFn: async () => {
-      const decks = await getDecks(1);
+  const { data: decks, isLoading, isError } = useDecks();
 
-      console.log({ decks });
-
-      return decks;
-    },
-  });
-
-  if (query.isLoading) {
+  if (isLoading) {
     return <Text>Loading...</Text>;
   }
 
-  if (query.isError) {
+  if (isError) {
     return <Text>Error loading decks</Text>;
   }
-
-  const decks = query.data;
 
   const renderItem = ({ item, index }) => {
     return (
