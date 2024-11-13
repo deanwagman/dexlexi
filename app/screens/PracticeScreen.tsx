@@ -1,16 +1,16 @@
 import React, { useReducer, useEffect } from "react";
 import { ScrollView, StyleSheet } from "react-native";
 import { useRoute } from "@react-navigation/native";
-import { Button, Box, HStack, VStack } from "native-base";
+import { Button, Box, HStack, VStack, Text } from "native-base";
 import { useTransition, animated } from "@react-spring/native";
 
-import { useQuery } from "@tanstack/react-query";
-import { getCards } from "../db/cards";
 import { startSession, endSession } from "../db/session";
 import { updateCardProgress } from "../db/cards";
 
 import DeckCard from "../../components/DeckCard";
 import PracticeSummary from "../../components/deck-data/PracticeSummary";
+
+import { useCards } from "../../hooks/useCards";
 
 const initialState = {
   correct: 0,
@@ -57,18 +57,9 @@ const PracticeScreen = () => {
   const route = useRoute();
   const deckId = route.params.deckId;
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { data: cards } = useQuery({
-    queryKey: ["deck", deckId],
-    queryFn: async () => {
-      const cards = await getCards(deckId);
-      dispatch({ type: "SET_CARDS", cards });
+  const { data: cards, isLoading, isError } = useCards(deckId);
 
-      return cards;
-    },
-    initialData: [],
-  });
-
-  const currentCard = cards[state.currentCardIndex];
+  const currentCard = cards?.[state.currentCardIndex];
 
   console.log({ currentCard });
 
@@ -136,8 +127,6 @@ const PracticeScreen = () => {
 
   useEffect(() => {
     const startTime = new Date().toISOString();
-    // eslint-disable-next-line no-undef
-    // const abortController = new AbortController();
 
     startSession(1, deckId, startTime)
       .then((sessionId) => {
@@ -146,11 +135,15 @@ const PracticeScreen = () => {
       .catch((error) => {
         console.error("Error starting session:", error);
       });
-
-    // return () => {
-    //   abortController.abort();
-    // };
   }, []);
+
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+
+  if (isError) {
+    return <Text>Error loading cards</Text>;
+  }
 
   return (
     <ScrollView contentContainerStyle={styles.scrollView}>

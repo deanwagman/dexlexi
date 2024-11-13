@@ -2,7 +2,10 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getCards, createCard, updateCard, deleteCard } from "../app/db/cards";
 
 export const useCards = (deckId) => {
-  return useQuery(["cards", deckId], () => getCards(deckId));
+  return useQuery({
+    queryKey: ["cards", deckId],
+    queryFn: () => getCards(deckId),
+  });
 };
 
 export const useCreateCard = () => {

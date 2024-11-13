@@ -3,8 +3,6 @@ import { db } from "../index";
 // id INTEGER PRIMARY KEY AUTOINCREMENT,
 // name TEXT,
 // userId INTEGER,
-// totalCards INTEGER DEFAULT 0,
-// cardsLearned INTEGER DEFAULT 0,
 // progressPercentage REAL DEFAULT 0,
 // FOREIGN KEY (userId) REFERENCES Users(id)
 
@@ -87,20 +85,15 @@ export const deleteDeck = async (deckId) => {
   }
 };
 
-export const updateDeckProgress = async (
-  deckId,
-  totalCards,
-  cardsLearned,
-  progressPercentage,
-) => {
+export const updateDeckProgress = async (deckId, progressPercentage) => {
   try {
     const result = await db.runAsync(
       `
         UPDATE Decks
-        SET totalCards = ?, cardsLearned = ?, progressPercentage = ?
+        SET progressPercentage = ?
         WHERE id = ?;
         `,
-      [totalCards, cardsLearned, progressPercentage, deckId],
+      [progressPercentage, deckId],
     );
     return result;
   } catch (error) {

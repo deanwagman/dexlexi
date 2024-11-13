@@ -11,9 +11,12 @@ import {
   ScrollView,
 } from "native-base";
 
+import { useUser } from "../../hooks/useUser";
+
 const DeckCreateScreen = () => {
   const [deckName, setDeckName] = useState("");
   const [cards, setCards] = useState([]);
+  const { user } = useUser();
   const createDeckMutation = useCreateDeck();
   const createCardMutation = useCreateCard();
 
@@ -22,13 +25,13 @@ const DeckCreateScreen = () => {
   };
 
   const handleCreateDeck = async () => {
-    const userId = 1; // Replace with actual userId
     try {
       const deckResult = await createDeckMutation.mutateAsync({
         name: deckName,
-        userId,
+        userId: user.id,
       });
-      const deckId = deckResult.insertId; // Adjust based on your DB response
+      const deckId = deckResult.lastInsertRowId; // Adjust based on your DB response
+
       await Promise.all(
         cards.map((card) =>
           createCardMutation.mutateAsync({

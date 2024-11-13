@@ -1,5 +1,11 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { getDecks, createDeck, updateDeck, deleteDeck } from "../app/db/decks";
+import {
+  getDecks,
+  createDeck,
+  updateDeck,
+  deleteDeck,
+  getDeck,
+} from "../app/db/decks";
 import { getDefaultUser } from "../app/db/user";
 
 export const useDecks = () => {
@@ -40,5 +46,12 @@ export const useDeleteDeck = () => {
     onSuccess: () => {
       queryClient.invalidateQueries("decks");
     },
+  });
+};
+
+export const useDeck = (deckId) => {
+  return useQuery({
+    queryKey: ["deck", deckId],
+    queryFn: () => getDeck(deckId),
   });
 };
