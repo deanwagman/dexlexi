@@ -1,0 +1,3590 @@
+{
+  "id": "SQL-1731881807380",
+  "subject": "SQL",
+  "numberOfDecks": 41,
+  "decks": [
+    {
+      "id": "deck-1",
+      "name": "Introduction to SQL",
+      "cards": [
+        {
+          "front": "SQL",
+          "back": "Structured Query Language, a standard programming language used to manage and manipulate relational databases.",
+          "tags": [
+            "beginner",
+            "database",
+            "language"
+          ]
+        },
+        {
+          "front": "SELECT Statement",
+          "back": "A SQL command used to retrieve data from a database, which can specify certain columns and conditions.",
+          "tags": [
+            "beginner",
+            "query",
+            "command"
+          ]
+        },
+        {
+          "front": "JOIN",
+          "back": "A SQL operation that combines rows from two or more tables based on a related column between them.",
+          "tags": [
+            "intermediate",
+            "tables",
+            "operation"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for a record in a database table, ensuring that no two rows can have the same value in that column.",
+          "tags": [
+            "intermediate",
+            "constraints",
+            "database"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field in one table that uniquely identifies a row of another table, establishing a relationship between the two tables.",
+          "tags": [
+            "intermediate",
+            "relationship",
+            "database"
+          ]
+        },
+        {
+          "front": "INSERT Statement",
+          "back": "A SQL command used to add new records to a table in a database.",
+          "tags": [
+            "beginner",
+            "command",
+            "data entry"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing data in a database to reduce redundancy and improve data integrity.",
+          "tags": [
+            "advanced",
+            "database design",
+            "theory"
+          ]
+        },
+        {
+          "front": "Indexes",
+          "back": "Special data structures that improve the speed of data retrieval operations on a database table at the cost of additional space and maintenance burden.",
+          "tags": [
+            "advanced",
+            "performance",
+            "database"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-2",
+      "name": "Database Fundamentals",
+      "cards": [
+        {
+          "front": "SQL",
+          "back": "Structured Query Language; a standard programming language specifically for managing and manipulating relational databases.",
+          "tags": [
+            "SQL",
+            "Language",
+            "Database"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for a record in a database table; ensures that no two rows have the same value in this column.",
+          "tags": [
+            "Database",
+            "Keys",
+            "Relational"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field (or collection of fields) in one table that uniquely identifies a row of another table, establishing a relationship between the two tables.",
+          "tags": [
+            "Database",
+            "Keys",
+            "Relation"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing data in a database to reduce redundancy and improve data integrity by separating data into distinct tables.",
+          "tags": [
+            "Database",
+            "Design",
+            "Normalization"
+          ]
+        },
+        {
+          "front": "JOIN",
+          "back": "An SQL operation that combines rows from two or more tables based on a related column between them.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Query"
+          ]
+        },
+        {
+          "front": "ACID Properties",
+          "back": "A set of properties (Atomicity, Consistency, Isolation, Durability) that guarantee reliable processing of database transactions.",
+          "tags": [
+            "Database",
+            "Transactions",
+            "ACID"
+          ]
+        },
+        {
+          "front": "Index",
+          "back": "A database structure that improves the speed of data retrieval operations on a database table at the cost of additional space and slower writes.",
+          "tags": [
+            "Database",
+            "Performance",
+            "Indexing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-3",
+      "name": "Data Types in SQL",
+      "cards": [
+        {
+          "front": "VARCHAR",
+          "back": "Variable character field used to store string data of varying lengths, with a maximum length limit defined upon creation.",
+          "tags": [
+            "string",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "INT",
+          "back": "An integer data type for storing whole numbers, typically ranging from -2,147,483,648 to 2,147,483,647.",
+          "tags": [
+            "integer",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "FLOAT",
+          "back": "A floating point data type for storing decimal numbers, allowing for a more precise representation of fractional values.",
+          "tags": [
+            "decimal",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "DATE",
+          "back": "A data type used to store dates, formatted as 'YYYY-MM-DD', representing calendar dates.",
+          "tags": [
+            "date",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "BOOLEAN",
+          "back": "A data type that can hold one of two values: TRUE or FALSE, often used for binary conditions.",
+          "tags": [
+            "boolean",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "TEXT",
+          "back": "A data type used for storing large amounts of text data, with no specified limit on length.",
+          "tags": [
+            "text",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "DECIMAL",
+          "back": "A fixed-point data type for storing exact numeric values with a specified precision and scale.",
+          "tags": [
+            "fixed-point",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "BLOB",
+          "back": "Binary large object data type used to store binary data such as images, audio, or other multimedia.",
+          "tags": [
+            "binary",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "DATETIME",
+          "back": "A data type that stores both date and time information, allowing for detailed timestamp records.",
+          "tags": [
+            "datetime",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "CHAR",
+          "back": "A fixed-length character string data type, where any unused space is padded with spaces.",
+          "tags": [
+            "fixed-length",
+            "data type",
+            "SQL"
+          ]
+        },
+        {
+          "front": "JSON",
+          "back": "A data type that stores JSON (JavaScript Object Notation) formatted data, enabling flexible data structures and easy data interchange.",
+          "tags": [
+            "json",
+            "data type",
+            "SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-4",
+      "name": "Basic SELECT Statements",
+      "cards": [
+        {
+          "front": "SELECT",
+          "back": "The SQL command used to retrieve data from a database.",
+          "tags": [
+            "SQL",
+            "command",
+            "database"
+          ]
+        },
+        {
+          "front": "FROM",
+          "back": "The clause in a SQL statement that specifies the table to be queried.",
+          "tags": [
+            "SQL",
+            "clause",
+            "query"
+          ]
+        },
+        {
+          "front": "WHERE",
+          "back": "A clause used to filter records that meet certain criteria in a SQL query.",
+          "tags": [
+            "SQL",
+            "filter",
+            "criteria"
+          ]
+        },
+        {
+          "front": "ORDER BY",
+          "back": "A clause that sorts the result set of a SQL query in ascending or descending order.",
+          "tags": [
+            "SQL",
+            "sorting",
+            "result set"
+          ]
+        },
+        {
+          "front": "DISTINCT",
+          "back": "A keyword used in SELECT statements to return only unique values from a column.",
+          "tags": [
+            "SQL",
+            "uniqueness",
+            "query"
+          ]
+        },
+        {
+          "front": "JOIN",
+          "back": "A SQL operation that combines records from two or more tables based on related columns.",
+          "tags": [
+            "SQL",
+            "combination",
+            "tables"
+          ]
+        },
+        {
+          "front": "LIMIT",
+          "back": "A clause that specifies the maximum number of records to return in a SQL query.",
+          "tags": [
+            "SQL",
+            "restriction",
+            "data retrieval"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-5",
+      "name": "WHERE Clause",
+      "cards": [
+        {
+          "front": "WHERE clause",
+          "back": "A SQL command used to filter records that fulfill a specified condition.",
+          "tags": [
+            "Basic",
+            "SQL",
+            "Query"
+          ]
+        },
+        {
+          "front": "Condition",
+          "back": "An expression that evaluates to true or false, often used in the WHERE clause to filter results.",
+          "tags": [
+            "Basic",
+            "SQL",
+            "Condition"
+          ]
+        },
+        {
+          "front": "Comparison Operators",
+          "back": "Symbols used in SQL to compare two values, such as =, <, >, <=, >=,<>.",
+          "tags": [
+            "Intermediate",
+            "SQL",
+            "Operators"
+          ]
+        },
+        {
+          "front": "Logical Operators",
+          "back": "Operators used to combine multiple conditions in a WHERE clause, such as AND, OR, and NOT.",
+          "tags": [
+            "Intermediate",
+            "SQL",
+            "Logical"
+          ]
+        },
+        {
+          "front": "NULL values",
+          "back": "A marker in SQL indicating that a data value does not exist in the database; often handled in the WHERE clause using IS NULL or IS NOT NULL.",
+          "tags": [
+            "Intermediate",
+            "SQL",
+            "NULL"
+          ]
+        },
+        {
+          "front": "LIKE operator",
+          "back": "A SQL operator used in a WHERE clause to search for a specified pattern in a column.",
+          "tags": [
+            "Intermediate",
+            "SQL",
+            "LIKE"
+          ]
+        },
+        {
+          "front": "BETWEEN operator",
+          "back": "A SQL operator that filters records within a specified range; includes the endpoints of the range.",
+          "tags": [
+            "Advanced",
+            "SQL",
+            "BETWEEN"
+          ]
+        },
+        {
+          "front": "WHERE vs HAVING",
+          "back": "The WHERE clause filters records before aggregation, while HAVING filters records after aggregation in grouped queries.",
+          "tags": [
+            "Advanced",
+            "SQL",
+            "HAVING"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-6",
+      "name": "AND, OR, NOT Operators",
+      "cards": [
+        {
+          "front": "AND",
+          "back": "A logical operator in SQL that combines two conditions, returning TRUE only if both conditions are TRUE.",
+          "tags": [
+            "basic",
+            "operator"
+          ]
+        },
+        {
+          "front": "OR",
+          "back": "A logical operator in SQL that combines two conditions, returning TRUE if at least one of the conditions is TRUE.",
+          "tags": [
+            "basic",
+            "operator"
+          ]
+        },
+        {
+          "front": "NOT",
+          "back": "A logical operator in SQL that reverses the truth value of a condition. It returns TRUE if the condition is FALSE, and vice versa.",
+          "tags": [
+            "basic",
+            "operator"
+          ]
+        },
+        {
+          "front": "WHERE clause",
+          "back": "A SQL clause that specifies the criteria for filtering records in a query, often used in conjunction with AND, OR, or NOT operators.",
+          "tags": [
+            "intermediate",
+            "syntax",
+            "query"
+          ]
+        },
+        {
+          "front": "True",
+          "back": "A boolean value representing that a condition is satisfied in SQL logical expressions.",
+          "tags": [
+            "basic",
+            "boolean"
+          ]
+        },
+        {
+          "front": "False",
+          "back": "A boolean value representing that a condition is not satisfied in SQL logical expressions.",
+          "tags": [
+            "basic",
+            "boolean"
+          ]
+        },
+        {
+          "front": "Filtering Results",
+          "back": "The process of narrowing down the number of rows returned in a query using conditions with AND, OR, and NOT operators.",
+          "tags": [
+            "intermediate",
+            "query"
+          ]
+        },
+        {
+          "front": "Compound Conditions",
+          "back": "A condition in SQL formed by combining multiple simple conditions using AND or OR operators.",
+          "tags": [
+            "intermediate",
+            "query"
+          ]
+        },
+        {
+          "front": "Precedence of Operators",
+          "back": "In SQL, the order in which operators are evaluated. AND is evaluated before OR unless parentheses are used to alter the order.",
+          "tags": [
+            "advanced",
+            "evaluation"
+          ]
+        },
+        {
+          "front": "NULL Checks",
+          "back": "Using conditions to check for NULL values in a database, often with conditions like IS NULL or IS NOT NULL, which can be combined with AND, OR, and NOT.",
+          "tags": [
+            "intermediate",
+            "query"
+          ]
+        },
+        {
+          "front": "Short-circuit Evaluation",
+          "back": "An optimization technique where logical operators like AND and OR stop evaluating as soon as the outcome is determined (e.g., false for AND, true for OR).",
+          "tags": [
+            "advanced",
+            "concept"
+          ]
+        },
+        {
+          "front": "Parentheses in SQL",
+          "back": "Used to group conditions in SQL and control the order of evaluation for logical operators AND and OR to ensure the intended logic is applied.",
+          "tags": [
+            "intermediate",
+            "syntax"
+          ]
+        },
+        {
+          "front": "Logical expressions",
+          "back": "An expression that evaluates to TRUE, FALSE, or UNKNOWN, often used in WHERE clauses to filter results based on conditions.",
+          "tags": [
+            "basic",
+            "concept"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-7",
+      "name": "ORDER BY Clause",
+      "cards": [
+        {
+          "front": "ORDER BY",
+          "back": "A clause in SQL used to sort the result set of a query by one or more columns, either in ascending or descending order.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Sorting"
+          ]
+        },
+        {
+          "front": "ASC",
+          "back": "A keyword in SQL used with the ORDER BY clause to specify sorting in ascending order.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Ascending"
+          ]
+        },
+        {
+          "front": "DESC",
+          "back": "A keyword in SQL used with the ORDER BY clause to specify sorting in descending order.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Descending"
+          ]
+        },
+        {
+          "front": "Multiple Columns in ORDER BY",
+          "back": "Specifying more than one column in the ORDER BY clause to sort the result set by multiple criteria, in the order given.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Sorting",
+            "Multiple Columns"
+          ]
+        },
+        {
+          "front": "ORDER BY with NULLs",
+          "back": "An aspect of the ORDER BY clause that determines how NULL values are treated when sorting, typically placed at the beginning or end of the list depending on the DBMS settings.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "NULL Values"
+          ]
+        },
+        {
+          "front": "ORDER BY with calculations",
+          "back": "Using expressions or calculations in the ORDER BY clause to sort results based on derived values, such as the result of a mathematical operation on a column.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Calculations"
+          ]
+        },
+        {
+          "front": "ORDER BY in GROUP BY",
+          "back": "Using the ORDER BY clause in conjunction with GROUP BY to sort the results of aggregated queries.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "GROUP BY"
+          ]
+        },
+        {
+          "front": "ORDER BY clause performance considerations",
+          "back": "Factors to consider concerning performance when using the ORDER BY clause, such as large datasets and indexing strategies.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "Performance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-8",
+      "name": "LIMIT and OFFSET",
+      "cards": [
+        {
+          "front": "LIMIT",
+          "back": "A SQL clause used to specify the maximum number of rows that the query should return.",
+          "tags": [
+            "SQL",
+            "LIMIT"
+          ]
+        },
+        {
+          "front": "OFFSET",
+          "back": "A SQL clause that skips a specified number of rows before starting to return rows from the query.",
+          "tags": [
+            "SQL",
+            "OFFSET"
+          ]
+        },
+        {
+          "front": "Pagination",
+          "back": "The process of dividing a large dataset into smaller, manageable pieces or pages, often utilizing LIMIT and OFFSET in SQL queries.",
+          "tags": [
+            "SQL",
+            "Pagination"
+          ]
+        },
+        {
+          "front": "ORDER BY",
+          "back": "A SQL clause used to sort the result set of a query by one or more columns, often used in conjunction with LIMIT and OFFSET to control the order of the results.",
+          "tags": [
+            "SQL",
+            "ORDER BY"
+          ]
+        },
+        {
+          "front": "Use case for OFFSET and LIMIT",
+          "back": "Commonly used in web applications to implement features like 'load more' buttons, where only a subset of records is displayed at once and users can request additional records, controlling the dataset size returned.",
+          "tags": [
+            "SQL",
+            "Use Case",
+            "Pagination"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-9",
+      "name": "Using DISTINCT",
+      "cards": [
+        {
+          "front": "DISTINCT",
+          "back": "A SQL keyword used to return only unique values from a column, eliminating duplicate entries.",
+          "tags": [
+            "SQL",
+            "DISTINCT",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Unique Records",
+          "back": "Records in a database table that do not repeat; DISTINCT is used to identify these entries in queries.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Records"
+          ]
+        },
+        {
+          "front": "SELECT DISTINCT",
+          "back": "A SQL statement that retrieves unique values from one or more columns without any duplicate results.",
+          "tags": [
+            "SQL",
+            "SELECT",
+            "DISTINCT"
+          ]
+        },
+        {
+          "front": "COUNT with DISTINCT",
+          "back": "Using COUNT() function alongside DISTINCT to count only the number of unique entries in a column.",
+          "tags": [
+            "SQL",
+            "Count",
+            "DISTINCT"
+          ]
+        },
+        {
+          "front": "Group By with DISTINCT",
+          "back": "Using GROUP BY clause in conjunction with DISTINCT to summarize data uniquely for each group.",
+          "tags": [
+            "SQL",
+            "Group By",
+            "DISTINCT"
+          ]
+        },
+        {
+          "front": "DISTINCT vs. GROUP BY",
+          "back": "DISTINCT filters rows to return unique results, while GROUP BY aggregates rows based on shared values.",
+          "tags": [
+            "SQL",
+            "Comparison",
+            "DISTINCT"
+          ]
+        },
+        {
+          "front": "Nesting DISTINCT",
+          "back": "Using DISTINCT within a subquery to query unique values from a derived table or result set.",
+          "tags": [
+            "SQL",
+            "Subqueries",
+            "DISTINCT"
+          ]
+        },
+        {
+          "front": "Performance Considerations",
+          "back": "Using DISTINCT can impact performance negatively on large datasets, as it requires extra processing to eliminate duplicates.",
+          "tags": [
+            "SQL",
+            "Performance",
+            "DISTINCT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-10",
+      "name": "Aggregate Functions: COUNT, SUM, AVG",
+      "cards": [
+        {
+          "front": "COUNT()",
+          "back": "An SQL function used to count the number of rows in a specified column or in a query result set.",
+          "tags": [
+            "SQL",
+            "aggregate function"
+          ]
+        },
+        {
+          "front": "SUM()",
+          "back": "An SQL function that computes the total sum of a numeric column in a query result set.",
+          "tags": [
+            "SQL",
+            "aggregate function"
+          ]
+        },
+        {
+          "front": "AVG()",
+          "back": "An SQL function that calculates the average value of a numeric column in a query result set.",
+          "tags": [
+            "SQL",
+            "aggregate function"
+          ]
+        },
+        {
+          "front": "GROUP BY",
+          "back": "An SQL clause used to arrange identical data into groups, often used with aggregate functions.",
+          "tags": [
+            "SQL",
+            "clause",
+            "grouping"
+          ]
+        },
+        {
+          "front": "HAVING",
+          "back": "An SQL clause that filters groups after they are formed by the GROUP BY clause, often used with aggregate functions.",
+          "tags": [
+            "SQL",
+            "clause",
+            "filtering"
+          ]
+        },
+        {
+          "front": "DISTINCT",
+          "back": "An SQL keyword that removes duplicate records from the results returned by a SQL query, can be used with aggregate functions to count unique values.",
+          "tags": [
+            "SQL",
+            "keyword",
+            "uniqueness"
+          ]
+        },
+        {
+          "front": "NULL values",
+          "back": "In SQL, NULL represents a missing or undefined value, which can affect aggregate function results like COUNT, AVG, and SUM.",
+          "tags": [
+            "SQL",
+            "null",
+            "data integrity"
+          ]
+        },
+        {
+          "front": "Window Functions",
+          "back": "Special SQL functions that allow for calculations across a set of table rows related to the current row, can incorporate aggregate functions without collapsing results into a single output row.",
+          "tags": [
+            "SQL",
+            "window functions",
+            "advanced"
+          ]
+        },
+        {
+          "front": "Subquery",
+          "back": "An SQL query nested inside another query, which can be used in conjunction with aggregate functions to filter results based on aggregated criteria.",
+          "tags": [
+            "SQL",
+            "subquery",
+            "nested queries"
+          ]
+        },
+        {
+          "front": "Aggregate Function Behavior",
+          "back": "All aggregate functions ignore NULL values except for COUNT(), which counts all rows regardless of NULLs.",
+          "tags": [
+            "SQL",
+            "aggregate functions",
+            "behavior"
+          ]
+        },
+        {
+          "front": "Scalar Function",
+          "back": "A function that operates on a single value and returns a single value, unlike aggregate functions which operate on multiple values and return a single value.",
+          "tags": [
+            "SQL",
+            "functions",
+            "comparison"
+          ]
+        },
+        {
+          "front": "Rounding with AVG()",
+          "back": "When using the AVG() function, results can include decimal places. Use functions like ROUND() to format the results as desired.",
+          "tags": [
+            "SQL",
+            "rounding",
+            "formatting"
+          ]
+        },
+        {
+          "front": "Performance Considerations",
+          "back": "Using aggregate functions in SQL queries can impact performance, especially on large datasets, so indexing and careful structuring of queries are important.",
+          "tags": [
+            "SQL",
+            "performance",
+            "optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-11",
+      "name": "GROUP BY Clause",
+      "cards": [
+        {
+          "front": "GROUP BY",
+          "back": "A SQL clause that groups rows sharing a property so that aggregate functions can be applied to each group.",
+          "tags": [
+            "SQL",
+            "GROUP BY"
+          ]
+        },
+        {
+          "front": "Aggregate Function",
+          "back": "A function that performs a calculation on a set of values and returns a single value, often used with GROUP BY, e.g., COUNT, SUM, AVG.",
+          "tags": [
+            "SQL",
+            "Aggregate Functions"
+          ]
+        },
+        {
+          "front": "HAVING Clause",
+          "back": "A SQL clause that filters records after the GROUP BY operation, allowing conditions to be applied to groups.",
+          "tags": [
+            "SQL",
+            "HAVING"
+          ]
+        },
+        {
+          "front": "COUNT()",
+          "back": "An aggregate function that returns the number of rows that match a specified condition. It can be used with GROUP BY to count occurrences in groups.",
+          "tags": [
+            "SQL",
+            "Count Function"
+          ]
+        },
+        {
+          "front": "SUM()",
+          "back": "An aggregate function that calculates the total sum of a numeric column for the specified groups.",
+          "tags": [
+            "SQL",
+            "Sum Function"
+          ]
+        },
+        {
+          "front": "AVG()",
+          "back": "An aggregate function that returns the average value of a numeric column for the specified groups.",
+          "tags": [
+            "SQL",
+            "Average Function"
+          ]
+        },
+        {
+          "front": "DISTINCT",
+          "back": "A SQL keyword used to return only distinct (different) values in a result set, often used in conjunction with GROUP BY.",
+          "tags": [
+            "SQL",
+            "Distinct"
+          ]
+        },
+        {
+          "front": "GROUP BY Syntax",
+          "back": "The syntax for using GROUP BY in SQL is: SELECT column1, aggregate_function(column2) FROM table_name GROUP BY column1;",
+          "tags": [
+            "SQL",
+            "Syntax"
+          ]
+        },
+        {
+          "front": "ORDER BY with GROUP BY",
+          "back": "You can use ORDER BY after GROUP BY to sort the result set based on aggregate values or grouped column values.",
+          "tags": [
+            "SQL",
+            "Order By"
+          ]
+        },
+        {
+          "front": "GROUP BY Multiple Columns",
+          "back": "When using GROUP BY, you can group by multiple columns by separating them with commas. Example: GROUP BY column1, column2;",
+          "tags": [
+            "SQL",
+            "Multiple Columns"
+          ]
+        },
+        {
+          "front": "ROLLUP",
+          "back": "An extension of the GROUP BY clause that creates subtotals at each level of a hierarchy in data.",
+          "tags": [
+            "SQL",
+            "ROLLUP"
+          ]
+        },
+        {
+          "front": "CUBE",
+          "back": "A SQL operation that generates a result set that includes all possible subtotals across multiple dimensions using GROUP BY.",
+          "tags": [
+            "SQL",
+            "CUBE"
+          ]
+        },
+        {
+          "front": "NULL Handling in GROUP BY",
+          "back": "When grouping by columns that contain NULL values, rows with NULLs are grouped together.",
+          "tags": [
+            "SQL",
+            "NULL Values"
+          ]
+        },
+        {
+          "front": "Is GROUP BY mandatory for aggregate functions?",
+          "back": "No, GROUP BY is not mandatory for aggregate functions but is needed to group the results by specific columns before applying the aggregate functions.",
+          "tags": [
+            "SQL",
+            "Aggregate Functions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-12",
+      "name": "HAVING Clause",
+      "cards": [
+        {
+          "front": "HAVING Clause",
+          "back": "A SQL clause used to filter results based on aggregate functions after the GROUP BY clause has been applied.",
+          "tags": [
+            "SQL",
+            "HAVING",
+            "Database"
+          ]
+        },
+        {
+          "front": "GROUP BY",
+          "back": "A SQL statement that groups rows sharing a property so that aggregate functions can be applied to each group.",
+          "tags": [
+            "SQL",
+            "GROUP BY",
+            "Database"
+          ]
+        },
+        {
+          "front": "Aggregate Functions",
+          "back": "Functions that operate on a set of values and return a single value, such as SUM, COUNT, AVG, MAX, and MIN.",
+          "tags": [
+            "SQL",
+            "Functions",
+            "Aggregate"
+          ]
+        },
+        {
+          "front": "Difference between WHERE and HAVING",
+          "back": "WHERE filters rows before aggregation, while HAVING filters groups after aggregation has occurred.",
+          "tags": [
+            "SQL",
+            "HAVING",
+            "WHERE"
+          ]
+        },
+        {
+          "front": "Filtering with HAVING",
+          "back": "The HAVING clause allows you to apply conditions to group-level aggregates, such as 'HAVING COUNT(*) > 5' to filter groups with more than 5 records.",
+          "tags": [
+            "SQL",
+            "HAVING",
+            "Filters"
+          ]
+        },
+        {
+          "front": "HAVING with multiple conditions",
+          "back": "You can use multiple conditions in the HAVING clause by using logical operators like AND and OR.",
+          "tags": [
+            "SQL",
+            "HAVING",
+            "Conditions"
+          ]
+        },
+        {
+          "front": "Common use of HAVING",
+          "back": "Utilizing HAVING to find groups that meet specific criteria, such as 'SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 10'.",
+          "tags": [
+            "SQL",
+            "HAVING",
+            "Example"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-13",
+      "name": "INNER JOIN Basics",
+      "cards": [
+        {
+          "front": "INNER JOIN",
+          "back": "A type of join that returns only the rows where there is a match in both tables being joined.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "INNER JOIN"
+          ]
+        },
+        {
+          "front": "ON clause",
+          "back": "The condition used to specify the columns to be compared in the INNER JOIN operation.",
+          "tags": [
+            "SQL",
+            "INNER JOIN",
+            "ON clause"
+          ]
+        },
+        {
+          "front": "SELECT statement",
+          "back": "A SQL command used to retrieve data from one or more tables, often used with joins to specify which columns to return.",
+          "tags": [
+            "SQL",
+            "SELECT"
+          ]
+        },
+        {
+          "front": "Alias",
+          "back": "A temporary name given to a table or a column for the duration of a query, commonly used to simplify notation in INNER JOINs.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "Alias"
+          ]
+        },
+        {
+          "front": "Cross Join",
+          "back": "A type of join that returns the Cartesian product of two tables, resulting in all possible combinations of rows.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "Cross Join"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for a record in a database table, often used as a reference in joins.",
+          "tags": [
+            "SQL",
+            "Primary Key",
+            "Database Keys"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A column or group of columns in a table that uniquely identifies a row in another table, used to establish relationships between tables.",
+          "tags": [
+            "SQL",
+            "Foreign Key",
+            "Database Relationships"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-14",
+      "name": "LEFT JOIN and RIGHT JOIN",
+      "cards": [
+        {
+          "front": "LEFT JOIN",
+          "back": "A type of join that returns all records from the left table and the matched records from the right table, or NULL for unmatched records from the right table.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "LEFT JOIN"
+          ]
+        },
+        {
+          "front": "RIGHT JOIN",
+          "back": "A type of join that returns all records from the right table and the matched records from the left table, or NULL for unmatched records from the left table.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "RIGHT JOIN"
+          ]
+        },
+        {
+          "front": "INNER JOIN",
+          "back": "A type of join that returns only the records where there is a match in both joined tables.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "INNER JOIN"
+          ]
+        },
+        {
+          "front": "JOIN Condition",
+          "back": "A condition that specifies how two tables are related to each other, often using primary and foreign keys to establish the relationship.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "Conditions"
+          ]
+        },
+        {
+          "front": "NULL values in JOIN",
+          "back": "In JOIN operations, NULL values indicate the absence of a matching record in the corresponding table, primarily seen in LEFT JOIN and RIGHT JOIN results.",
+          "tags": [
+            "SQL",
+            "JOIN",
+            "NULL values"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-15",
+      "name": "FULL OUTER JOIN",
+      "cards": [
+        {
+          "front": "FULL OUTER JOIN",
+          "back": "A type of join that returns all records from both tables where there is a match, and if there is no match, NULL values are returned for the columns of the table that lacks a match.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Database"
+          ]
+        },
+        {
+          "front": "NULL",
+          "back": "A special marker used in SQL to indicate that a data value does not exist in the database.",
+          "tags": [
+            "SQL",
+            "Data",
+            "Database"
+          ]
+        },
+        {
+          "front": "LEFT JOIN",
+          "back": "A type of join that returns all records from the left table and the matched records from the right table. If there is no match, NULL values are returned for the right table's columns.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Database"
+          ]
+        },
+        {
+          "front": "RIGHT JOIN",
+          "back": "A type of join that returns all records from the right table and the matched records from the left table. If there is no match, NULL values are returned for the left table's columns.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Database"
+          ]
+        },
+        {
+          "front": "INNER JOIN",
+          "back": "A type of join that returns only the records that have matching values in both tables.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Database"
+          ]
+        },
+        {
+          "front": "COALESCE",
+          "back": "A SQL function that returns the first non-null value in a list of arguments.",
+          "tags": [
+            "SQL",
+            "Function",
+            "Database"
+          ]
+        },
+        {
+          "front": "Table Aliasing",
+          "back": "A technique in SQL that allows you to give a temporary name to a table for the duration of a query, making it easier to refer to in various clauses.",
+          "tags": [
+            "SQL",
+            "Alias",
+            "Database"
+          ]
+        },
+        {
+          "front": "Common Use Cases",
+          "back": "FULL OUTER JOIN is commonly used for data comparisons and when you want to see the complete dataset from both tables, including non-matching records.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Application"
+          ]
+        },
+        {
+          "front": "ON Clause",
+          "back": "A clause in a JOIN condition that specifies the criteria for how the tables should be joined, typically defining the relationship between keys in the tables.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Database"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-16",
+      "name": "Self Joins",
+      "cards": [
+        {
+          "front": "Self Join",
+          "back": "A self join is a regular join, but the table is joined with itself. It is used to compare rows in a table or retrieve related information from the same table.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "INNER JOIN",
+          "back": "An INNER JOIN returns only the rows that have matching values in both tables involved in the join. In the context of a self join, it only returns rows where the comparison is true within the same table.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Alias",
+          "back": "An alias is a temporary name given to a table or a column for the duration of a query. In self joins, aliases are used to differentiate between the two instances of the same table.",
+          "tags": [
+            "SQL",
+            "Alias",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Cartesian Product",
+          "back": "The cartesian product is the result of combining every row of one table with every row of another table. In self joins, this occurs if no conditions are specified, which can lead to a large result set.",
+          "tags": [
+            "SQL",
+            "Cartesian Product",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "ON clause",
+          "back": "The ON clause is used to specify the condition for joining tables. In self joins, it clarifies which rows from the same table should be matched based on certain criteria.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "WHERE clause",
+          "back": "The WHERE clause filters records that fulfill a specified condition. In the context of a self join, it can further refine the results after the rows have been joined.",
+          "tags": [
+            "SQL",
+            "Filtering",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Self Join Use Case",
+          "back": "Self joins are commonly used to find hierarchical relationships within the same table, such as employees and their managers, or to compare rows within the same dataset.",
+          "tags": [
+            "SQL",
+            "Use Case",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Recursive Query",
+          "back": "A recursive query allows for retrieving data from hierarchical structures. While not always tied to self joins, it can be implemented in SQL using self joins to represent parent-child relationships.",
+          "tags": [
+            "SQL",
+            "Recursive Query",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Avoiding Duplicates",
+          "back": "When performing a self join, it is crucial to manage duplicates in the result set by using DISTINCT or checking conditions that prevent identical matches.",
+          "tags": [
+            "SQL",
+            "Duplicate Management",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "LEFT JOIN in Self Join",
+          "back": "A LEFT JOIN retrieves all rows from the left table and the matched rows from the right table. In self joins, it can return unmatched rows from the first instance of the table while matching records from the second.",
+          "tags": [
+            "SQL",
+            "LEFT JOIN",
+            "Self Join"
+          ]
+        },
+        {
+          "front": "Performance Considerations",
+          "back": "Self joins can be resource-intensive, especially on large datasets. It's important to optimize queries using appropriate indexes and filters to improve performance.",
+          "tags": [
+            "SQL",
+            "Performance",
+            "Self Join"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-17",
+      "name": "Subqueries: Introduction",
+      "cards": [
+        {
+          "front": "Subquery",
+          "back": "A query nested inside another SQL query that can be used to perform operations that depend on the result of the outer query.",
+          "tags": [
+            "SQL",
+            "Subquery",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Inner Query",
+          "back": "The query that is nested inside another SQL query, used in a subquery to provide results that the outer query will use.",
+          "tags": [
+            "SQL",
+            "Inner Query",
+            "Subquery"
+          ]
+        },
+        {
+          "front": "Outer Query",
+          "back": "The main SQL query that contains a subquery. It depends on the results returned by the subquery.",
+          "tags": [
+            "SQL",
+            "Outer Query",
+            "Subquery"
+          ]
+        },
+        {
+          "front": "Correlated Subquery",
+          "back": "A type of subquery that references columns from the outer query, allowing the subquery to return different results for each row processed by the outer query.",
+          "tags": [
+            "SQL",
+            "Correlated Subquery",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "Non-Correlated Subquery",
+          "back": "A subquery that can be executed independently of the outer query, as it does not reference any columns from the outer query.",
+          "tags": [
+            "SQL",
+            "Non-Correlated Subquery",
+            "Basic"
+          ]
+        },
+        {
+          "front": "EXISTS",
+          "back": "A SQL keyword used in a subquery to check for the existence of any rows that meet certain criteria, returning TRUE if at least one row exists.",
+          "tags": [
+            "SQL",
+            "EXISTS",
+            "Subquery"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-18",
+      "name": "Correlated Subqueries",
+      "cards": [
+        {
+          "front": "Correlated Subquery",
+          "back": "A subquery that references columns from the outer query, and is evaluated once for each row processed by the outer query.",
+          "tags": [
+            "Subquery",
+            "SQL",
+            "Correlated"
+          ]
+        },
+        {
+          "front": "Outer Query",
+          "back": "The main query that contains the correlated subquery, providing context for the subquery's execution.",
+          "tags": [
+            "SQL",
+            "Query",
+            "Outer"
+          ]
+        },
+        {
+          "front": "Performance Implications",
+          "back": "Correlated subqueries may lead to performance issues because they can be executed multiple times, once for each row in the outer query.",
+          "tags": [
+            "Performance",
+            "SQL",
+            "Correlated"
+          ]
+        },
+        {
+          "front": "Non-correlated Subquery",
+          "back": "A subquery that is independent of the outer query and can be executed on its own, providing a single result set for the main query.",
+          "tags": [
+            "Subquery",
+            "SQL"
+          ]
+        },
+        {
+          "front": "EXISTS Operator",
+          "back": "A SQL operator used in a correlated subquery to test for the existence of rows returned by the subquery.",
+          "tags": [
+            "SQL",
+            "EXISTS",
+            "Subquery"
+          ]
+        },
+        {
+          "front": "Scalar Subquery",
+          "back": "A subquery that returns a single value; can be used in SELECT, WHERE, or HAVING clauses.",
+          "tags": [
+            "Subquery",
+            "SQL"
+          ]
+        },
+        {
+          "front": "ANY and ALL Operators",
+          "back": "These operators can be used in correlated subqueries to compare a value to a set of values returned by the subquery.",
+          "tags": [
+            "SQL",
+            "Correlated",
+            "Operators"
+          ]
+        },
+        {
+          "front": "Performance Alternatives",
+          "back": "Using joins instead of correlated subqueries can often improve performance, as joins are generally more efficient in SQL execution.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Performance"
+          ]
+        },
+        {
+          "front": "Aggregate Functions in Correlated Subqueries",
+          "back": "Aggregate functions can be used in correlated subqueries to calculate sums, counts, or averages for the related data in the outer query.",
+          "tags": [
+            "SQL",
+            "Aggregate Functions",
+            "Subquery"
+          ]
+        },
+        {
+          "front": "Example of Correlated Subquery",
+          "back": "SELECT e1.* FROM Employees e1 WHERE e1.salary > (SELECT AVG(e2.salary) FROM Employees e2 WHERE e2.department_id = e1.department_id);",
+          "tags": [
+            "SQL",
+            "Example",
+            "Correlated"
+          ]
+        },
+        {
+          "front": "Correlated Subquery vs. Join",
+          "back": "Correlated subqueries can be less efficient than joins as they may require multiple evaluations; joins are generally optimized in SQL processing.",
+          "tags": [
+            "SQL",
+            "Join",
+            "Comparison"
+          ]
+        },
+        {
+          "front": "NULL Handling in Subqueries",
+          "back": "When using correlated subqueries, NULL values should be handled carefully to prevent unexpected results in the outer query.",
+          "tags": [
+            "SQL",
+            "NULL",
+            "Subquery"
+          ]
+        },
+        {
+          "front": "Visualizing Correlated Subqueries",
+          "back": "Visualizing the flow of data between the outer query and correlated subquery can help in understanding the data dependencies.",
+          "tags": [
+            "SQL",
+            "Visualization",
+            "Correlated"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-19",
+      "name": "UNION and UNION ALL",
+      "cards": [
+        {
+          "front": "UNION",
+          "back": "A SQL operator that combines the results of two or more SELECT statements, eliminating duplicate rows from the final result set.",
+          "tags": [
+            "SQL",
+            "UNION",
+            "Basics"
+          ]
+        },
+        {
+          "front": "UNION ALL",
+          "back": "A SQL operator that combines the results of two or more SELECT statements, including all duplicates in the final result set.",
+          "tags": [
+            "SQL",
+            "UNION ALL",
+            "Basics"
+          ]
+        },
+        {
+          "front": "Duplicate Rows",
+          "back": "Rows that have identical values for all columns in a set. UNION removes these rows, while UNION ALL keeps them.",
+          "tags": [
+            "SQL",
+            "Duplicates",
+            "UNION"
+          ]
+        },
+        {
+          "front": "Performance of UNION vs UNION ALL",
+          "back": "UNION ALL is generally faster than UNION because it does not perform the duplicate elimination check.",
+          "tags": [
+            "SQL",
+            "Performance",
+            "UNION"
+          ]
+        },
+        {
+          "front": "Use Cases for UNION",
+          "back": "Used when you want to combine results from different queries without duplicates, like merging results from different regions or branches.",
+          "tags": [
+            "SQL",
+            "Use Cases",
+            "UNION"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-20",
+      "name": "Basic Data Manipulation with INSERT",
+      "cards": [
+        {
+          "front": "INSERT Statement",
+          "back": "A SQL command used to add new rows of data to a table in a database.",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Basic"
+          ]
+        },
+        {
+          "front": "VALUES Clause",
+          "back": "A component of the INSERT statement that specifies the data to be inserted into the table, often represented in parentheses as a list of values.",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Basic"
+          ]
+        },
+        {
+          "front": "Single Row Insert",
+          "back": "Inserting one record at a time using the INSERT statement. Syntax example: INSERT INTO table_name (column1, column2) VALUES (value1, value2);",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "Multi-Row Insert",
+          "back": "Inserting multiple records at once into a table using a single INSERT statement. This is achieved by including multiple sets of values in the VALUES clause.",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "NULL Value",
+          "back": "A special marker in SQL that indicates that a data value does not exist in the database. When inserting data, a NULL value can be explicitly specified if a column allows it.",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "Default Values",
+          "back": "A predefined value that a column in a database table can take if no explicit value is provided during an INSERT operation.",
+          "tags": [
+            "SQL",
+            "INSERT",
+            "Advanced"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-21",
+      "name": "Updating Records with UPDATE",
+      "cards": [
+        {
+          "front": "UPDATE Statement",
+          "back": "An SQL command used to modify existing records in a table.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Basics"
+          ]
+        },
+        {
+          "front": "SET Clause",
+          "back": "Part of the UPDATE statement that specifies the columns to modify and their new values.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Basics"
+          ]
+        },
+        {
+          "front": "WHERE Clause",
+          "back": "A condition in an SQL statement that specifies which records to update.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Conditions"
+          ]
+        },
+        {
+          "front": "Multiple Conditions",
+          "back": "Using AND/OR in the WHERE clause to specify which records to update based on various criteria.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "Aggregate Functions",
+          "back": "Functions like COUNT, SUM, AVG that can be used in the SELECT statement but not directly in UPDATE.",
+          "tags": [
+            "SQL",
+            "Functions",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "Cascading Updates",
+          "back": "Automatically updating related records in other tables due to changes made in a primary table, typically in foreign key relationships.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "Transaction Control",
+          "back": "Commands such as COMMIT and ROLLBACK that manage changes made by DML statements like UPDATE.",
+          "tags": [
+            "SQL",
+            "Transactions",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "Batch Update",
+          "back": "Updating multiple records in a table simultaneously, often using a single SQL command.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "SQL Injection",
+          "back": "A security vulnerability that allows an attacker to interfere with the queries an application makes to its database, potentially affecting UPDATE statements.",
+          "tags": [
+            "SQL",
+            "Security",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "NULL Values",
+          "back": "The absence of a value in a column that can be set or updated using an UPDATE statement.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "Returning Clause",
+          "back": "A clause that allows you to return the values of updated records from an UPDATE statement.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "Join in UPDATE",
+          "back": "Using JOIN syntax within an UPDATE statement to modify records in one table based on condition from another table.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "Advanced"
+          ]
+        },
+        {
+          "front": "Transaction",
+          "back": "A sequence of operations performed as a single logical unit of work, ensuring that either all operations or none are executed.",
+          "tags": [
+            "SQL",
+            "Transactions",
+            "Concepts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-22",
+      "name": "Deleting Records with DELETE",
+      "cards": [
+        {
+          "front": "DELETE Statement",
+          "back": "A SQL command used to remove existing records from a table based on a specified condition.",
+          "tags": [
+            "SQL",
+            "DELETE",
+            "Command"
+          ]
+        },
+        {
+          "front": "WHERE Clause",
+          "back": "A SQL clause used to specify the conditions that must be met for records to be deleted.",
+          "tags": [
+            "SQL",
+            "Clause",
+            "DELETE"
+          ]
+        },
+        {
+          "front": "TRUNCATE TABLE",
+          "back": "A SQL command that removes all records from a table without logging individual row deletions; faster than DELETE without a condition.",
+          "tags": [
+            "SQL",
+            "Table",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "CASCADE DELETE",
+          "back": "An option in SQL that allows the deletion of records in a child table when the corresponding record in the parent table is deleted.",
+          "tags": [
+            "SQL",
+            "Foreign Keys",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "Syntax of DELETE",
+          "back": "The basic syntax for the DELETE command is: DELETE FROM table_name WHERE condition;",
+          "tags": [
+            "SQL",
+            "Syntax",
+            "DELETE"
+          ]
+        },
+        {
+          "front": "DELETE vs. TRUNCATE",
+          "back": "DELETE removes specified records and can be rolled back; TRUNCATE removes all records permanently and cannot be rolled back in most database systems.",
+          "tags": [
+            "SQL",
+            "Comparison",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "Conditional Deletion",
+          "back": "When using DELETE, you can specify conditions using the WHERE clause to delete only certain records that match those conditions.",
+          "tags": [
+            "SQL",
+            "Condition",
+            "DELETE"
+          ]
+        },
+        {
+          "front": "DELETE All Records",
+          "back": "To delete all records from a table without specifying a condition, use the statement: DELETE FROM table_name;",
+          "tags": [
+            "SQL",
+            "Deletion",
+            "All Records"
+          ]
+        },
+        {
+          "front": "Soft Delete",
+          "back": "A technique where a record is not physically removed from a table but marked as deleted, often by setting a 'deleted' flag.",
+          "tags": [
+            "SQL",
+            "Soft Delete",
+            "Data Management"
+          ]
+        },
+        {
+          "front": "Transactions in DELETE",
+          "back": "The use of transactions ensures that DELETE commands can be rolled back in the event of an error, maintaining data integrity.",
+          "tags": [
+            "SQL",
+            "Transactions",
+            "Integrity"
+          ]
+        },
+        {
+          "front": "Multi-Table DELETE",
+          "back": "An SQL DELETE operation that can delete records from multiple tables using a JOIN in the DELETE statement.",
+          "tags": [
+            "SQL",
+            "Multi-Table",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "Potential Risks of DELETE",
+          "back": "Using DELETE without a WHERE clause can result in the loss of all records within a table, which may lead to data loss.",
+          "tags": [
+            "SQL",
+            "Risks",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "Using SQL Functions in DELETE",
+          "back": "You can use functions like COUNT(), MAX(), etc., in a DELETE statement, usually in a subquery to specify records to delete based on aggregated results.",
+          "tags": [
+            "SQL",
+            "Functions",
+            "DELETE"
+          ]
+        },
+        {
+          "front": "Safe Deleting in Practice",
+          "back": "Before performing a DELETE operation, it's a good practice to first execute a SELECT statement with the same conditions to inspect which records will be affected.",
+          "tags": [
+            "SQL",
+            "Practice",
+            "Deletion"
+          ]
+        },
+        {
+          "front": "DELETE Restrictions",
+          "back": "Some databases may impose restrictions on deleting records due to foreign key constraints, preventing the deletion of referenced records.",
+          "tags": [
+            "SQL",
+            "Constraints",
+            "Deletion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-23",
+      "name": "Using Transactions",
+      "cards": [
+        {
+          "front": "Transaction",
+          "back": "A sequence of one or more SQL operations that are executed as a single unit of work. It ensures that either all operations succeed or none at all.",
+          "tags": [
+            "basic",
+            "definition"
+          ]
+        },
+        {
+          "front": "ACID Properties",
+          "back": "A set of properties (Atomicity, Consistency, Isolation, Durability) that ensure reliable processing of database transactions.",
+          "tags": [
+            "basic",
+            "concept"
+          ]
+        },
+        {
+          "front": "COMMIT",
+          "back": "An SQL command used to save all changes made during the current transaction to the database permanently.",
+          "tags": [
+            "basic",
+            "command"
+          ]
+        },
+        {
+          "front": "ROLLBACK",
+          "back": "An SQL command that undoes all changes made during the current transaction if an error occurs or if a user decides to abandon the transaction.",
+          "tags": [
+            "basic",
+            "command"
+          ]
+        },
+        {
+          "front": "Isolation Level",
+          "back": "Defines the level of visibility that concurrent transactions have over each other's modifications. Common levels include READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, and SERIALIZABLE.",
+          "tags": [
+            "intermediate",
+            "concept"
+          ]
+        },
+        {
+          "front": "Savepoint",
+          "back": "A point in a transaction that can be used to partially roll back the transaction to that point without affecting the entire transaction.",
+          "tags": [
+            "intermediate",
+            "concept"
+          ]
+        },
+        {
+          "front": "Deadlock",
+          "back": "A situation in which two or more transactions are unable to proceed because each is waiting for the other to release resources, causing a standstill.",
+          "tags": [
+            "intermediate",
+            "problem"
+          ]
+        },
+        {
+          "front": "BEGIN TRANSACTION",
+          "back": "An SQL command that marks the start of a transaction, signaling that subsequent SQL statements should be treated as a single unit of work.",
+          "tags": [
+            "advanced",
+            "command"
+          ]
+        },
+        {
+          "front": "Two-Phase Commit Protocol",
+          "back": "A distributed transaction protocol that ensures all participants in a transaction either commit or rollback, ensuring consistency across all systems involved.",
+          "tags": [
+            "advanced",
+            "concept"
+          ]
+        },
+        {
+          "front": "Transaction Log",
+          "back": "A file that records all transactions and modifications made to the database, allowing recovery in the case of failure or crashes.",
+          "tags": [
+            "advanced",
+            "concept"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-24",
+      "name": "Error Handling in SQL",
+      "cards": [
+        {
+          "front": "TRY...CATCH",
+          "back": "A SQL control-of-flow structure that allows you to handle exceptions or errors by defining a block of code for normal processing and a separate block for error handling.",
+          "tags": [
+            "control flow",
+            "error handling",
+            "SQL Server"
+          ]
+        },
+        {
+          "front": "RAISEERROR",
+          "back": "A SQL statement used to generate an error message in the application or client from T-SQL code. It can also be used to specify the severity and state of the error.",
+          "tags": [
+            "error generation",
+            "SQL Server"
+          ]
+        },
+        {
+          "front": "Transaction Management",
+          "back": "The process of ensuring data integrity through the use of transactions, which are sequences of operations performed as a single logical unit of work. Transactions can be committed or rolled back in case of errors.",
+          "tags": [
+            "data integrity",
+            "transactions",
+            "error handling"
+          ]
+        },
+        {
+          "front": "SQLSTATE",
+          "back": "A five-character string code returned by the SQL engine to indicate the success or failure of an operation, including specific error conditions. Useful for determining error handling outcomes.",
+          "tags": [
+            "error codes",
+            "SQL standards"
+          ]
+        },
+        {
+          "front": "CHECKPOINT",
+          "back": "A command in SQL that forces the database engine to write all in-memory data to disk, allowing for better transaction management and recovery processes after errors or failures.",
+          "tags": [
+            "database recovery",
+            "transactions",
+            "error management"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-25",
+      "name": "Indexes: What and Why?",
+      "cards": [
+        {
+          "front": "Index",
+          "back": "A database structure that improves the speed of data retrieval operations on a database table at the cost of additional space and maintenance overhead.",
+          "tags": [
+            "basic",
+            "index"
+          ]
+        },
+        {
+          "front": "B-tree index",
+          "back": "A self-balancing tree data structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.",
+          "tags": [
+            "basic",
+            "b-tree",
+            "index"
+          ]
+        },
+        {
+          "front": "Unique index",
+          "back": "An index that ensures all values in a column are unique, preventing duplicate entries in that column.",
+          "tags": [
+            "basic",
+            "unique",
+            "index"
+          ]
+        },
+        {
+          "front": "Clustered index",
+          "back": "An index that determines the physical order of data rows in a table. A table can have only one clustered index.",
+          "tags": [
+            "intermediate",
+            "clustered",
+            "index"
+          ]
+        },
+        {
+          "front": "Non-clustered index",
+          "back": "An index that maintains a logical order of the data but does not sort the actual data rows. A table can have multiple non-clustered indexes.",
+          "tags": [
+            "intermediate",
+            "non-clustered",
+            "index"
+          ]
+        },
+        {
+          "front": "Composite index",
+          "back": "An index on two or more columns of a table to optimize queries that filter or sort based on multiple columns.",
+          "tags": [
+            "intermediate",
+            "composite",
+            "index"
+          ]
+        },
+        {
+          "front": "Covering index",
+          "back": "An index that includes all the columns needed for a query, allowing the database to return the data without having to look up the actual table.",
+          "tags": [
+            "advanced",
+            "covering",
+            "index"
+          ]
+        },
+        {
+          "front": "Index fragmentation",
+          "back": "The condition where the logical ordering of index pages does not match the physical ordering, which can degrade performance.",
+          "tags": [
+            "advanced",
+            "fragmentation",
+            "index"
+          ]
+        },
+        {
+          "front": "Bitmap index",
+          "back": "An index created by mapping the values of a column to binary digits (bits), efficiently used in read-heavy and low-cardinality situations.",
+          "tags": [
+            "advanced",
+            "bitmap",
+            "index"
+          ]
+        },
+        {
+          "front": "Full-text index",
+          "back": "An index that allows for efficient searching of textual data within database columns, enabling complex searches on large text bodies.",
+          "tags": [
+            "advanced",
+            "full-text",
+            "index"
+          ]
+        },
+        {
+          "front": "Cost of indexing",
+          "back": "The trade-off related to increased storage requirements and maintenance overhead caused by creating and maintaining indexes compared to the speed-up in query performance they provide.",
+          "tags": [
+            "intermediate",
+            "cost",
+            "index"
+          ]
+        },
+        {
+          "front": "Query plan with indexes",
+          "back": "The execution strategy that the database engine uses to retrieve data based on indexes, significantly affecting query performance and efficiency.",
+          "tags": [
+            "advanced",
+            "query plan",
+            "index"
+          ]
+        },
+        {
+          "front": "Index maintenance",
+          "back": "The process of keeping indexes updated through operations such as inserts, updates, and deletes, which can affect database performance if not managed properly.",
+          "tags": [
+            "advanced",
+            "maintenance",
+            "index"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-26",
+      "name": "Creating Tables and Schema Design",
+      "cards": [
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for each record in a database table, ensuring that no two rows have the same key value.",
+          "tags": [
+            "basic",
+            "database",
+            "schema"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field in one table that links to the primary key of another table, establishing a relationship between the two tables.",
+          "tags": [
+            "basic",
+            "database",
+            "schema"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing data in a database to reduce redundancy and improve data integrity.",
+          "tags": [
+            "intermediate",
+            "database",
+            "design"
+          ]
+        },
+        {
+          "front": "Denormalization",
+          "back": "The process of combining tables or adding redundant data to improve database read performance at the expense of write performance.",
+          "tags": [
+            "intermediate",
+            "database",
+            "design"
+          ]
+        },
+        {
+          "front": "Schema",
+          "back": "The overall structure that defines how data is organized in a database, including tables, fields, relationships, and constraints.",
+          "tags": [
+            "basic",
+            "database",
+            "design"
+          ]
+        },
+        {
+          "front": "Data Type",
+          "back": "A classification that specifies what kind of data can be stored in a field, such as INTEGER, VARCHAR, DATE, etc.",
+          "tags": [
+            "basic",
+            "database",
+            "design"
+          ]
+        },
+        {
+          "front": "Index",
+          "back": "A database structure that improves the speed of data retrieval operations by providing quick access to rows in a table.",
+          "tags": [
+            "intermediate",
+            "database",
+            "performance"
+          ]
+        },
+        {
+          "front": "Composite Key",
+          "back": "A primary key that consists of two or more columns in a table, used to uniquely identify a record when a single column is insufficient.",
+          "tags": [
+            "advanced",
+            "database",
+            "schema"
+          ]
+        },
+        {
+          "front": "Entity-Relationship Model",
+          "back": "A visual representation of the entities in a database and their relationships, used to facilitate database design.",
+          "tags": [
+            "intermediate",
+            "design",
+            "modeling"
+          ]
+        },
+        {
+          "front": "Referential Integrity",
+          "back": "A set of rules that ensure that relationships between tables remain consistent, preventing orphaned records.",
+          "tags": [
+            "intermediate",
+            "database",
+            "integrity"
+          ]
+        },
+        {
+          "front": "Join",
+          "back": "An SQL operation that combines rows from two or more tables based on a related column between them.",
+          "tags": [
+            "basic",
+            "sql",
+            "database"
+          ]
+        },
+        {
+          "front": "SQL Constraint",
+          "back": "A rule that restricts the types of data that can be inserted into a table, such as NOT NULL, UNIQUE, or FOREIGN KEY.",
+          "tags": [
+            "intermediate",
+            "sql",
+            "design"
+          ]
+        },
+        {
+          "front": "View",
+          "back": "A virtual table that provides a way to present data from one or more tables without storing it separately, often used for simplifying complex queries.",
+          "tags": [
+            "intermediate",
+            "database",
+            "design"
+          ]
+        },
+        {
+          "front": "Database Migration",
+          "back": "The process of transferring data from one database system to another or of changing the database schema to accommodate new requirements.",
+          "tags": [
+            "advanced",
+            "database",
+            "migration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-27",
+      "name": "Primary and Foreign Keys",
+      "cards": [
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for a record in a table, ensuring that no two rows have the same value for this column.",
+          "tags": [
+            "Primary Key",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field in one table that uniquely identifies a row of another table, establishing a relationship between two tables.",
+          "tags": [
+            "Foreign Key",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Composite Key",
+          "back": "A primary key that consists of two or more columns in a table, used to uniquely identify a record.",
+          "tags": [
+            "Composite Key",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Referential Integrity",
+          "back": "A property that requires foreign keys to match values in the primary key of another table, ensuring valid relationships.",
+          "tags": [
+            "Referential Integrity",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Null Value",
+          "back": "A marker in a database that indicates that a data value does not exist in the database, which foreign keys can accept unless specified otherwise.",
+          "tags": [
+            "Null Value",
+            "SQL"
+          ]
+        },
+        {
+          "front": "One-to-Many Relationship",
+          "back": "A relationship where a single record in one table is associated with multiple records in another table, often represented by primary and foreign keys.",
+          "tags": [
+            "One-to-Many Relationship",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Many-to-Many Relationship",
+          "back": "A relationship where multiple records in one table relate to multiple records in another table, typically created through a junction table.",
+          "tags": [
+            "Many-to-Many Relationship",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Junction Table",
+          "back": "A table used to establish a many-to-many relationship, containing foreign keys referencing the primary keys of the two related tables.",
+          "tags": [
+            "Junction Table",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Entity Integrity",
+          "back": "A principle that ensures the primary key value must be unique and not null in each record, maintaining data integrity.",
+          "tags": [
+            "Entity Integrity",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Cascading Updates",
+          "back": "A feature that allows changes made to a primary key to automatically update corresponding foreign keys in related tables.",
+          "tags": [
+            "Cascading Updates",
+            "SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-28",
+      "name": "Constraints: NOT NULL, UNIQUE, CHECK",
+      "cards": [
+        {
+          "front": "NOT NULL",
+          "back": "A constraint that ensures a column cannot have a NULL value, meaning that a field must always contain a value for each record.",
+          "tags": [
+            "basic",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "UNIQUE",
+          "back": "A constraint that ensures all values in a column are different from each other, meaning no two rows can have the same value in that column.",
+          "tags": [
+            "basic",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "CHECK",
+          "back": "A constraint that allows defining a condition on a column, ensuring that the value in the column satisfies certain criteria before allowing the data to be inserted or updated.",
+          "tags": [
+            "intermediate",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A unique identifier for a record in a table. It can contain multiple columns and must never accept NULL values, ensuring each record can be uniquely identified.",
+          "tags": [
+            "basic",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field (or collection of fields) in one table that refers to the Primary Key in another table, used to establish a link between the two tables.",
+          "tags": [
+            "intermediate",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Composite Unique Key",
+          "back": "A unique constraint that applies to a combination of two or more columns in a table, ensuring that the combination of values is unique across all records.",
+          "tags": [
+            "intermediate",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Scalar CHECK Constraint",
+          "back": "A type of CHECK constraint that evaluates a single column's value against a condition specified in the constraint definition.",
+          "tags": [
+            "advanced",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Row-level CHECK Constraint",
+          "back": "A CHECK constraint that can use values from multiple columns in the same row to validate whether the row satisfies a specified condition.",
+          "tags": [
+            "advanced",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "Deferring Constraints",
+          "back": "An SQL feature that allows the enforcement of constraints, like UNIQUE or CHECK, to be temporarily postponed until the end of a transaction, giving more flexibility during data manipulation.",
+          "tags": [
+            "advanced",
+            "SQL",
+            "constraints"
+          ]
+        },
+        {
+          "front": "NULL",
+          "back": "A special marker used to indicate that a data value does not exist in the database, often treated as unknown or absent rather than zero or an empty string.",
+          "tags": [
+            "basic",
+            "SQL",
+            "constraints"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-29",
+      "name": "Stored Procedures: An Introduction",
+      "cards": [
+        {
+          "front": "Stored Procedure",
+          "back": "A stored procedure is a set of SQL statements that can be executed as a single unit, typically to encapsulate business logic.",
+          "tags": [
+            "definition",
+            "basic"
+          ]
+        },
+        {
+          "front": "Benefits of Stored Procedures",
+          "back": "Stored procedures improve performance by reducing network traffic, allow for code reuse, and provide a layer of abstraction for security.",
+          "tags": [
+            "advantages",
+            "basic"
+          ]
+        },
+        {
+          "front": "Parameters in Stored Procedures",
+          "back": "Parameters are variables that can be passed into stored procedures to customize their behavior, allowing for dynamic execution with different inputs.",
+          "tags": [
+            "parameters",
+            "intermediate"
+          ]
+        },
+        {
+          "front": "CREATE PROCEDURE",
+          "back": "The CREATE PROCEDURE statement is used to define a new stored procedure in a database.",
+          "tags": [
+            "SQL syntax",
+            "intermediate"
+          ]
+        },
+        {
+          "front": "EXECUTE statement",
+          "back": "The EXECUTE statement (or EXEC) is used to run a previously defined stored procedure.",
+          "tags": [
+            "execution",
+            "basic"
+          ]
+        },
+        {
+          "front": "Transaction Control in Stored Procedures",
+          "back": "Stored procedures can include transaction control statements like BEGIN TRANSACTION, COMMIT, and ROLLBACK to manage database transactions within the procedure.",
+          "tags": [
+            "transactions",
+            "advanced"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-30",
+      "name": "Triggers: Basic Concepts",
+      "cards": [
+        {
+          "front": "Trigger",
+          "back": "A trigger is a set of instructions that are automatically executed in response to certain events on a particular table or view in a database.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "BEFORE Trigger",
+          "back": "A BEFORE trigger is executed before the insert, update, or delete operation on a table.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "AFTER Trigger",
+          "back": "An AFTER trigger is executed after the insert, update, or delete operation has occurred on a table.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "INSTEAD OF Trigger",
+          "back": "An INSTEAD OF trigger overrides the default action of an insert, update, or delete operation on a view.",
+          "tags": [
+            "intermediate",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Trigger Event",
+          "back": "An event that activates a trigger, such as INSERT, UPDATE, or DELETE.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Trigger Condition",
+          "back": "The condition that must be met for the trigger to execute; it can be specified in the trigger definition.",
+          "tags": [
+            "intermediate",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Trigger Body",
+          "back": "The actual SQL statements that are executed when the trigger is activated.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Row-Level Trigger",
+          "back": "A row-level trigger is executed once for each row that is affected by the triggering event.",
+          "tags": [
+            "intermediate",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Statement-Level Trigger",
+          "back": "A statement-level trigger is executed once for the entire operation, regardless of the number of rows affected.",
+          "tags": [
+            "intermediate",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Recursive Trigger",
+          "back": "A recursive trigger is a trigger that can invoke itself, either directly or indirectly, which can lead to infinite loops if not carefully managed.",
+          "tags": [
+            "advanced",
+            "trigger"
+          ]
+        },
+        {
+          "front": "DML Trigger",
+          "back": "A DML (Data Manipulation Language) trigger is associated with DML events such as INSERT, UPDATE, or DELETE actions.",
+          "tags": [
+            "basic",
+            "trigger"
+          ]
+        },
+        {
+          "front": "DDL Trigger",
+          "back": "A DDL (Data Definition Language) trigger responds to changes in the structure of the database, such as CREATE, ALTER, or DROP statements.",
+          "tags": [
+            "advanced",
+            "trigger"
+          ]
+        },
+        {
+          "front": "Trigger Management",
+          "back": "The process of creating, modifying, enabling, or disabling triggers within a database system.",
+          "tags": [
+            "intermediate",
+            "trigger"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-31",
+      "name": "Views: Creating and Using",
+      "cards": [
+        {
+          "front": "SQL View",
+          "back": "A virtual table based on the result set of a SELECT query that can represent data from one or more tables.",
+          "tags": [
+            "SQL",
+            "View"
+          ]
+        },
+        {
+          "front": "CREATE VIEW",
+          "back": "A SQL statement used to create a new view in the database.",
+          "tags": [
+            "SQL",
+            "View",
+            "Create"
+          ]
+        },
+        {
+          "front": "Materialized View",
+          "back": "A database object that contains the results of a query and is stored on disk, improving query performance by avoiding re-execution of the query.",
+          "tags": [
+            "SQL",
+            "View",
+            "Materialized"
+          ]
+        },
+        {
+          "front": "DROP VIEW",
+          "back": "A SQL command used to delete an existing view from the database.",
+          "tags": [
+            "SQL",
+            "View",
+            "Drop"
+          ]
+        },
+        {
+          "front": "UPDATE View",
+          "back": "An operation that modifies data in a view; only works on updatable views where the underlying tables can be modified directly.",
+          "tags": [
+            "SQL",
+            "View",
+            "Update"
+          ]
+        },
+        {
+          "front": "Updatable View",
+          "back": "A type of view that allows for data modification on the underlying tables.",
+          "tags": [
+            "SQL",
+            "View",
+            "Updatable"
+          ]
+        },
+        {
+          "front": "SELECT Statement",
+          "back": "A SQL query used to retrieve data from one or more tables, often used to define the data shown in a view.",
+          "tags": [
+            "SQL",
+            "Query",
+            "View"
+          ]
+        },
+        {
+          "front": "Join View",
+          "back": "A view that is based on the result of a JOIN operation between two or more tables.",
+          "tags": [
+            "SQL",
+            "View",
+            "Join"
+          ]
+        },
+        {
+          "front": "View vs Table",
+          "back": "A view is a virtual table derived from a SELECT query, whereas a table is a physical storage of structured data in the database.",
+          "tags": [
+            "SQL",
+            "View",
+            "Table"
+          ]
+        },
+        {
+          "front": "REPLACE VIEW",
+          "back": "A SQL statement that allows you to change an existing view definition without dropping it first.",
+          "tags": [
+            "SQL",
+            "View",
+            "Replace"
+          ]
+        },
+        {
+          "front": "Granting Permissions on Views",
+          "back": "Using the GRANT command to provide users with access rights to perform specific actions on a view.",
+          "tags": [
+            "SQL",
+            "View",
+            "Permissions"
+          ]
+        },
+        {
+          "front": "Indexed View",
+          "back": "A special type of view in SQL Server that is physically stored on disk and has a clustered index for performance enhancement.",
+          "tags": [
+            "SQL",
+            "View",
+            "Indexed"
+          ]
+        },
+        {
+          "front": "Security through Views",
+          "back": "Using views as a security measure to restrict access to specific rows and columns of data from the underlying tables.",
+          "tags": [
+            "SQL",
+            "View",
+            "Security"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-32",
+      "name": "Advanced SELECT: CASE and COALESCE",
+      "cards": [
+        {
+          "front": "CASE Statement",
+          "back": "A SQL control flow structure that allows for conditional logic in queries, often used to return specific values based on conditions.",
+          "tags": [
+            "SQL",
+            "CASE",
+            "control flow"
+          ]
+        },
+        {
+          "front": "COALESCE Function",
+          "back": "A SQL function that returns the first non-null value in a list of arguments, useful for handling NULL values in queries.",
+          "tags": [
+            "SQL",
+            "COALESCE",
+            "functions"
+          ]
+        },
+        {
+          "front": "NULLIF Function",
+          "back": "A SQL function that compares two expressions and returns NULL if they are equal, otherwise it returns the first expression, often used to prevent division by zero errors.",
+          "tags": [
+            "SQL",
+            "NULLIF",
+            "functions"
+          ]
+        },
+        {
+          "front": "Nested CASE Statement",
+          "back": "A CASE statement that is placed within another CASE statement, allowing for multiple levels of conditional logic in SQL queries.",
+          "tags": [
+            "SQL",
+            "nested CASE",
+            "complex queries"
+          ]
+        },
+        {
+          "front": "CASE with ELSE Clause",
+          "back": "A CASE statement that includes an ELSE clause to specify a default return value if no conditions are met.",
+          "tags": [
+            "SQL",
+            "CASE",
+            "ELSE"
+          ]
+        },
+        {
+          "front": "Using CASE in SELECT",
+          "back": "The implementation of the CASE statement within a SELECT query to create conditional column values based on specified criteria.",
+          "tags": [
+            "SQL",
+            "SELECT",
+            "CASE"
+          ]
+        },
+        {
+          "front": "CASE in ORDER BY",
+          "back": "Using the CASE statement in the ORDER BY clause to dynamically control the sorting of query results based on specific conditions.",
+          "tags": [
+            "SQL",
+            "ORDER BY",
+            "CASE"
+          ]
+        },
+        {
+          "front": "Aggregate Functions with CASE",
+          "back": "The combination of aggregate functions (like SUM, AVG) with a CASE statement to perform calculations conditionally on grouped data.",
+          "tags": [
+            "SQL",
+            "aggregate functions",
+            "CASE"
+          ]
+        },
+        {
+          "front": "COALESCE with Multiple Arguments",
+          "back": "Using the COALESCE function with multiple arguments to determine the first non-null value among several columns, facilitating data integrity in reports.",
+          "tags": [
+            "SQL",
+            "COALESCE",
+            "multiple columns"
+          ]
+        },
+        {
+          "front": "CASE with Multiple Conditions",
+          "back": "A CASE statement that evaluates multiple conditions within a single WHEN clause to determine the outcome based on more than one criterion.",
+          "tags": [
+            "SQL",
+            "CASE",
+            "multiple conditions"
+          ]
+        },
+        {
+          "front": "CASE vs IIF",
+          "back": "A comparison of the SQL CASE statement and IIF function, where IIF is a shorthand for if-else logic but less flexible than CASE.",
+          "tags": [
+            "SQL",
+            "CASE",
+            "IIF"
+          ]
+        },
+        {
+          "front": "Handling NULL Values with COALESCE",
+          "back": "Using COALESCE to replace NULL values with specified alternatives, improving data representation and ensuring completeness in results.",
+          "tags": [
+            "SQL",
+            "COALESCE",
+            "NULL values"
+          ]
+        },
+        {
+          "front": "CASE in UPDATE Statement",
+          "back": "The use of a CASE statement in an UPDATE SQL command to conditionally set values based on the existing data.",
+          "tags": [
+            "SQL",
+            "UPDATE",
+            "CASE"
+          ]
+        },
+        {
+          "front": "CASE vs DECODE",
+          "back": "A comparison of the SQL CASE statement and the DECODE function (in Oracle), where DECODE provides a simpler syntax for certain conditionals but is less versatile than CASE.",
+          "tags": [
+            "SQL",
+            "CASE",
+            "DECODE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-33",
+      "name": "String Functions in SQL",
+      "cards": [
+        {
+          "front": "CONCAT",
+          "back": "A function that concatenates two or more strings into one single string.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        },
+        {
+          "front": "SUBSTRING",
+          "back": "A function that extracts a part of a string, given a starting position and length.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        },
+        {
+          "front": "TRIM",
+          "back": "A function that removes leading and trailing spaces from a string.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        },
+        {
+          "front": "UPPER",
+          "back": "A function that converts a string to all uppercase letters.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        },
+        {
+          "front": "LOWER",
+          "back": "A function that converts a string to all lowercase letters.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        },
+        {
+          "front": "REPLACE",
+          "back": "A function that replaces all occurrences of a specified substring within a string with another substring.",
+          "tags": [
+            "function",
+            "string manipulation",
+            "SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-34",
+      "name": "Date and Time Functions",
+      "cards": [
+        {
+          "front": "CURRENT_DATE",
+          "back": "Returns the current date in the session time zone.",
+          "tags": [
+            "SQL",
+            "Date Functions"
+          ]
+        },
+        {
+          "front": "DATEDIFF",
+          "back": "Calculates the difference in days between two date values.",
+          "tags": [
+            "SQL",
+            "Date Functions",
+            "Difficult"
+          ]
+        },
+        {
+          "front": "DATE_FORMAT",
+          "back": "Formats a date value based on a specified format string.",
+          "tags": [
+            "SQL",
+            "Date Functions",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "NOW()",
+          "back": "Returns the current date and time in the session time zone.",
+          "tags": [
+            "SQL",
+            "Date Functions"
+          ]
+        },
+        {
+          "front": "TIMESTAMPADD",
+          "back": "Adds a specified interval to a date or time value.",
+          "tags": [
+            "SQL",
+            "Date Functions",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "EXTRACT",
+          "back": "Retrieves sub-parts of a date, such as year, month, or day.",
+          "tags": [
+            "SQL",
+            "Date Functions",
+            "Intermediate"
+          ]
+        },
+        {
+          "front": "STR_TO_DATE",
+          "back": "Converts a string into a date based on a specified format.",
+          "tags": [
+            "SQL",
+            "Date Functions",
+            "Difficult"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-35",
+      "name": "Common SQL Mistakes",
+      "cards": [
+        {
+          "front": "SELECT *",
+          "back": "Using 'SELECT *' retrieves all columns from a table. This can lead to performance issues and unnecessary data retrieval. It's better to specify only the columns needed.",
+          "tags": [
+            "basic",
+            "performance"
+          ]
+        },
+        {
+          "front": "INNER JOIN vs OUTER JOIN",
+          "back": "An INNER JOIN only returns rows with matching values in both tables, while an OUTER JOIN returns all rows from one table and matched rows from the other. Misusing these can result in unexpected outputs.",
+          "tags": [
+            "intermediate",
+            "joins"
+          ]
+        },
+        {
+          "front": "GROUP BY without aggregation",
+          "back": "Using GROUP BY without an aggregate function (like COUNT, SUM, AVG) leads to SQL errors or misleading results. Always use an aggregate function when grouping data.",
+          "tags": [
+            "incorrect",
+            "aggregation"
+          ]
+        },
+        {
+          "front": "Using '=' instead of 'LIKE'",
+          "back": "Using '=' to compare a string field for partial matches can cause no results to be returned. Use 'LIKE' with wildcards for pattern matching instead.",
+          "tags": [
+            "basic",
+            "comparison"
+          ]
+        },
+        {
+          "front": "Not using indexes",
+          "back": "Failing to use indexes on columns frequently queried can drastically slow down query performance. Indexes help in speeding up data retrieval.",
+          "tags": [
+            "advanced",
+            "performance"
+          ]
+        },
+        {
+          "front": "WHERE clause errors",
+          "back": "Common mistakes include misplacing the WHERE clause, such as after GROUP BY or ORDER BY, leading to logical errors in query results.",
+          "tags": [
+            "intermediate",
+            "syntax"
+          ]
+        },
+        {
+          "front": "Not handling NULLs correctly",
+          "back": "NULL values can affect calculations and conditions in SQL queries. Failing to consider NULLs can lead to unexpected results, such as counting NULLs.",
+          "tags": [
+            "basic",
+            "null handling"
+          ]
+        },
+        {
+          "front": "Accidental Cartesian Product",
+          "back": "A Cartesian product occurs when a query joins tables without a proper ON clause condition, resulting in a multiplication of rows between the tables. This can inflate the dataset and lead to performance issues.",
+          "tags": [
+            "advanced",
+            "joins"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-36",
+      "name": "Performance Tuning Basics",
+      "cards": [
+        {
+          "front": "Index",
+          "back": "A database object that improves the speed of data retrieval operations on a table by creating a sorted set of keys for quicker access.",
+          "tags": [
+            "indexing",
+            "performance",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Query Optimization",
+          "back": "The process of modifying a query to execute it in the most efficient way possible, reducing resource consumption and execution time.",
+          "tags": [
+            "query",
+            "optimization",
+            "performance tuning"
+          ]
+        },
+        {
+          "front": "Execution Plan",
+          "back": "A detailed roadmap generated by the SQL server that outlines the steps to retrieve or modify the data based on a SQL query.",
+          "tags": [
+            "execution plan",
+            "performance",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing data to minimize redundancy and improve data integrity, often impacting performance if done excessively.",
+          "tags": [
+            "normalization",
+            "database design",
+            "performance"
+          ]
+        },
+        {
+          "front": "Denormalization",
+          "back": "The process of intentionally introducing redundancy into a table to improve read performance at the cost of write performance and data integrity.",
+          "tags": [
+            "denormalization",
+            "performance",
+            "database design"
+          ]
+        },
+        {
+          "front": "Stored Procedure",
+          "back": "A precompiled collection of one or more SQL statements which can be executed as a single unit, improving performance by reducing parsing time and optimizing execution.",
+          "tags": [
+            "stored procedure",
+            "performance",
+            "SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-37",
+      "name": "Normalization: 1NF, 2NF, 3NF",
+      "cards": [
+        {
+          "front": "1NF",
+          "back": "First Normal Form (1NF) ensures that all columns in a table contain atomic (indivisible) values, and each record is unique.",
+          "tags": [
+            "1NF",
+            "Normalization"
+          ]
+        },
+        {
+          "front": "2NF",
+          "back": "Second Normal Form (2NF) is achieved when a database table is in 1NF and all non-key attributes are fully functional dependent on the primary key.",
+          "tags": [
+            "2NF",
+            "Normalization"
+          ]
+        },
+        {
+          "front": "3NF",
+          "back": "Third Normal Form (3NF) is when a table is in 2NF and all the attributes are functionally dependent only on the primary key, eliminating transitive dependency.",
+          "tags": [
+            "3NF",
+            "Normalization"
+          ]
+        },
+        {
+          "front": "Functional Dependency",
+          "back": "A relationship between two attributes, typically between a key and a non-key attribute, where a value of one attribute uniquely determines the value of another.",
+          "tags": [
+            "Functional Dependency"
+          ]
+        },
+        {
+          "front": "Atomic Value",
+          "back": "An atomic value is a value that cannot be divided or broken down into smaller parts. Each cell in a database table should contain atomic values to fulfill 1NF.",
+          "tags": [
+            "Atomic Value",
+            "1NF"
+          ]
+        },
+        {
+          "front": "Composite Key",
+          "back": "A composite key is a combination of two or more columns in a database table that uniquely identifies a row in that table.",
+          "tags": [
+            "Composite Key"
+          ]
+        },
+        {
+          "front": "Transitive Dependency",
+          "back": "A transitive dependency is a condition where a non-key attribute depends on another non-key attribute, rather than directly on the primary key, violating 3NF.",
+          "tags": [
+            "Transitive Dependency",
+            "3NF"
+          ]
+        },
+        {
+          "front": "Partial Dependency",
+          "back": "A partial dependency occurs when a non-key attribute is dependent on only part of a composite primary key, violating 2NF.",
+          "tags": [
+            "Partial Dependency",
+            "2NF"
+          ]
+        },
+        {
+          "front": "Denormalization",
+          "back": "Denormalization is the process of combining tables to enhance read performance by reducing the number of joins, often at the cost of redundancy.",
+          "tags": [
+            "Denormalization"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity, typically achieved through various normal forms.",
+          "tags": [
+            "Normalization"
+          ]
+        },
+        {
+          "front": "Relation",
+          "back": "In database terminology, a relation is a table with rows and columns where each row is a record and each column is an attribute of that record.",
+          "tags": [
+            "Relation"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A primary key is a unique identifier for a record in a table, ensuring that no two records can have the same value for the primary key field.",
+          "tags": [
+            "Primary Key"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A foreign key is a field in a table that is a primary key in another table, used to establish a link between the two tables.",
+          "tags": [
+            "Foreign Key"
+          ]
+        },
+        {
+          "front": "Boyce-Codd Normal Form (BCNF)",
+          "back": "BCNF is a stronger version of 3NF where, for every functional dependency (X -> Y), X must be a super key. It resolves some anomalies not handled by 3NF.",
+          "tags": [
+            "BCNF"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-38",
+      "name": "Denormalization Strategies",
+      "cards": [
+        {
+          "front": "Denormalization",
+          "back": "The process of optimizing the read performance of a database by adding redundant data or grouping data, often to reduce the complexity of joins and improve query speed.",
+          "tags": [
+            "denormalization",
+            "database",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Redundant Data",
+          "back": "Data that is duplicated or repeated in a database to improve read efficiency and reduce query complexity. This can lead to faster data retrieval but may increase storage requirements.",
+          "tags": [
+            "redundancy",
+            "data",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Join Operations",
+          "back": "SQL operations that combine rows from two or more tables based on a related column. Common types of joins include inner joins, outer joins, and cross joins.",
+          "tags": [
+            "joins",
+            "SQL",
+            "database"
+          ]
+        },
+        {
+          "front": "Data Warehouse",
+          "back": "A centralized repository that allows for the analysis and reporting of data from multiple sources, often using denormalized structures to optimize query performance for analytics.",
+          "tags": [
+            "data warehouse",
+            "denormalization",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Star Schema",
+          "back": "A type of database schema used in data warehousing consisting of fact tables and dimension tables. It often involves denormalization of dimension tables for quicker query access.",
+          "tags": [
+            "star schema",
+            "data modeling",
+            "denormalization"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing the fields and tables of a relational database to minimize redundancy and dependency by splitting data into different tables and establishing relationships.",
+          "tags": [
+            "normalization",
+            "database",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Fact Table",
+          "back": "A central table in a star schema or snowflake schema that contains quantitative data for analysis, typically storing metrics and foreign keys to dimension tables.",
+          "tags": [
+            "fact table",
+            "data modeling",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Denormalized Table",
+          "back": "A table that combines multiple tables and includes redundant fields to improve read performance and reduce the need for complex joins.",
+          "tags": [
+            "denormalized table",
+            "database",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Performance Trade-offs",
+          "back": "The considerations between read and write efficiency when denormalizing a database. While read performance may improve, write operations can become more complex and slower due to potential data redundancy.",
+          "tags": [
+            "performance",
+            "denormalization",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Data Redundancy",
+          "back": "The intentional duplication of data within a database or among databases, often used in denormalization strategies to speed up data retrieval speeds.",
+          "tags": [
+            "data redundancy",
+            "denormalization",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Materialized Views",
+          "back": "Database objects that store the results of a query physically, allowing for faster access to complex query results; often used in denormalized environments to optimize performance.",
+          "tags": [
+            "materialized views",
+            "performance optimization",
+            "SQL"
+          ]
+        },
+        {
+          "front": "Snowflake Schema",
+          "back": "A more complex database schema than a star schema where dimension tables are normalized into multiple related tables, generally leading to less redundancy but more complex queries.",
+          "tags": [
+            "snowflake schema",
+            "data modeling",
+            "SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-39",
+      "name": "SQL Injection Prevention",
+      "cards": [
+        {
+          "front": "SQL Injection",
+          "back": "A code injection technique that exploits a vulnerability in an application's software by introducing malicious SQL statements into a query, which can access, modify, or delete data from a database.",
+          "tags": [
+            "Basic",
+            "Security"
+          ]
+        },
+        {
+          "front": "Prepared Statement",
+          "back": "A feature used in SQL that allows you to precompile SQL statements and safely insert parameters without risking SQL injection attacks.",
+          "tags": [
+            "Intermediate",
+            "Mitigation"
+          ]
+        },
+        {
+          "front": "Parameterization",
+          "back": "The practice of using placeholders in SQL queries to separate SQL code from data, thereby preventing SQL injection vulnerabilities.",
+          "tags": [
+            "Basic",
+            "Mitigation"
+          ]
+        },
+        {
+          "front": "Escaping User Input",
+          "back": "A technique where special characters in user input are prefixed with a backslash or a similar escape character to prevent them from being interpreted as part of a SQL command.",
+          "tags": [
+            "Intermediate",
+            "Security"
+          ]
+        },
+        {
+          "front": "Least Privilege Principle",
+          "back": "The security concept that a user or process should only have the minimum level of access necessary to perform its function, reducing the potential impact of SQL injection exploits.",
+          "tags": [
+            "Advanced",
+            "Security"
+          ]
+        },
+        {
+          "front": "Web Application Firewall (WAF)",
+          "back": "A security mechanism that filters, monitors, and analyzes HTTP traffic to and from a web application to prevent SQL injection and other attacks.",
+          "tags": [
+            "Advanced",
+            "Mitigation"
+          ]
+        },
+        {
+          "front": "Input Validation",
+          "back": "The process of ensuring that user inputs are correct and appropriate before they are processed, which helps to prevent SQL injection by rejecting malformed input.",
+          "tags": [
+            "Intermediate",
+            "Mitigation"
+          ]
+        },
+        {
+          "front": "OR 1=1",
+          "back": "An example of a classic SQL injection payload that can alter the logical flow of a SQL query, allowing an attacker to gain unauthorized access to data.",
+          "tags": [
+            "Intermediate",
+            "Exploit"
+          ]
+        },
+        {
+          "front": "SQL Error Messages",
+          "back": "Detailed messages returned by SQL databases when an error occurs, which can reveal sensitive information about the database and aid attackers in crafting SQL injection attacks.",
+          "tags": [
+            "Intermediate",
+            "Security"
+          ]
+        },
+        {
+          "front": "Cross-Site Scripting (XSS)",
+          "back": "A security vulnerability that allows an attacker to inject malicious scripts into web pages viewed by users, often related but distinct from SQL injection attacks.",
+          "tags": [
+            "Basic",
+            "Security"
+          ]
+        },
+        {
+          "front": "Security Code Review",
+          "back": "The process of systematically examining source code for potential security vulnerabilities, including SQL injection, to improve an application's security posture.",
+          "tags": [
+            "Advanced",
+            "Mitigation"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-40",
+      "name": "Database Relationships: One-to-One, One-to-Many, Many-to-Many",
+      "cards": [
+        {
+          "front": "One-to-One Relationship",
+          "back": "A type of relationship where a single record in one table is linked to a single record in another table. This is often used for splitting data into separate tables for clarity and organization.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Relationships"
+          ]
+        },
+        {
+          "front": "One-to-Many Relationship",
+          "back": "A relationship where a single record in one table can be associated with multiple records in another table. For example, one customer can place many orders, but each order is placed by only one customer.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Relationships"
+          ]
+        },
+        {
+          "front": "Many-to-Many Relationship",
+          "back": "A relationship where multiple records in one table are associated with multiple records in another table. This typically requires a junction table that connects the two tables, like students and classes.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Relationships"
+          ]
+        },
+        {
+          "front": "Foreign Key",
+          "back": "A field (or fields) in one table that uniquely identifies a row of another table. It is used to establish and enforce a link between the data in the two tables.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Keys"
+          ]
+        },
+        {
+          "front": "Primary Key",
+          "back": "A field (or set of fields) that uniquely identifies a record in a table. Each table should have a primary key to ensure that no two rows are identical.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Keys"
+          ]
+        },
+        {
+          "front": "Normalization",
+          "back": "The process of organizing data in a database to minimize redundancy and improve data integrity. This often involves dividing large tables into smaller, related tables and defining relationships between them.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Design"
+          ]
+        },
+        {
+          "front": "Entity-Relationship Diagram (ERD)",
+          "back": "A visual representation of different entities within a database and their relationships. ERDs are used for database modeling and help in understanding the structure of the database.",
+          "tags": [
+            "SQL",
+            "Database",
+            "Modeling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deck-41",
+      "name": "Advanced Joins and Set Operations",
+      "cards": [
+        {
+          "front": "INNER JOIN",
+          "back": "An INNER JOIN is a type of join that returns only the rows that have matching values in both tables involved in the join operation.",
+          "tags": [
+            "joins",
+            "SQL"
+          ]
+        },
+        {
+          "front": "FULL OUTER JOIN",
+          "back": "A FULL OUTER JOIN combines the results of both LEFT OUTER JOIN and RIGHT OUTER JOIN, returning all rows from both tables, with NULLs in places where there is no match.",
+          "tags": [
+            "joins",
+            "SQL"
+          ]
+        },
+        {
+          "front": "CROSS JOIN",
+          "back": "A CROSS JOIN returns the Cartesian product of two tables, meaning it pairs every row from the first table with every row from the second table.",
+          "tags": [
+            "joins",
+            "SQL"
+          ]
+        },
+        {
+          "front": "UNION",
+          "back": "The UNION operator is used to combine the result sets of two or more SELECT statements, removing duplicates from the result set.",
+          "tags": [
+            "set operations",
+            "SQL"
+          ]
+        },
+        {
+          "front": "INTERSECT",
+          "back": "The INTERSECT operator returns only the rows that are present in both SELECT statements, effectively finding common records.",
+          "tags": [
+            "set operations",
+            "SQL"
+          ]
+        },
+        {
+          "front": "EXCEPT",
+          "back": "The EXCEPT operator returns all rows from the first SELECT statement that are not present in the second SELECT statement, effectively showing the difference between the two result sets.",
+          "tags": [
+            "set operations",
+            "SQL"
+          ]
+        },
+        {
+          "front": "SELF JOIN",
+          "back": "A SELF JOIN is a regular join that joins a table to itself, allowing for comparison of rows within the same table.",
+          "tags": [
+            "joins",
+            "SQL"
+          ]
+        }
+      ]
+    }
+  ]
+}
