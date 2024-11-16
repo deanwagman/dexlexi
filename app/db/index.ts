@@ -1,24 +1,46 @@
+// db/index.js
+
+import { Asset } from "expo-asset";
+import * as FileSystem from "expo-file-system";
 import * as SQLite from "expo-sqlite";
 
 import { DEFAULT_USER } from "../../constants";
 
-// Open the database asynchronously
-const openDatabase = async () => {
-  try {
-    const db = await SQLite.openDatabaseAsync("alpha.db");
-    return db;
-  } catch (error) {
-    console.error("Error opening database:", error);
-    throw error;
+const dbName = "alpha3.db";
+const dbPath = `${FileSystem.documentDirectory}SQLite/alpha3.db`;
+const dbDirectory = FileSystem.documentDirectory;
+
+let dbPromise = null;
+
+async function openDatabase() {
+  const { exists } = await FileSystem.getInfoAsync(dbPath);
+
+  console.log(
+    "Database file path:",
+    `${FileSystem.documentDirectory}SQLite/alpha3.db`,
+  );
+
+  if (!exists) {
+    // Load the asset
+    const asset = Asset.fromModule(require("../../assets/alpha3.db"));
+    await asset.downloadAsync();
+
+    // Copy the database
+    await FileSystem.copyAsync({
+      from: asset.localUri,
+      to: dbPath,
+    });
   }
-};
+  // Open and return the database
+  return await SQLite.openDatabaseAsync(dbName);
+}
 
 // Initialize the database with necessary tables
-const initializeDatabase = async () => {
+async function initializeDatabase() {
   try {
     const db = await openDatabase();
 
-    // Users table
+    // Initialize tables
     await db.execAsync(`
       CREATE TABLE IF NOT EXISTS Users (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -28,23 +50,13 @@ const initializeDatabase = async () => {
         streak INTEGER DEFAULT 0,
         lastLogin DATETIME
       );
-    `);
-
-    // Decks table
-    await db.execAsync(`
       CREATE TABLE IF NOT EXISTS Decks (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         name TEXT,
         userId INTEGER,
-        totalCards INTEGER DEFAULT 0,
-        cardsLearned INTEGER DEFAULT 0,
         progressPercentage REAL DEFAULT 0,
         FOREIGN KEY (userId) REFERENCES Users(id)
       );
-    `);
-
-    // Cards table
-    await db.execAsync(`
       CREATE TABLE IF NOT EXISTS Cards (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         deckId INTEGER,
@@ -58,10 +70,6 @@ const initializeDatabase = async () => {
         easeFactor REAL DEFAULT 2.5,
         FOREIGN KEY (deckId) REFERENCES Decks(id)
       );
-    `);
-
-    // Sessions table
-    await db.execAsync(`
       CREATE TABLE IF NOT EXISTS Sessions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         userId INTEGER,
@@ -73,10 +81,6 @@ const initializeDatabase = async () => {
         FOREIGN KEY (userId) REFERENCES Users(id),
         FOREIGN KEY (deckId) REFERENCES Decks(id)
       );
-    `);
-
-    // SessionCards table
-    await db.execAsync(`
       CREATE TABLE IF NOT EXISTS SessionCards (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         sessionId INTEGER,
@@ -92,22 +96,30 @@ const initializeDatabase = async () => {
 
     await createDefaultUserIfNotExists(db);
 
+    const decks = await db.getAllAsync(`
+      SELECT * FROM Decks;
+    `);
+
+    console.log("Decks:", decks);
+
     return db;
   } catch (error) {
     console.error("Error initializing database:", error);
+    throw error; // Re-throw the error to handle it in the calling code
   }
-};
+}
 
 // Create a default user if one does not exist
-const createDefaultUserIfNotExists = async (db) => {
+async function createDefaultUserIfNotExists(db) {
   try {
-    const [{ userCount }] = await db.getAllAsync(
-      `SELECT COUNT(*) AS userCount FROM Users`,
+    const result = await db.getFirstAsync(
+      "SELECT COUNT(*) as count FROM Users WHERE username = ?",
+      [DEFAULT_USER],
     );
 
-    if (userCount === 0) {
+    if (result.count === 0) {
       await db.runAsync(
-        `INSERT INTO Users (username, lastLogin) VALUES (?, ?)`,
+        "INSERT INTO Users (username, lastLogin) VALUES (?, ?)",
         [DEFAULT_USER, new Date().toISOString()],
       );
       console.log("Default user created.");
@@ -117,9 +129,14 @@ const createDefaultUserIfNotExists = async (db) => {
   } catch (error) {
     console.error("Error checking/creating default user:", error);
   }
-};
+}
 
-initializeDatabase();
+// Function to get the database instance
+async function getDb() {
+  if (!dbPromise) {
+    dbPromise = initializeDatabase();
+  }
+  return dbPromise;
+}
 
-// Call the initializeDatabase function
-export const db = SQLite.openDatabaseSync("alpha.db");
+export { getDb, dbName, dbDirectory };

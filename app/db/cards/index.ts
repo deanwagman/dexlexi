@@ -1,4 +1,4 @@
-import { db } from "../index";
+import { getDb } from "../index";
 
 // id INTEGER PRIMARY KEY AUTOINCREMENT,
 // deckId INTEGER,
@@ -14,6 +14,7 @@ import { db } from "../index";
 
 export const getCard = async (cardId) => {
   try {
+    const db = await getDb();
     const result = await db.getAsync(
       `
         SELECT * FROM Cards WHERE id = ?;
@@ -29,6 +30,7 @@ export const getCard = async (cardId) => {
 
 export const getCards = async (deckId) => {
   try {
+    const db = await getDb();
     const result = await db.getAllAsync(
       `
         SELECT * FROM Cards WHERE deckId = ?;
@@ -51,6 +53,7 @@ export const updateCardProgress = async (
   easeFactor,
 ) => {
   try {
+    const db = await getDb();
     const result = await db.runAsync(
       `
             UPDATE Cards
@@ -87,6 +90,7 @@ export const createCard = async (
   easeFactor,
 ) => {
   try {
+    const db = await getDb();
     const result = await db.runAsync(
       `
         INSERT INTO Cards (deckId, front, back, difficulty, masteryLevel, lastReviewed, nextReviewDate, reviewCount, easeFactor)
@@ -113,6 +117,7 @@ export const createCard = async (
 
 export const deleteCard = async (cardId) => {
   try {
+    const db = await getDb();
     const result = await db.runAsync(
       `
         DELETE FROM Cards WHERE id = ?;

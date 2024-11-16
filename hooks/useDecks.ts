@@ -14,6 +14,8 @@ export const useDecks = () => {
     queryFn: async () => {
       const user = await getDefaultUser();
 
+      console.log({ decskUser: user });
+
       return getDecks(user.id);
     },
   });
